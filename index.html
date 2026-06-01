@@ -682,7 +682,7 @@
   <div class="container inner">
     <div class="topbar-meta">
       <span><span class="dot"></span><span data-i18n="top.hours">الأحد — الخميس · 8:00 — 17:00</span></span>
-      <span dir="ltr" style="font-family:'Inter',sans-serif">📞 +964 770 123 4567</span>
+      <span dir="ltr" style="font-family:'Inter',sans-serif">📞 +964 775 168 7406</span>
       <span dir="ltr" style="font-family:'Inter',sans-serif">✉ info@albait-iraqi.com</span>
     </div>
     <div class="lang-switch" role="tablist" aria-label="Language">
@@ -734,7 +734,7 @@
     <div class="hero-copy">
       <span class="hero-pill">
         <span class="dot"></span>
-        <span data-i18n="hero.pill">منذ 2010 · أكثر من 15 عاماً من الخبرة</span>
+        <span data-i18n="hero.pill">منذ 2015 · أكثر من 11 عاماً من الخبرة</span>
       </span>
       <h1>
         <span data-i18n="hero.title1">خدمات التخليص الكمركي</span>
@@ -742,7 +742,7 @@
         <span data-i18n="hero.title3">بين العراق والعالم</span>
       </h1>
       <p class="lead" data-i18n="hero.lead">
-        خبرة تمتد لأكثر من 15 عاماً في تخليص البضائع والواردات والصادرات
+        خبرة تمتد لأكثر من 11 عاماً في تخليص البضائع والواردات والصادرات
         عبر المنافذ البحرية والبرية والجوية. نخدم المستوردين والمصدّرين بدقة وسرعة.
       </p>
       <div class="hero-ctas">
@@ -754,7 +754,7 @@
       </div>
       <div class="hero-meta">
         <div class="item"><div class="n">+3000</div><div class="l" data-i18n="hero.m1">شحنة مُخلَّصة</div></div>
-        <div class="item"><div class="n">+15</div><div class="l" data-i18n="hero.m2">سنة خبرة</div></div>
+        <div class="item"><div class="n">+11</div><div class="l" data-i18n="hero.m2">سنة خبرة</div></div>
         <div class="item"><div class="n">3</div><div class="l" data-i18n="hero.m3">منافذ حدودية</div></div>
         <div class="item"><div class="n">3<span style="font-size:18px"> </span><span data-i18n="hero.m4u" style="font-size:18px">أيام</span></div><div class="l" data-i18n="hero.m4">متوسط التخليص</div></div>
       </div>
@@ -1005,25 +1005,25 @@
       <p data-i18n="contact.sub">املأ النموذج وسيتواصل معك أحد مستشارينا لمناقشة تفاصيل شحنتك ومتطلباتها.</p>
     </div>
     <div class="contact-grid">
-      <form class="contact-card" onsubmit="event.preventDefault(); this.querySelector('.form-actions .ok').style.display='inline-flex';">
+      <form class="contact-card" id="contactForm" onsubmit="return handleContactForm(event);">
         <div class="form-row">
           <div class="field">
             <label data-i18n="form.name">الاسم الكامل</label>
-            <input type="text" required>
+            <input type="text" id="cfName" required>
           </div>
           <div class="field">
             <label data-i18n="form.phone">رقم الهاتف</label>
-            <input type="tel" dir="ltr" placeholder="+964 ..." required>
+            <input type="tel" id="cfPhone" dir="ltr" placeholder="+964 ..." required>
           </div>
         </div>
         <div class="form-row">
           <div class="field">
             <label data-i18n="form.email">البريد الإلكتروني</label>
-            <input type="email" dir="ltr" required>
+            <input type="email" id="cfEmail" dir="ltr" required>
           </div>
           <div class="field">
             <label data-i18n="form.service">نوع الخدمة</label>
-            <select>
+            <select id="cfService">
               <option data-i18n="form.opt1">استيراد</option>
               <option data-i18n="form.opt2">تصدير</option>
               <option data-i18n="form.opt3">تخليص متخصص</option>
@@ -1033,7 +1033,7 @@
         </div>
         <div class="field" style="margin-bottom: 14px;">
           <label data-i18n="form.msg">رسالتك / تفاصيل الشحنة</label>
-          <textarea placeholder="" data-i18n-attr="placeholder" data-i18n="form.msgPh"></textarea>
+          <textarea id="cfMsg" placeholder="" data-i18n-attr="placeholder" data-i18n="form.msgPh"></textarea>
         </div>
         <div class="form-actions">
           <button type="submit" class="btn btn-navy">
@@ -1041,10 +1041,19 @@
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <span class="privacy" data-i18n="form.privacy">بياناتك مصونة ولن تُشارك مع أي طرف ثالث.</span>
-          <span class="ok badge" style="display:none">
-            <svg class="check" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-11" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span data-i18n="form.ok">تم الإرسال — سنتواصل قريباً</span>
-          </span>
+        </div>
+        <div id="waChoose" style="display:none; margin-top:14px; text-align:center;">
+          <p style="margin-bottom:10px; font-size:14px; opacity:.8;">اختر الرقم لإرسال الطلب عبر واتساب:</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+            <a id="waBtn1" href="#" target="_blank" rel="noopener" class="wa-btn" style="flex:1; min-width:200px; margin-top:0;">
+              <span class="wa-ic"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg></span>
+              <span class="lbl"><span class="t" dir="ltr">+964 775 168 7406</span></span>
+            </a>
+            <a id="waBtn2" href="#" target="_blank" rel="noopener" class="wa-btn" style="flex:1; min-width:200px; margin-top:0;">
+              <span class="wa-ic"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg></span>
+              <span class="lbl"><span class="t" dir="ltr">+964 783 648 0002</span></span>
+            </a>
+          </div>
         </div>
       </form>
 
@@ -1061,7 +1070,7 @@
           <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 6c0 9 6 15 15 15l3-4-5-2-2 2c-3-1-5-3-6-6l2-2-2-5-5 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
           <div>
             <div class="k" data-i18n="contact.phone.k">الهاتف</div>
-            <div class="v en" dir="ltr">+964 770 123 4567</div>
+            <div class="v en" dir="ltr">+964 775 168 7406</div>
           </div>
         </div>
         <div class="info">
@@ -1078,13 +1087,22 @@
             <div class="v" data-i18n="contact.hours.v">الأحد — الخميس · 8:00 — 17:00</div>
           </div>
         </div>
-        <a href="https://wa.me/9647700000000" target="_blank" rel="noopener" class="wa-btn" aria-label="WhatsApp">
+        <a href="https://wa.me/9647751687406" target="_blank" rel="noopener" class="wa-btn" aria-label="WhatsApp" style="margin-bottom:8px;">
           <span class="wa-ic" aria-hidden="true">
             <svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg>
           </span>
           <span class="lbl">
             <span class="t" data-i18n="contact.wa">تواصل عبر واتساب</span>
-            <span class="s" data-i18n="contact.wa.s">رد فوري خلال دقائق</span>
+            <span class="s" dir="ltr">+964 775 168 7406</span>
+          </span>
+        </a>
+        <a href="https://wa.me/9647836480002" target="_blank" rel="noopener" class="wa-btn" aria-label="WhatsApp">
+          <span class="wa-ic" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg>
+          </span>
+          <span class="lbl">
+            <span class="t" data-i18n="contact.wa">تواصل عبر واتساب</span>
+            <span class="s" dir="ltr">+964 783 648 0002</span>
           </span>
         </a>
       </aside>
@@ -1108,7 +1126,7 @@
             <div class="en" data-i18n="brand.tag">Al-Bait Al-Iraqi · Customs Clearance</div>
           </div>
         </div>
-        <p data-i18n="foot.about">مجموعة عراقية متخصصة في خدمات التخليص الكمركي بين العراق والعالم. خبرة تتجاوز 15 عاماً مع المستوردين والمصدّرين.</p>
+        <p data-i18n="foot.about">مجموعة عراقية متخصصة في خدمات التخليص الكمركي بين العراق والعالم. خبرة تتجاوز 11 عاماً مع المستوردين والمصدّرين.</p>
       </div>
 
       <div class="foot">
@@ -1135,7 +1153,7 @@
       <div class="foot">
         <h4 data-i18n="foot.contact">معلومات التواصل</h4>
         <ul>
-          <li dir="ltr" style="font-family:'Inter',sans-serif">+964 770 123 4567</li>
+          <li dir="ltr" style="font-family:'Inter',sans-serif">+964 775 168 7406</li>
           <li dir="ltr" style="font-family:'Inter',sans-serif">info@albait-iraqi.com</li>
           <li data-i18n="contact.addr.v">البصرة — العشار، شارع الكورنيش</li>
         </ul>
@@ -1165,11 +1183,11 @@ const I18N = {
     "nav.home": "الرئيسية", "nav.services": "الخدمات", "nav.cases": "نماذج التخليص",
     "nav.why": "لماذا نحن", "nav.contact": "تواصل معنا",
     "cta.viewCases": "شاهد نماذجنا", "cta.getQuote": "طلب عرض سعر",
-    "hero.pill": "منذ 2010 · أكثر من 15 عاماً من الخبرة",
+    "hero.pill": "منذ 2015 · أكثر من 11 عاماً من الخبرة",
     "hero.title1": "خدمات التخليص الكمركي",
     "hero.title2": "الاحترافية",
     "hero.title3": "بين العراق والعالم",
-    "hero.lead": "خبرة تمتد لأكثر من 15 عاماً في تخليص البضائع والواردات والصادرات عبر المنافذ البحرية والبرية والجوية. نخدم المستوردين والمصدّرين بدقة وسرعة.",
+    "hero.lead": "خبرة تمتد لأكثر من 11 عاماً في تخليص البضائع والواردات والصادرات عبر المنافذ البحرية والبرية والجوية. نخدم المستوردين والمصدّرين بدقة وسرعة.",
     "hero.cta1": "تواصل معنا", "hero.cta2": "شاهد نماذجنا",
     "hero.m1":"شحنة مُخلَّصة","hero.m2":"سنة خبرة","hero.m3":"منافذ حدودية","hero.m4":"متوسط التخليص","hero.m4u":"أيام",
     "hero.stamp":"سنة خبرة",
@@ -1213,7 +1231,7 @@ const I18N = {
     "contact.addr.k":"العنوان","contact.addr.v":"البصرة — العشار، شارع الكورنيش، بناية 14",
     "contact.phone.k":"الهاتف","contact.mail.k":"البريد الإلكتروني","contact.hours.k":"ساعات العمل","contact.hours.v":"الأحد — الخميس · 8:00 — 17:00",
     "contact.wa":"تواصل عبر واتساب","contact.wa.s":"رد فوري خلال دقائق",
-    "foot.about":"مجموعة عراقية متخصصة في خدمات التخليص الكمركي بين العراق والعالم. خبرة تتجاوز 15 عاماً مع المستوردين والمصدّرين.",
+    "foot.about":"مجموعة عراقية متخصصة في خدمات التخليص الكمركي بين العراق والعالم. خبرة تتجاوز 11 عاماً مع المستوردين والمصدّرين.",
     "foot.links":"روابط سريعة","foot.services":"الخدمات","foot.contact":"معلومات التواصل"
   },
   en: {
@@ -1223,11 +1241,11 @@ const I18N = {
     "nav.home":"Home","nav.services":"Services","nav.cases":"Sample Clearances",
     "nav.why":"Why Us","nav.contact":"Contact",
     "cta.viewCases":"View our cases","cta.getQuote":"Get a quote",
-    "hero.pill":"Since 2010 · 15+ years of experience",
+    "hero.pill":"Since 2015 · 11+ years of experience",
     "hero.title1":"Professional customs clearance",
     "hero.title2":"services",
     "hero.title3":"between Iraq and the world",
-    "hero.lead":"More than 15 years of experience clearing imports and exports across sea, land and air ports. We serve importers and exporters with precision and speed.",
+    "hero.lead":"More than 11 years of experience clearing imports and exports across sea, land and air ports. We serve importers and exporters with precision and speed.",
     "hero.cta1":"Contact us","hero.cta2":"View our cases",
     "hero.m1":"Shipments cleared","hero.m2":"Years experience","hero.m3":"Border crossings","hero.m4":"Avg. clearance","hero.m4u":"days",
     "hero.stamp":"years",
@@ -1271,7 +1289,7 @@ const I18N = {
     "contact.addr.k":"Address","contact.addr.v":"Basra — Al-Ashar, Corniche Street, Building 14",
     "contact.phone.k":"Phone","contact.mail.k":"Email","contact.hours.k":"Working hours","contact.hours.v":"Sun — Thu · 8:00 — 17:00",
     "contact.wa":"Chat on WhatsApp","contact.wa.s":"Instant reply in minutes",
-    "foot.about":"An Iraqi specialized group in customs clearance between Iraq and the world. Over 15 years working with importers and exporters.",
+    "foot.about":"An Iraqi specialized group in customs clearance between Iraq and the world. Over 11 years working with importers and exporters.",
     "foot.links":"Quick links","foot.services":"Services","foot.contact":"Contact info"
   },
   zh: {
@@ -1479,6 +1497,29 @@ window.addEventListener('scroll', () => {
   }
   navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#'+active));
 }, {passive: true});
+
+function handleContactForm(e) {
+  e.preventDefault();
+  var f = e.target;
+  if (!f.checkValidity()) { f.reportValidity(); return false; }
+  var name = document.getElementById('cfName').value;
+  var phone = document.getElementById('cfPhone').value;
+  var email = document.getElementById('cfEmail').value;
+  var service = document.getElementById('cfService').value;
+  var msg = document.getElementById('cfMsg').value;
+  var text = '📋 *طلب جديد من الموقع*\n\n'
+    + '👤 *الاسم:* ' + name + '\n'
+    + '📞 *الهاتف:* ' + phone + '\n'
+    + '📧 *الإيميل:* ' + email + '\n'
+    + '📦 *الخدمة:* ' + service + '\n';
+  if (msg) text += '💬 *التفاصيل:* ' + msg + '\n';
+  var encoded = encodeURIComponent(text);
+  document.getElementById('waBtn1').href = 'https://wa.me/9647751687406?text=' + encoded;
+  document.getElementById('waBtn2').href = 'https://wa.me/9647836480002?text=' + encoded;
+  document.getElementById('waChoose').style.display = 'block';
+  document.getElementById('waChoose').scrollIntoView({behavior:'smooth', block:'center'});
+  return false;
+}
 </script>
 
 </body>
