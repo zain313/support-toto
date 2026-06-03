@@ -1,0 +1,30 @@
+{
+  "name": "البيت العراقي للتخليص الكمركي",
+  "short_name": "البيت العراقي",
+  "description": "خدمات تخليص جمركي احترافية بين العراق والعالم",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfaf6",
+  "theme_color": "#0A2342",
+  "lang": "ar",
+  "dir": "rtl",
+  "scope": "/",
+  "categories": ["business", "finance"],
+  "icons": [
+    { "src": "/images/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/images/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "تواصل معنا",
+      "url": "/#contact",
+      "description": "أرسل طلب عرض سعر"
+    },
+    {
+      "name": "خدماتنا",
+      "url": "/#services",
+      "description": "استعرض خدمات التخليص"
+    }
+  ]
+}
