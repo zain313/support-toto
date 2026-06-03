@@ -6,7 +6,10 @@
 <title>البيت العراقي للتخليص الكمركي</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Non-render-blocking font load. Other fonts load on language switch via JS -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="images/hero-1.webp" as="image" type="image/webp">
 <style>
   :root{
     --navy: #0A2342;
@@ -31,7 +34,7 @@
   *{ box-sizing: border-box; }
   html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink); }
   body{
-    font-family: 'Cairo', 'Inter', system-ui, sans-serif;
+    font-family: 'Cairo', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     line-height: 1.55;
     font-size: 16px;
@@ -219,7 +222,7 @@
   }
   .photo-slot.light .label .ic{ color: var(--gold-deep); }
   .photo-slot .label .t{
-    font-family: 'JetBrains Mono', monospace;
+    font-family: ui-monospace, 'Courier New', monospace;
     font-size: 12px; letter-spacing:.04em;
     color: inherit;
     text-transform: uppercase;
@@ -761,9 +764,9 @@
     </div>
     <div class="hero-art">
       <div class="hero-slideshow" id="heroSlideshow" aria-label="Hero slideshow">
-        <div class="slide active" style="background-image:url('images/hero-1.png')" data-caption="cap.1"></div>
-        <div class="slide" style="background-image:url('images/hero-2.png')" data-caption="cap.2"></div>
-        <div class="slide" style="background-image:url('images/hero-3.png')" data-caption="cap.3"></div>
+        <div class="slide active" style="background-image:url('images/hero-1.webp')" data-caption="cap.1"></div>
+        <div class="slide" data-src="images/hero-2.webp" data-caption="cap.2"></div>
+        <div class="slide" data-src="images/hero-3.webp" data-caption="cap.3"></div>
         <div class="caption" id="heroCaption"><span class="ic"></span><span data-i18n="cap.1">منفذ حدودي — حركة شاحنات</span></div>
         <div class="dots" id="heroDots" role="tablist" aria-label="Slideshow controls">
           <button class="active" data-idx="0" aria-label="Slide 1"></button>
@@ -1410,7 +1413,24 @@ const I18N = {
 
 const RTL = new Set(['ar','fa']);
 
+const FONT_URLS = {
+  en: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap',
+  zh: 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700&display=swap',
+  fa: 'https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap'
+};
+const loadedFonts = new Set(['ar']);
+
+function loadFont(lang){
+  if (loadedFonts.has(lang) || !FONT_URLS[lang]) return;
+  loadedFonts.add(lang);
+  const l = document.createElement('link');
+  l.rel = 'stylesheet';
+  l.href = FONT_URLS[lang];
+  document.head.appendChild(l);
+}
+
 function applyLang(lang){
+  loadFont(lang);
   const dict = I18N[lang] || I18N.ar;
   document.documentElement.lang = lang;
   document.documentElement.dir = RTL.has(lang) ? 'rtl' : 'ltr';
@@ -1454,9 +1474,12 @@ applyLang(initial);
 
   function show(i){
     idx = (i + slides.length) % slides.length;
-    slides.forEach((s, k) => s.classList.toggle('active', k === idx));
+    const s = slides[idx];
+    if (s.dataset.src && !s.style.backgroundImage){
+      s.style.backgroundImage = "url('" + s.dataset.src + "')";
+    }
+    slides.forEach((sl, k) => sl.classList.toggle('active', k === idx));
     dots.forEach((d, k) => d.classList.toggle('active', k === idx));
-    // update caption translation key
     const cap = slides[idx].dataset.caption;
     if (cap){
       captionEl.setAttribute('data-i18n', cap);
