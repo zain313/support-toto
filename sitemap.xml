@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://iqbait.com/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://iqbait.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iqbait.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iqbait.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://iqbait.com/?lang=fa"/>
+  </url>
+</urlset>

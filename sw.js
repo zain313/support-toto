@@ -1,10 +1,14 @@
-const CACHE = 'iqbait-v1';
+const CACHE = 'iqbait-v2';
 const ASSETS = [
   '/',
   '/index.html',
+  '/offline.html',
   '/images/hero-1.webp',
   '/images/hero-2.webp',
-  '/images/hero-3.webp'
+  '/images/hero-3.webp',
+  '/images/icon-192.png',
+  '/images/icon-512.png',
+  '/manifest.json'
 ];
 
 self.addEventListener('install', e => {
@@ -34,7 +38,7 @@ self.addEventListener('fetch', e => {
           caches.open(CACHE).then(c => c.put(e.request, clone));
         }
         return res;
-      });
+      }).catch(() => caches.match('/offline.html'));
       return cached || network;
     })
   );
