@@ -1,0 +1,35 @@
+name: Notify search engines (IndexNow)
+
+# After each GitHub Pages deployment, tell Bing, Yandex, Seznam and Naver that the pages changed.
+# Bing's index also feeds ChatGPT search, Microsoft Copilot and DuckDuckGo.
+on:
+  workflow_run:
+    workflows: [pages-build-deployment]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Submit sitemap URLs
+        run: |
+          set -euo pipefail
+          key_file=$(ls | grep -E '^[0-9a-f]{32}\.txt$' | head -n1)
+          key=${key_file%.txt}
+          urls=$(grep -oE '<loc>[^<]+</loc>' sitemap.xml | sed -E 's#</?loc>##g' \
+            | jq -R . | jq -s '. + ["https://iqbait.com/llms.txt", "https://iqbait.com/llms-full.txt"]')
+          jq -n --arg key "$key" --argjson urls "$urls" \
+            '{host: "iqbait.com", key: $key, keyLocation: ("https://iqbait.com/" + $key + ".txt"), urlList: $urls}' > payload.json
+          cat payload.json
+          code=$(curl -sS -o response.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' --data @payload.json)
+          echo "IndexNow responded HTTP $code"
+          cat response.txt || true
+          [ "$code" = 200 ] || [ "$code" = 202 ]

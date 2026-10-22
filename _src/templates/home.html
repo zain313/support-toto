@@ -1,0 +1,371 @@
+<section class="hero" id="home">
+<div class="container hero-inner">
+<div class="hero-copy">
+<span class="hero-pill">
+<span class="dot"></span>
+<span>{{hero.pill}}</span>
+</span>
+<h1>
+<span>{{hero.title1}}</span>
+<span class="accent">{{hero.title2}}</span>
+<span>{{hero.title3}}</span>
+</h1>
+<p class="lead">{{hero.lead}}</p>
+<div class="hero-ctas">
+<a href="#contact" class="btn btn-primary">
+<span>{{hero.cta1}}</span>
+<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+<a href="#cases" class="btn btn-ghost">{{hero.cta2}}</a>
+</div>
+<div class="hero-meta">
+<div class="item"><div class="n">+3000</div><div class="l">{{hero.m1}}</div></div>
+<div class="item"><div class="n">+11</div><div class="l">{{hero.m2}}</div></div>
+<div class="item"><div class="n">7</div><div class="l">{{hero.m3}}</div></div>
+<div class="item"><div class="n">3<span style="font-size:18px"> </span><span style="font-size:18px">{{hero.m4u}}</span></div><div class="l">{{hero.m4}}</div></div>
+</div>
+</div>
+<div class="hero-art">
+<div class="hero-slideshow" id="heroSlideshow" aria-label="Hero slideshow">
+<div class="slide active" role="img" aria-label="{{cap.1}}" style="background-image:url('/images/hero-1.webp')" data-caption="{{cap.1}}"></div>
+<div class="slide" role="img" aria-label="{{cap.2}}" data-src="/images/hero-2.webp" data-caption="{{cap.2}}"></div>
+<div class="slide" role="img" aria-label="{{cap.3}}" data-src="/images/hero-3.webp" data-caption="{{cap.3}}"></div>
+<div class="caption" id="heroCaption"><span class="ic"></span><span>{{cap.1}}</span></div>
+<div class="dots" id="heroDots" role="tablist" aria-label="Slideshow controls">
+<button class="active" data-idx="0" aria-label="Slide 1"></button>
+<button data-idx="1" aria-label="Slide 2"></button>
+<button data-idx="2" aria-label="Slide 3"></button>
+</div>
+</div>
+<div class="hero-stamp" aria-hidden="true">
+<div>
+<div class="num">11+</div>
+<div class="lbl">{{hero.stamp}}</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="block" id="services">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">{{services.eye}}</div>
+<h2>{{services.title}}</h2>
+<p>{{services.sub}}</p>
+</div>
+<div class="services">
+<article class="svc fade-up">
+<div class="ic-wrap"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M3 7l9 4 9-4M12 11v10" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 14v-3m-3 6l3-3 3 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<h3>{{svc.t1}}</h3>
+<p>{{svc.d1}}</p>
+<a class="more" href="#contact"><span>{{svc.more}}</span><svg class="arr" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</article>
+<article class="svc fade-up">
+<div class="ic-wrap"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M3 7l9 4 9-4M12 11v10" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 11v3m-3-3l3 3 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<h3>{{svc.t2}}</h3>
+<p>{{svc.d2}}</p>
+<a class="more" href="#contact"><span>{{svc.more}}</span><svg class="arr" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</article>
+<article class="svc fade-up">
+<div class="ic-wrap"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5.5L20 9.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L12 3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+<h3>{{svc.t3}}</h3>
+<p>{{svc.d3}}</p>
+<a class="more" href="#contact"><span>{{svc.more}}</span><svg class="arr" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</article>
+<article class="svc fade-up">
+<div class="ic-wrap"><svg viewBox="0 0 24 24" fill="none"><path d="M21 12c0 4.97-4.03 9-9 9-1.42 0-2.76-.33-3.95-.92L3 21l.92-5.05A8.96 8.96 0 0 1 3 12c0-4.97 4.03-9 9-9s9 4.03 9 9z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 11h.01M12 11h.01M16 11h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+<h3>{{svc.t4}}</h3>
+<p>{{svc.d4}}</p>
+<a class="more" href="#contact"><span>{{svc.more}}</span><svg class="arr" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</article>
+</div>
+</div>
+</section>
+<section class="block dark-band" id="iran">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">{{iran.eye}}</div>
+<h2>{{iran.title}}</h2>
+<p>{{iran.sub}}</p>
+</div>
+<h3 class="sub-head">{{iran.landTitle}}</h3>
+{{#crossingCards}}
+<h3 class="sub-head">{{iran.portsTitle}}</h3>
+{{#ports}}
+<div class="band-cta">
+<a class="btn btn-primary" href="{{@guide}}">
+<span>{{iran.guideLink}}</span>
+<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+<a class="btn btn-ghost" href="https://wa.me/9647751687406" target="_blank" rel="noopener">{{iran.cta}}</a>
+</div>
+</div>
+</section>
+<section class="block cases-bg" id="cases">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">{{cases.eye}}</div>
+<h2>{{cases.title}}</h2>
+<p>{{cases.sub}}</p>
+</div>
+<div class="cases">
+<article class="case fade-up">
+<div class="case-body">
+<div class="case-head">
+<div class="case-route">
+<span>{{case.r1a}}</span>
+<span class="sep">→</span>
+<span>{{case.r1b}}</span>
+</div>
+<span class="badge">
+<svg class="check" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-11" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span>{{case.done}}</span>
+</span>
+</div>
+<div class="case-meta">
+<div><div class="k">{{case.goods}}</div><div class="v">{{case.g1}}</div></div>
+<div><div class="k">{{case.weight}}</div><div class="v" dir="ltr" style="font-family:'Inter','Cairo',sans-serif">4,000 <span>{{case.tons}}</span></div></div>
+<div><div class="k">{{case.type}}</div><div class="v">{{case.import}}</div></div>
+<div><div class="k">{{case.time}}</div><div class="v"><span dir="ltr" style="font-family:'Inter','Cairo',sans-serif">3</span> <span>{{case.days}}</span></div></div>
+</div>
+<div class="case-docs">
+<div class="k">{{case.docs}}</div>
+<div class="doc-chips">
+<span class="chip">{{case.d.inv}}</span>
+<span class="chip">{{case.d.dec}}</span>
+<span class="chip">{{case.d.org}}</span>
+<span class="chip">{{case.d.trn}}</span>
+</div>
+</div>
+<div class="timeline">
+<div class="k">{{case.flow}}</div>
+<div class="steps">
+<div class="step"><div class="node">1</div><div class="t">{{flow.s1}}</div></div>
+<div class="step"><div class="node">2</div><div class="t">{{flow.s2}}</div></div>
+<div class="step"><div class="node">3</div><div class="t">{{flow.s3}}</div></div>
+<div class="step"><div class="node">4</div><div class="t">{{flow.s4}}</div></div>
+<div class="step"><div class="node">5</div><div class="t">{{flow.s5}}</div></div>
+</div>
+</div>
+</div>
+</article>
+<article class="case fade-up">
+<div class="case-body">
+<div class="case-head">
+<div class="case-route">
+<span>{{case.r2a}}</span>
+<span class="sep">→</span>
+<span>{{case.r2b}}</span>
+</div>
+<span class="badge">
+<svg class="check" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-11" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span>{{case.done}}</span>
+</span>
+</div>
+<div class="case-meta">
+<div><div class="k">{{case.goods}}</div><div class="v">{{case.g2}}</div></div>
+<div><div class="k">{{case.weight}}</div><div class="v" dir="ltr" style="font-family:'Inter','Cairo',sans-serif">5,000 <span>{{case.tons}}</span></div></div>
+<div><div class="k">{{case.type}}</div><div class="v">{{case.import}}</div></div>
+<div><div class="k">{{case.time}}</div><div class="v"><span dir="ltr" style="font-family:'Inter','Cairo',sans-serif">5</span> <span>{{case.days}}</span></div></div>
+</div>
+<div class="case-docs">
+<div class="k">{{case.docs}}</div>
+<div class="doc-chips">
+<span class="chip">{{case.d.inv}}</span>
+<span class="chip">{{case.d.cnf}}</span>
+<span class="chip">{{case.d.dec}}</span>
+<span class="chip">{{case.d.lic}}</span>
+</div>
+</div>
+<div class="timeline">
+<div class="k">{{case.flow}}</div>
+<div class="steps">
+<div class="step"><div class="node">1</div><div class="t">{{flow.s1}}</div></div>
+<div class="step"><div class="node">2</div><div class="t">{{flow.s2}}</div></div>
+<div class="step"><div class="node">3</div><div class="t">{{flow.s3}}</div></div>
+<div class="step"><div class="node">4</div><div class="t">{{flow.s4}}</div></div>
+<div class="step"><div class="node">5</div><div class="t">{{flow.s5}}</div></div>
+</div>
+</div>
+</div>
+</article>
+<article class="case fade-up">
+<div class="case-body">
+<div class="case-head">
+<div class="case-route">
+<span>{{case.r3a}}</span>
+<span class="sep">→</span>
+<span>{{case.r3b}}</span>
+</div>
+<span class="badge">
+<svg class="check" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-11" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span>{{case.done}}</span>
+</span>
+</div>
+<div class="case-meta">
+<div><div class="k">{{case.goods}}</div><div class="v">{{case.g3}}</div></div>
+<div><div class="k">{{case.weight}}</div><div class="v" dir="ltr" style="font-family:'Inter','Cairo',sans-serif">6,000 <span>{{case.tons}}</span></div></div>
+<div><div class="k">{{case.type}}</div><div class="v">{{case.import}}</div></div>
+<div><div class="k">{{case.time}}</div><div class="v"><span dir="ltr" style="font-family:'Inter','Cairo',sans-serif">4</span> <span>{{case.days}}</span></div></div>
+</div>
+<div class="case-docs">
+<div class="k">{{case.docs}}</div>
+<div class="doc-chips">
+<span class="chip">{{case.d.inv}}</span>
+<span class="chip">{{case.d.dec}}</span>
+<span class="chip">{{case.d.org}}</span>
+<span class="chip">{{case.d.trn}}</span>
+</div>
+</div>
+<div class="timeline">
+<div class="k">{{case.flow}}</div>
+<div class="steps">
+<div class="step"><div class="node">1</div><div class="t">{{flow.s1}}</div></div>
+<div class="step"><div class="node">2</div><div class="t">{{flow.s2}}</div></div>
+<div class="step"><div class="node">3</div><div class="t">{{flow.s3}}</div></div>
+<div class="step"><div class="node">4</div><div class="t">{{flow.s4}}</div></div>
+<div class="step"><div class="node">5</div><div class="t">{{flow.s5}}</div></div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="block" id="why">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">{{why.eye}}</div>
+<h2>{{why.title}}</h2>
+<p>{{why.sub}}</p>
+</div>
+<div class="why">
+<div class="stat fade-up">
+<div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7l9 4 9-4-9-4-9 4zm0 0v10l9 4 9-4V7M12 11v10" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+<div class="n">+3000</div>
+<div class="l">{{why.s1}}</div>
+</div>
+<div class="stat fade-up">
+<div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+<div class="n">+11</div>
+<div class="l">{{why.s2}}</div>
+</div>
+<div class="stat fade-up">
+<div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg></div>
+<div class="n">7</div>
+<div class="l">{{why.s3}}</div>
+</div>
+<div class="stat fade-up">
+<div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+<div class="n" style="font-size:30px;line-height:1.15">{{why.fast}}</div>
+<div class="l">{{why.s4}}</div>
+</div>
+</div>
+</div>
+</section>
+<section class="block cases-bg" id="faq">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">{{faq.eye}}</div>
+<h2>{{faq.title}}</h2>
+<p>{{faq.sub}}</p>
+</div>
+{{#faq home.faq}}
+<p class="faq-more"><a href="{{@guide}}">{{iran.guideLink}}</a></p>
+</div>
+</section>
+<section class="block" id="contact">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">{{contact.eye}}</div>
+<h2>{{contact.title}}</h2>
+<p>{{contact.sub}}</p>
+</div>
+<div class="contact-grid">
+<form class="contact-card" id="contactForm" onsubmit="return handleContactForm(event);">
+<div class="form-row">
+<div class="field">
+<label>{{form.name}}</label>
+<input type="text" id="cfName" required>
+</div>
+<div class="field">
+<label>{{form.phone}}</label>
+<input type="tel" id="cfPhone" dir="ltr" placeholder="+964 ..." pattern="^\+?[0-9\s\-()]{7,20}$" required>
+</div>
+</div>
+<div class="form-row">
+<div class="field">
+<label>{{form.email}}</label>
+<input type="email" id="cfEmail" dir="ltr" required>
+</div>
+<div class="field">
+<label>{{form.service}}</label>
+<select id="cfService">
+<option>{{form.opt1}}</option>
+<option>{{form.opt2}}</option>
+<option>{{form.opt3}}</option>
+<option>{{form.opt4}}</option>
+</select>
+</div>
+</div>
+<div class="field" style="margin-bottom: 14px;">
+<label>{{form.msg}}</label>
+<textarea id="cfMsg" placeholder="{{form.msgPh}}"></textarea>
+</div>
+<div class="form-actions">
+<button type="submit" class="btn btn-navy">
+<span>{{form.submit}}</span>
+<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<span class="privacy">{{form.privacy}}</span>
+</div>
+<div id="waChoose" style="display:none; margin-top:14px; text-align:center;">
+<a id="waBtn1" href="#" target="_blank" rel="noopener" class="wa-btn" style="margin-top:0;">
+<span class="wa-ic"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg></span>
+<span class="lbl"><span class="t" dir="ltr">+964 775 168 7406</span></span>
+</a>
+</div>
+</form>
+<aside class="contact-side">
+<h3>{{contact.aside.title}}</h3>
+<div class="info">
+<div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg></div>
+<div>
+<div class="k">{{contact.addr.k}}</div>
+<div class="v">{{contact.addr.v}}</div>
+</div>
+</div>
+<div class="info">
+<div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 6c0 9 6 15 15 15l3-4-5-2-2 2c-3-1-5-3-6-6l2-2-2-5-5 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+<div>
+<div class="k">{{contact.phone.k}}</div>
+<a class="v en" dir="ltr" href="tel:+9647751687406">+964 775 168 7406</a>
+</div>
+</div>
+<div class="info">
+<div class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+<div>
+<div class="k">{{contact.mail.k}}</div>
+<a class="v en" dir="ltr" href="mailto:support@iqbait.com">support@iqbait.com</a>
+</div>
+</div>
+<div class="info">
+<div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+<div>
+<div class="k">{{contact.hours.k}}</div>
+<div class="v">{{contact.hours.v}}</div>
+</div>
+</div>
+<a href="https://wa.me/9647751687406" target="_blank" rel="noopener" class="wa-btn" aria-label="WhatsApp" style="margin-bottom:8px;">
+<span class="wa-ic" aria-hidden="true">
+<svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg>
+</span>
+<span class="lbl">
+<span class="t">{{contact.wa}}</span>
+<span class="s" dir="ltr">+964 775 168 7406</span>
+</span>
+</a>
+</aside>
+</div>
+</div>
+</section>
