@@ -1,14 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://iqbait.com/</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://iqbait.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://iqbait.com/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://iqbait.com/?lang=zh"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://iqbait.com/?lang=fa"/>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>https://iqbait.com/</loc>
+<lastmod>2026-10-22</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+<xhtml:link rel="alternate" hreflang="ar" href="https://iqbait.com/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://iqbait.com/en/"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://iqbait.com/zh/"/>
+<xhtml:link rel="alternate" hreflang="fa" href="https://iqbait.com/fa/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://iqbait.com/en/"/>
+<image:image><image:loc>https://iqbait.com/images/hero-1.webp</image:loc></image:image>
+<image:image><image:loc>https://iqbait.com/images/hero-2.webp</image:loc></image:image>
+<image:image><image:loc>https://iqbait.com/images/hero-3.webp</image:loc></image:image>
+</url>
+<url>
+<loc>https://iqbait.com/en/</loc>
+<lastmod>2026-10-22</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+<xhtml:link rel="alternate" hreflang="ar" href="https://iqbait.com/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://iqbait.com/en/"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://iqbait.com/zh/"/>
+<xhtml:link rel="alternate" hreflang="fa" href="https://iqbait.com/fa/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://iqbait.com/en/"/>
+<image:image><image:loc>https://iqbait.com/images/hero-1.webp</image:loc></image:image>
+<image:image><image:loc>https://iqbait.com/images/hero-2.webp</image:loc></image:image>
+<image:image><image:loc>https://iqbait.com/images/hero-3.webp</image:loc></image:image>
+</url>
+<url>
+<loc>https://iqbait.com/zh/</loc>
+<lastmod>2026-10-22</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+<xhtml:link rel="alternate" hreflang="ar" href="https://iqbait.com/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://iqbait.com/en/"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://iqbait.com/zh/"/>
+<xhtml:link rel="alternate" hreflang="fa" href="https://iqbait.com/fa/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://iqbait.com/en/"/>
+<image:image><image:loc>https://iqbait.com/images/hero-1.webp</image:loc></image:image>
+<image:image><image:loc>https://iqbait.com/images/hero-2.webp</image:loc></image:image>
+<image:image><image:loc>https://iqbait.com/images/hero-3.webp</image:loc></image:image>
+</url>
+<url>
+<loc>https://iqbait.com/fa/</loc>
+<lastmod>2026-10-22</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+<xhtml:link rel="alternate" hreflang="ar" href="https://iqbait.com/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://iqbait.com/en/"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://iqbait.com/zh/"/>
+<xhtml:link rel="alternate" hreflang="fa" href="https://iqbait.com/fa/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://iqbait.com/en/"/>
+<image:image><image:loc>https://iqbait.com/images/hero-1.webp</image:loc></image:image>
+<image:image><image:loc>https://iqbait.com/images/hero-2.webp</image:loc></image:image>
+<image:image><image:loc>https://iqbait.com/images/hero-3.webp</image:loc></image:image>
+</url>
+<url>
+<loc>https://iqbait.com/iran-iraq-customs-clearance/</loc>
+<lastmod>2026-10-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+<xhtml:link rel="alternate" hreflang="ar" href="https://iqbait.com/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://iqbait.com/en/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://iqbait.com/zh/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="fa" href="https://iqbait.com/fa/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://iqbait.com/en/iran-iraq-customs-clearance/"/>
+</url>
+<url>
+<loc>https://iqbait.com/en/iran-iraq-customs-clearance/</loc>
+<lastmod>2026-10-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+<xhtml:link rel="alternate" hreflang="ar" href="https://iqbait.com/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://iqbait.com/en/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://iqbait.com/zh/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="fa" href="https://iqbait.com/fa/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://iqbait.com/en/iran-iraq-customs-clearance/"/>
+</url>
+<url>
+<loc>https://iqbait.com/zh/iran-iraq-customs-clearance/</loc>
+<lastmod>2026-10-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+<xhtml:link rel="alternate" hreflang="ar" href="https://iqbait.com/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://iqbait.com/en/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://iqbait.com/zh/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="fa" href="https://iqbait.com/fa/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://iqbait.com/en/iran-iraq-customs-clearance/"/>
+</url>
+<url>
+<loc>https://iqbait.com/fa/iran-iraq-customs-clearance/</loc>
+<lastmod>2026-10-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+<xhtml:link rel="alternate" hreflang="ar" href="https://iqbait.com/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://iqbait.com/en/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://iqbait.com/zh/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="fa" href="https://iqbait.com/fa/iran-iraq-customs-clearance/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://iqbait.com/en/iran-iraq-customs-clearance/"/>
+</url>
 </urlset>

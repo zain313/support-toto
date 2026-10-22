@@ -1,11 +1,7 @@
-const CACHE = 'iqbait-v2';
-const ASSETS = [
-  '/',
-  '/index.html',
+const CACHE = 'iqbait-v3';
+const PRECACHE = [
   '/offline.html',
   '/images/hero-1.webp',
-  '/images/hero-2.webp',
-  '/images/hero-3.webp',
   '/images/icon-192.png',
   '/images/icon-512.png',
   '/manifest.json'
@@ -13,7 +9,7 @@ const ASSETS = [
 
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting())
+    caches.open(CACHE).then(c => c.addAll(PRECACHE)).then(() => self.skipWaiting())
   );
 });
 
@@ -25,20 +21,31 @@ self.addEventListener('activate', e => {
   );
 });
 
+function store(req, res) {
+  if (res.ok) {
+    const copy = res.clone();
+    caches.open(CACHE).then(c => c.put(req, copy));
+  }
+  return res;
+}
+
 self.addEventListener('fetch', e => {
-  if (e.request.method !== 'GET') return;
-  const url = new URL(e.request.url);
-  if (url.origin !== location.origin) return;
+  const req = e.request;
+  if (req.method !== 'GET') return;
+  if (new URL(req.url).origin !== location.origin) return;
+
+  // Pages always come from the network so visitors see the latest content; the cache is only an offline fallback.
+  if (req.mode === 'navigate') {
+    e.respondWith(
+      fetch(req).then(res => store(req, res))
+        .catch(() => caches.match(req).then(cached => cached || caches.match('/offline.html')))
+    );
+    return;
+  }
 
   e.respondWith(
-    caches.match(e.request).then(cached => {
-      const network = fetch(e.request).then(res => {
-        if (res.ok) {
-          const clone = res.clone();
-          caches.open(CACHE).then(c => c.put(e.request, clone));
-        }
-        return res;
-      }).catch(() => caches.match('/offline.html'));
+    caches.match(req).then(cached => {
+      const network = fetch(req).then(res => store(req, res)).catch(() => cached);
       return cached || network;
     })
   );
