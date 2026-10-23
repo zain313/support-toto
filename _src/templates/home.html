@@ -27,9 +27,9 @@
 </div>
 <div class="hero-art">
 <div class="hero-slideshow" id="heroSlideshow" aria-label="Hero slideshow">
-<div class="slide active" role="img" aria-label="{{cap.1}}" style="background-image:url('/images/hero-1.webp')" data-caption="{{cap.1}}"></div>
-<div class="slide" role="img" aria-label="{{cap.2}}" data-src="/images/hero-2.webp" data-caption="{{cap.2}}"></div>
-<div class="slide" role="img" aria-label="{{cap.3}}" data-src="/images/hero-3.webp" data-caption="{{cap.3}}"></div>
+<img class="slide active" src="/images/hero-1.webp" width="1024" height="645" alt="{{cap.1}}" data-caption="{{cap.1}}" fetchpriority="high">
+<img class="slide" src="/images/hero-2.webp" width="640" height="370" alt="{{cap.2}}" data-caption="{{cap.2}}" loading="lazy" decoding="async">
+<img class="slide" src="/images/hero-3.webp" width="1400" height="1018" alt="{{cap.3}}" data-caption="{{cap.3}}" loading="lazy" decoding="async">
 <div class="caption" id="heroCaption"><span class="ic"></span><span>{{cap.1}}</span></div>
 <div class="dots" id="heroDots" role="tablist" aria-label="Slideshow controls">
 <button class="active" data-idx="0" aria-label="Slide 1"></button>
@@ -271,7 +271,7 @@
 <p>{{faq.sub}}</p>
 </div>
 {{#faq home.faq}}
-<p class="faq-more"><a href="{{@guide}}">{{iran.guideLink}}</a></p>
+<p class="faq-more"><a href="{{@guide}}">{{iran.guideLink}}</a><a href="{{@china}}">{{nav.china}}</a><a href="{{@glossary}}">{{nav.glossary}}</a></p>
 </div>
 </section>
 <section class="block" id="contact">

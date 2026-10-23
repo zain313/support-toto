@@ -3,6 +3,12 @@
   "home.seo.desc": "Customs broker at the Zurbatiyah crossing opposite Mehran since 2015. We clear imports, exports and transit through every Iran–Iraq border and Iranian port. Quote in 24 hours.",
   "guide.seo.title": "Iran to Iraq Customs Clearance Guide: Crossings, Documents, Steps",
   "guide.seo.desc": "A practical guide to clearing goods between Iran and Iraq: the seven land border crossings, Iranian ports and transit routes, required documents, steps and timelines — from a broker at Zurbatiyah.",
+  "hub.seo.title": "Customs Clearance at Every Iraq–Iran Border Crossing",
+  "hub.seo.desc": "The seven land border crossings between Iraq and Iran — Zurbatiyah–Mehran, Al-Sheeb–Chazabeh, Shalamcheh, Al-Mundhiriya–Khosravi, Haj Omran, Bashmakh and Parwezkhan: where each one is, which provinces it serves and how we clear your goods there.",
+  "china.seo.title": "Shipping from China to Iraq via Iran: Route, Documents, Clearance",
+  "china.seo.desc": "How to ship goods from China to Iraq through Bandar Abbas and overland transit across Iran: the route step by step, documents and the COC certificate, and clearance at Zurbatiyah or Shalamcheh.",
+  "gloss.seo.title": "Customs Glossary: Arabic – Persian – English – Chinese",
+  "gloss.seo.desc": "Key customs clearance and trade terms used between Iraq, Iran and China, with their Arabic, Persian and Chinese equivalents and a short explanation of each.",
   "og.alt": "Al-Bait Al-Iraqi Customs Clearance — Zurbatiyah border crossing",
   "org.desc": "Customs broker based at the Zurbatiyah border crossing in Wasit, Iraq, opposite Iran's Mehran crossing, clearing imports, exports and transit cargo between Iran and Iraq through every land crossing and Iranian seaport since 2015.",
   "org.street": "Zurbatiyah Border Crossing",
@@ -42,6 +48,9 @@
   "nav.iran": "Iran crossings",
   "nav.faq": "FAQ",
   "nav.guide": "Iran–Iraq clearance guide",
+  "nav.crossings": "Border crossings",
+  "nav.china": "China to Iraq via Iran",
+  "nav.glossary": "Customs glossary",
   "cta.viewCases": "View our cases",
   "cta.getQuote": "Get a quote",
   "hero.pill": "Since 2015 · 11+ years of experience",
@@ -84,41 +93,263 @@
   "iran.portsTitle": "Iranian ports & transit routes to Iraq",
   "iran.guideLink": "Read the Iran–Iraq customs clearance guide",
   "iran.cta": "Ask about your crossing on WhatsApp",
+  "iran.more": "Crossing details",
   "crossings": [
     {
       "iq": "Zurbatiyah — Wasit",
       "ir": "Mehran — Ilam",
-      "note": "Our head office · route to Baghdad and central Iraq"
+      "note": "Our head office · route to Baghdad and central Iraq",
+      "name": "Zurbatiyah–Mehran crossing",
+      "title": "Customs Clearance at Zurbatiyah–Mehran Border | Al-Bait Al-Iraqi",
+      "desc": "Our office is inside the Zurbatiyah border crossing in Wasit, opposite Iran's Mehran crossing. Import, export and transit clearance to Baghdad, Kut and the Middle Euphrates — 3 working days on average.",
+      "h1": "Customs clearance at the Zurbatiyah border crossing (Mehran)",
+      "intro": "The Zurbatiyah crossing in Badra district, Wasit Governorate, is Iraq's land gateway opposite the Mehran crossing in Iran's Ilam Province. Goods heading for Baghdad, Kut and the Middle Euphrates provinces enter here. Our head office is at this crossing, so we follow your shipment on the spot from the truck's arrival to release.",
+      "iqFull": "Zurbatiyah crossing — Badra district, Wasit Governorate",
+      "irFull": "Mehran — Ilam Province",
+      "serves": "Wasit (Kut), Baghdad, Babil, Karbala and Najaf",
+      "feeds": "Ilam, Kermanshah and Tehran, plus transit cargo from Bandar Abbas",
+      "when": [
+        "Your goods are going to Baghdad, Kut or the Middle Euphrates provinces.",
+        "Transit cargo coming from Bandar Abbas and central Iran.",
+        "You want your customs broker physically present at the crossing."
+      ],
+      "notes": [
+        "The crossing gets very busy during the Arbaeen pilgrimage season because of pilgrim traffic; plan shipments before or after the season.",
+        "Our office is at the crossing every working day, Sunday to Thursday."
+      ],
+      "faq": [
+        {
+          "q": "Do you have an office at the Zurbatiyah crossing?",
+          "a": "Yes. Our head office is at the Zurbatiyah border crossing in Badra district, Wasit Governorate, and we follow shipments at the crossing directly."
+        },
+        {
+          "q": "Where do goods go after clearance at Zurbatiyah?",
+          "a": "Mostly to Kut, Baghdad, Babil, Karbala and Najaf, and they can continue to any Iraqi province after release."
+        },
+        {
+          "q": "Does the Arbaeen season affect clearance at Zurbatiyah?",
+          "a": "Yes. Pilgrim traffic through Mehran and Zurbatiyah rises sharply during Arbaeen, so we recommend scheduling shipments before or after the season, and we tell you how busy the crossing is before you load."
+        }
+      ]
     },
     {
       "iq": "Al-Sheeb — Maysan",
       "ir": "Chazabeh — Khuzestan",
-      "note": "Route to Maysan and the southern provinces"
+      "note": "Route to Maysan and the southern provinces",
+      "name": "Al-Sheeb–Chazabeh crossing",
+      "title": "Customs Clearance at Al-Sheeb–Chazabeh Border | Al-Bait Al-Iraqi",
+      "desc": "Clearing goods through the Al-Sheeb crossing in Maysan, opposite Chazabeh in Khuzestan: imports from Iran and transit cargo to Amarah, Dhi Qar and southern Iraq.",
+      "h1": "Customs clearance at the Al-Sheeb border crossing (Chazabeh)",
+      "intro": "The Al-Sheeb crossing in Maysan Governorate faces the Chazabeh crossing in Iran's Khuzestan Province. It is a direct route for goods coming from Ahvaz and the Khuzestan ports towards Amarah and southern Iraq. We clear shipments here and follow them from the Iranian side to release.",
+      "iqFull": "Al-Sheeb crossing — Maysan Governorate",
+      "irFull": "Chazabeh — Khuzestan Province (near Bostan)",
+      "serves": "Maysan (Amarah), Dhi Qar and the southern provinces",
+      "feeds": "Ahvaz and the Khuzestan ports such as Bandar Imam Khomeini",
+      "when": [
+        "Your goods are going to Amarah, Dhi Qar or southern Iraq.",
+        "Goods coming from Ahvaz and the Khuzestan ports.",
+        "As an alternative to Shalamcheh when it is congested."
+      ],
+      "notes": [
+        "The crossing is also used by pilgrims during the Arbaeen season, so traffic rises at that time.",
+        "Naming the correct entry crossing in your transport documents avoids delays."
+      ],
+      "faq": [
+        {
+          "q": "Do you clear goods at the Al-Sheeb crossing?",
+          "a": "Yes. We handle import and transit clearance at Al-Sheeb in Maysan, from filing the declaration to release, and review your documents before loading."
+        },
+        {
+          "q": "What is the difference between Al-Sheeb and Shalamcheh?",
+          "a": "Al-Sheeb is in Maysan and suits goods going to Amarah and Dhi Qar; Shalamcheh is in Basra and suits shipments for Basra and the far south. We help you choose the one closest to your destination."
+        },
+        {
+          "q": "Where do goods reach the Chazabeh crossing from?",
+          "a": "Mostly from Ahvaz and the Khuzestan ports such as Bandar Imam Khomeini, as well as transit cargo crossing Iran by road."
+        }
+      ]
     },
     {
       "iq": "Shalamcheh — Basra",
       "ir": "Shalamcheh — Khuzestan",
-      "note": "Route to Basra and southern Iraq"
+      "note": "Route to Basra and southern Iraq",
+      "name": "Shalamcheh crossing",
+      "title": "Customs Clearance at Shalamcheh Border (Basra) | Al-Bait Al-Iraqi",
+      "desc": "Clearing goods through the Shalamcheh crossing between Basra and Khuzestan: imports from Iran and transit cargo from the Khorramshahr and Bandar Imam Khomeini ports to Basra and southern Iraq.",
+      "h1": "Customs clearance at the Shalamcheh border crossing",
+      "intro": "The Shalamcheh crossing east of Basra is the southern land gateway between Iraq and Iran, facing the Shalamcheh crossing in Khuzestan near Khorramshahr. Its closeness to Basra and to the Khorramshahr and Bandar Imam Khomeini ports makes it the usual choice for goods heading to Basra and southern Iraq.",
+      "iqFull": "Shalamcheh crossing — Basra Governorate",
+      "irFull": "Shalamcheh — Khuzestan Province (near Khorramshahr)",
+      "serves": "Basra, Dhi Qar, Maysan and the south",
+      "feeds": "Khorramshahr, Abadan and Ahvaz, and the Khorramshahr and Bandar Imam Khomeini ports",
+      "when": [
+        "Your goods are going to Basra or the far south of Iraq.",
+        "Goods coming from Khuzestan ports such as Khorramshahr and Bandar Imam Khomeini.",
+        "Transit cargo discharged at Iran's southern ports."
+      ],
+      "notes": [
+        "Traffic at the crossing peaks during the Arbaeen season because of pilgrims.",
+        "Being close to Basra city shortens the haul after release."
+      ],
+      "faq": [
+        {
+          "q": "Do you offer customs clearance at Shalamcheh?",
+          "a": "Yes. We clear goods entering through Shalamcheh for Basra and the south, and follow the shipment from the Iranian side until release."
+        },
+        {
+          "q": "Which Iranian port is closest to the Shalamcheh crossing?",
+          "a": "Khorramshahr port is the closest, followed by Bandar Imam Khomeini in Khuzestan; goods are trucked from both to Shalamcheh."
+        },
+        {
+          "q": "Can I ship goods from China to Basra via Shalamcheh?",
+          "a": "Yes. Containers are discharged at an Iranian port such as Bandar Abbas or Bandar Imam Khomeini, then trucked in transit to Shalamcheh, and we clear them on entry into Iraq."
+        }
+      ]
     },
     {
       "iq": "Al-Mundhiriya — Diyala",
       "ir": "Khosravi — Kermanshah",
-      "note": "Route to Diyala and Baghdad"
+      "note": "Route to Diyala and Baghdad",
+      "name": "Al-Mundhiriya–Khosravi crossing",
+      "title": "Customs Clearance at Al-Mundhiriya–Khosravi Border | Al-Bait Al-Iraqi",
+      "desc": "Clearing goods through the Al-Mundhiriya crossing in Diyala, opposite Khosravi in Kermanshah: a direct route from western Iran and Tehran to Diyala and Baghdad.",
+      "h1": "Customs clearance at the Al-Mundhiriya border crossing (Khosravi)",
+      "intro": "The Al-Mundhiriya crossing is in Khanaqin district, Diyala Governorate, facing the Khosravi crossing near Qasr-e Shirin in Iran's Kermanshah Province. It lies on the historic road between Baghdad and western Iran and suits goods coming from Kermanshah, Hamadan and Tehran towards Diyala and Baghdad.",
+      "iqFull": "Al-Mundhiriya crossing — Khanaqin district, Diyala Governorate",
+      "irFull": "Khosravi — Qasr-e Shirin, Kermanshah Province",
+      "serves": "Diyala (Baqubah), Baghdad, and the central and northern provinces",
+      "feeds": "Kermanshah, Hamadan and Tehran",
+      "when": [
+        "Your goods are going to Diyala or Baghdad.",
+        "Goods coming from western Iran and Tehran via Kermanshah.",
+        "As an alternative to Zurbatiyah, depending on where the goods come from and go to."
+      ],
+      "notes": [
+        "The Kermanshah–Qasr-e Shirin–Khosravi road is one of the oldest trade routes between Iraq and Iran.",
+        "Name the entry crossing in your transport documents before loading to avoid re-routing."
+      ],
+      "faq": [
+        {
+          "q": "Do you clear goods at the Al-Mundhiriya crossing?",
+          "a": "Yes. We handle import and transit clearance at Al-Mundhiriya in Diyala, review the documents before loading and follow the shipment to release."
+        },
+        {
+          "q": "Which is better for Baghdad: Al-Mundhiriya or Zurbatiyah?",
+          "a": "Both serve Baghdad. Al-Mundhiriya is closer for goods from Kermanshah and Hamadan, while Zurbatiyah suits goods from Ilam and southern Iran. We suggest the better option based on the origin and destination of your goods."
+        },
+        {
+          "q": "Where is the Khosravi crossing?",
+          "a": "Khosravi is in Iran's Kermanshah Province near the town of Qasr-e Shirin, opposite the Al-Mundhiriya crossing in Khanaqin district, Diyala Governorate."
+        }
+      ]
     },
     {
       "iq": "Haj Omran — Erbil",
       "ir": "Tamarchin — Piranshahr",
-      "note": "Route to Erbil and the Kurdistan Region"
+      "note": "Route to Erbil and the Kurdistan Region",
+      "name": "Haj Omran–Tamarchin crossing",
+      "title": "Customs Clearance at Haj Omran–Tamarchin Border | Al-Bait Al-Iraqi",
+      "desc": "Clearing goods through the Haj Omran crossing in Erbil, opposite Tamarchin near Piranshahr: the route from north-western Iran to Erbil and the Kurdistan Region.",
+      "h1": "Customs clearance at the Haj Omran border crossing (Tamarchin)",
+      "intro": "The Haj Omran crossing in Erbil Governorate, Kurdistan Region, faces the Tamarchin crossing near Piranshahr in Iran's West Azerbaijan Province. It serves goods coming from Urmia, Tabriz and north-western Iran towards Erbil and the region's cities along a mountain road.",
+      "iqFull": "Haj Omran crossing — Erbil Governorate, Kurdistan Region",
+      "irFull": "Tamarchin — Piranshahr, West Azerbaijan Province",
+      "serves": "Erbil, Duhok and northern Iraq",
+      "feeds": "Urmia, Tabriz, Mahabad and north-western Iran",
+      "when": [
+        "Your goods are going to Erbil or Duhok.",
+        "Goods coming from West Azerbaijan and north-western Iran."
+      ],
+      "notes": [
+        "The crossing is in the Kurdistan Region and run by the regional authorities, so some procedures can differ from crossings in central and southern Iraq.",
+        "The road is mountainous and can be affected by snow in winter; plan shipping dates early."
+      ],
+      "faq": [
+        {
+          "q": "Do you clear goods at the Haj Omran crossing?",
+          "a": "Yes. We follow the clearance of shipments entering through Haj Omran to Erbil and the Kurdistan Region, from document review to release."
+        },
+        {
+          "q": "Are procedures different at Kurdistan Region crossings?",
+          "a": "The regional authorities run their own border crossings, so some procedures and requirements can differ from those in central and southern Iraq. We review your shipment in advance and explain what is needed before loading."
+        },
+        {
+          "q": "Is the Haj Omran crossing affected by the weather?",
+          "a": "The road to the crossing is mountainous and can be affected by snow in winter, so we recommend allowing extra time for shipments in that season."
+        }
+      ]
     },
     {
       "iq": "Bashmakh — Sulaymaniyah",
       "ir": "Bashmaq — Marivan",
-      "note": "Route to Sulaymaniyah and the Kurdistan Region"
+      "note": "Route to Sulaymaniyah and the Kurdistan Region",
+      "name": "Bashmakh–Bashmaq crossing",
+      "title": "Customs Clearance at Bashmakh–Bashmaq Border | Al-Bait Al-Iraqi",
+      "desc": "Clearing goods through the Bashmakh crossing in Sulaymaniyah, opposite Bashmaq near Marivan: the route from Iranian Kurdistan to Sulaymaniyah and Kirkuk.",
+      "h1": "Customs clearance at the Bashmakh border crossing (Bashmaq)",
+      "intro": "The Bashmakh crossing is in Penjwen district, Sulaymaniyah Governorate, facing the Bashmaq crossing near Marivan in Iran's Kurdistan Province. It serves goods coming from Sanandaj, Marivan and western Iran towards Sulaymaniyah and Kirkuk.",
+      "iqFull": "Bashmakh crossing — Penjwen district, Sulaymaniyah Governorate",
+      "irFull": "Bashmaq — Marivan, Kurdistan Province",
+      "serves": "Sulaymaniyah, Kirkuk and the Kurdistan Region",
+      "feeds": "Sanandaj, Marivan, Hamadan and Tehran",
+      "when": [
+        "Your goods are going to Sulaymaniyah or Kirkuk.",
+        "Goods coming from Iranian Kurdistan and western Iran."
+      ],
+      "notes": [
+        "The crossing is in the Kurdistan Region and run by the regional authorities, so some procedures can differ from crossings in central and southern Iraq.",
+        "The Penjwen road is mountainous and can be affected by snow in winter."
+      ],
+      "faq": [
+        {
+          "q": "Do you clear goods at the Bashmakh crossing?",
+          "a": "Yes. We follow the clearance of shipments entering through Bashmakh to Sulaymaniyah and Kirkuk, and review your documents before loading."
+        },
+        {
+          "q": "Where is Iran's Bashmaq crossing?",
+          "a": "Bashmaq is near the town of Marivan in Iran's Kurdistan Province, opposite the Bashmakh crossing in Penjwen district, Sulaymaniyah Governorate."
+        },
+        {
+          "q": "Which crossing is best for goods going to Sulaymaniyah?",
+          "a": "Bashmakh–Bashmaq is the direct route to Sulaymaniyah, and Parwezkhan is another option for goods heading to the Garmiyan area. We suggest the better one based on where your goods come from."
+        }
+      ]
     },
     {
       "iq": "Parwezkhan — Kurdistan Region",
       "ir": "Parviz Khan — Kermanshah",
-      "note": "Route to the Kurdistan Region"
+      "note": "Route to the Kurdistan Region",
+      "name": "Parwezkhan crossing",
+      "title": "Customs Clearance at Parwezkhan–Parviz Khan Border | Al-Bait Al-Iraqi",
+      "desc": "Clearing goods through the Parwezkhan crossing between Iraq's Kurdistan Region and Iran's Kermanshah Province, towards Garmiyan and Sulaymaniyah.",
+      "h1": "Customs clearance at the Parwezkhan border crossing",
+      "intro": "The Parwezkhan crossing links Iraq's Kurdistan Region with Iran's Kermanshah Province near Qasr-e Shirin, serving goods heading to the Garmiyan area and Sulaymaniyah. We follow import and transit clearance here just as at the other crossings.",
+      "iqFull": "Parwezkhan crossing — Kurdistan Region (Garmiyan administration)",
+      "irFull": "Parviz Khan — Qasr-e Shirin, Kermanshah Province",
+      "serves": "Garmiyan (Kalar), Sulaymaniyah and the Kurdistan Region",
+      "feeds": "Kermanshah, Qasr-e Shirin and western Iran",
+      "when": [
+        "Your goods are going to the Garmiyan area or southern Sulaymaniyah.",
+        "As an alternative to Al-Mundhiriya for goods heading to the Kurdistan Region."
+      ],
+      "notes": [
+        "The crossing is run by the Kurdistan Region authorities, so some procedures can differ from federal crossings.",
+        "Check your shipment's requirements with us before loading to avoid delays."
+      ],
+      "faq": [
+        {
+          "q": "Do you clear goods at the Parwezkhan crossing?",
+          "a": "Yes. We follow the clearance of shipments entering through Parwezkhan to Garmiyan and Sulaymaniyah, from document review to release."
+        },
+        {
+          "q": "What is the difference between Parwezkhan and Al-Mundhiriya?",
+          "a": "Both face Iran's Kermanshah Province: Parwezkhan leads into the Kurdistan Region, while Al-Mundhiriya leads to Diyala and Baghdad. The better choice depends on your goods' destination in Iraq."
+        },
+        {
+          "q": "Where do goods reach the Parviz Khan crossing from?",
+          "a": "Mostly from Kermanshah, Qasr-e Shirin and western Iran, as well as transit cargo crossing Iran by road."
+        }
+      ]
     }
   ],
   "ports": [
@@ -368,5 +599,228 @@
     }
   ],
   "guide.ctaTitle": "Ready to clear your next shipment from Iran?",
-  "guide.ctaText": "Send your shipment details on WhatsApp and get a quote within 24 hours."
+  "guide.ctaText": "Send your shipment details on WhatsApp and get a quote within 24 hours.",
+  "hub.eye": "Border crossings",
+  "hub.crumb": "Border crossings",
+  "hub.h1": "Border crossings between Iraq and Iran",
+  "hub.lead": "Seven official land crossings connect Iraq and Iran, from Basra in the south to Erbil in the north. Pick a crossing to see where it is, which provinces it serves, which routes lead to it from Iran, and how we clear your goods there.",
+  "xing.factsTitle": "Crossing at a glance",
+  "xing.serves": "Serves in Iraq",
+  "xing.feeds": "Routes from Iran",
+  "xing.service": "Our service",
+  "xing.serviceText": "Import, export and transit clearance, with follow-up until release",
+  "xing.whenTitle": "When to choose this crossing",
+  "xing.notesTitle": "Practical notes",
+  "xing.howTitle": "How we clear your goods",
+  "xing.howText": "We review your documents before loading, file the customs declaration when the truck arrives, follow the inspection and duty payment through to release, and update you on WhatsApp at every stage.",
+  "xing.faqTitle": "Questions about this crossing",
+  "xing.otherTitle": "Other crossings we cover",
+  "xing.ctaTitle": "Have a shipment through this crossing?",
+  "china.eye": "Shipping route",
+  "china.crumb": "China to Iraq via Iran",
+  "china.h1": "Shipping from China to Iraq via Iran: route, documents and customs clearance",
+  "china.summary": "Goods can be shipped from China to Iraq through Iranian ports — most often Shahid Rajaee Port in Bandar Abbas — and then trucked overland in transit across Iran to an Iraqi crossing such as Zurbatiyah–Mehran or Shalamcheh. Al-Bait Al-Iraqi for Customs Clearance follows the transit and clears the goods on entry into Iraq. WhatsApp: +964 775 168 7406.",
+  "china.whyTitle": "Why importers choose the Iran route",
+  "china.why": [
+    "The land crossings with Iran are close to Baghdad, central and southern Iraq.",
+    "The shipment can be routed to the crossing nearest its destination in Iraq.",
+    "An additional option alongside direct sea freight to Umm Qasr.",
+    "Our permanent presence at the Zurbatiyah crossing lets us follow the shipment the moment it arrives."
+  ],
+  "china.routeTitle": "The route from China to Iraq, step by step",
+  "china.steps": [
+    {
+      "name": "Sea freight from China",
+      "text": "Containers are shipped from Chinese ports to Shahid Rajaee Port in Bandar Abbas, with Iraq stated as the final destination in the shipping documents."
+    },
+    {
+      "name": "Arrival in Bandar Abbas",
+      "text": "The containers are discharged and the transit formalities are completed on the Iranian side."
+    },
+    {
+      "name": "Overland transit across Iran",
+      "text": "The goods are trucked across Iran under transit without entering the Iranian market."
+    },
+    {
+      "name": "Arrival at the Iraqi crossing",
+      "text": "The truck reaches the crossing closest to its destination, such as Zurbatiyah–Mehran for Baghdad and central Iraq or Shalamcheh for Basra."
+    },
+    {
+      "name": "Customs clearance in Iraq",
+      "text": "We file the customs declaration and follow the inspection and duty payment through to release."
+    },
+    {
+      "name": "Delivery in Iraq",
+      "text": "After release the goods continue to your warehouse, and we notify you as soon as clearance is complete."
+    }
+  ],
+  "china.docsTitle": "Documents needed for shipments from China",
+  "china.docs": [
+    {
+      "name": "Commercial invoice and packing list",
+      "text": "Issued by the Chinese supplier, with matching quantities and weights."
+    },
+    {
+      "name": "Certificate of origin",
+      "text": "Proof that the goods originate in China."
+    },
+    {
+      "name": "Bill of lading",
+      "text": "Showing Bandar Abbas as the port of discharge and Iraq as the final transit destination."
+    },
+    {
+      "name": "Certificate of conformity (COC)",
+      "text": "For goods covered by Iraq's conformity inspection programme, obtained from an approved inspection body before shipping from China."
+    },
+    {
+      "name": "Import licence",
+      "text": "For goods that require one under Iraqi regulations."
+    },
+    {
+      "name": "Iranian transit documents",
+      "text": "Prepared on the Iranian side to move the goods overland to the Iraqi border."
+    }
+  ],
+  "china.tipsTitle": "Tips before you ship from China",
+  "china.tips": [
+    "Get the certificate of conformity (COC) before shipping; obtaining it after arrival delays release.",
+    "Write the Iraqi consignee's name and details accurately on every document.",
+    "State on the bill of lading that the shipment is in transit to Iraq.",
+    "Send us copies of the documents before the vessel sails so we can review them.",
+    "Decide on the Iraqi crossing nearest your goods' destination from the start."
+  ],
+  "china.faq": [
+    {
+      "q": "Can goods be shipped from China to Iraq via Iran?",
+      "a": "Yes, it is a common route: containers are discharged at Bandar Abbas and trucked in transit across Iran to an Iraqi crossing, where we clear them."
+    },
+    {
+      "q": "Do Chinese goods need a COC certificate for Iraq?",
+      "a": "Goods covered by Iraq's conformity inspection programme need one, obtained from an approved inspection body before shipping. We review your shipment and tell you whether it is covered."
+    },
+    {
+      "q": "Which Iraqi crossing is best for containers from Bandar Abbas?",
+      "a": "Zurbatiyah–Mehran for Baghdad and central Iraq, Shalamcheh for Basra and the south, and the Kurdistan Region crossings for goods going to Erbil and Sulaymaniyah."
+    },
+    {
+      "q": "Do you follow the shipment before it reaches Iraq?",
+      "a": "Yes. We follow the shipment from its arrival at the Iranian port and keep you updated until it reaches the Iraqi crossing, where we clear it."
+    }
+  ],
+  "china.ctaTitle": "Shipping from China to Iraq?",
+  "china.ctaText": "Send us the shipment details and documents on WhatsApp and we will send you a clearance quote within 24 hours.",
+  "gloss.eye": "Glossary",
+  "gloss.crumb": "Customs glossary",
+  "gloss.h1": "Customs clearance glossary in four languages",
+  "gloss.lead": "Traders working between Iraq, Iran and China handle documents in several languages. Here are the key customs terms in Arabic, Persian, English and Chinese, each with a short explanation.",
+  "glossary": [
+    {
+      "term": "Customs clearance",
+      "def": "Completing the customs formalities to bring goods into or out of a country, from filing the declaration to release."
+    },
+    {
+      "term": "Customs broker",
+      "def": "A person or firm that handles customs formalities on behalf of an importer or exporter."
+    },
+    {
+      "term": "Customs declaration",
+      "def": "The official document filed with customs describing the goods, their value and origin so that duties can be assessed."
+    },
+    {
+      "term": "Customs tariff",
+      "def": "The schedule of duty rates applied to goods according to their classification."
+    },
+    {
+      "term": "Customs duties",
+      "def": "The amounts charged on goods when they are imported or exported, according to the tariff."
+    },
+    {
+      "term": "HS code (Harmonized System)",
+      "def": "An international number that classifies goods and determines the applicable duty rate."
+    },
+    {
+      "term": "Commercial invoice",
+      "def": "The supplier's sales invoice, showing the description, quantity and price of the goods."
+    },
+    {
+      "term": "Packing list",
+      "def": "A document detailing the contents, weights and number of packages."
+    },
+    {
+      "term": "Certificate of origin",
+      "def": "A certificate proving the country where the goods were made."
+    },
+    {
+      "term": "Certificate of conformity (COC)",
+      "def": "A certificate proving that goods meet Iraqi standards, issued by an approved inspection body before shipping."
+    },
+    {
+      "term": "Import licence",
+      "def": "An official approval required to import certain kinds of goods."
+    },
+    {
+      "term": "Bill of lading (B/L)",
+      "def": "The sea freight document that confirms the goods were loaded on the vessel and represents title to them."
+    },
+    {
+      "term": "CMR consignment note",
+      "def": "The international road transport document that travels with the goods across borders by truck."
+    },
+    {
+      "term": "Transit",
+      "def": "Goods passing through a third country under customs control without entering its market."
+    },
+    {
+      "term": "Border crossing",
+      "def": "The official crossing point between two countries where customs formalities are completed."
+    },
+    {
+      "term": "Inspection",
+      "def": "Physically examining the goods to confirm they match the documents."
+    },
+    {
+      "term": "Customs value",
+      "def": "The value of the goods on which duties are calculated."
+    },
+    {
+      "term": "Customs release",
+      "def": "Permission for the goods to leave the crossing once formalities are complete and duties are paid."
+    },
+    {
+      "term": "Health certificate",
+      "def": "A certificate confirming that food and animal products are fit for consumption."
+    },
+    {
+      "term": "Phytosanitary certificate",
+      "def": "A certificate confirming that agricultural products are free of pests and diseases."
+    },
+    {
+      "term": "Import",
+      "def": "Bringing goods into the country from abroad."
+    },
+    {
+      "term": "Export",
+      "def": "Sending goods out of the country."
+    },
+    {
+      "term": "Incoterms",
+      "def": "International rules that set out the seller's and buyer's responsibilities for shipping, insurance and costs."
+    },
+    {
+      "term": "CIF (cost, insurance and freight)",
+      "def": "A price that includes the goods, insurance and freight up to the port of arrival."
+    },
+    {
+      "term": "FOB (free on board)",
+      "def": "A price under which the seller covers costs until the goods are loaded on the vessel at the port of shipment."
+    },
+    {
+      "term": "Power of attorney",
+      "def": "A document authorising the customs broker to complete formalities in the goods owner's name."
+    },
+    {
+      "term": "Container",
+      "def": "A standard 20- or 40-foot shipping box used to move goods by sea and land."
+    }
+  ]
 }

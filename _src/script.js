@@ -10,9 +10,6 @@ let timer;
 function show(i){
 idx = (i + slides.length) % slides.length;
 const s = slides[idx];
-if (s.dataset.src && !s.style.backgroundImage){
-s.style.backgroundImage = "url('" + s.dataset.src + "')";
-}
 slides.forEach((sl, k) => sl.classList.toggle('active', k === idx));
 dots.forEach((d, k) => d.classList.toggle('active', k === idx));
 if (captionEl && s.dataset.caption) captionEl.textContent = s.dataset.caption;

@@ -1,11 +1,7 @@
 <article class="guide">
 <header class="guide-hero">
 <div class="container">
-<nav class="crumbs" aria-label="Breadcrumb">
-<a href="{{@home}}">{{nav.home}}</a>
-<span aria-hidden="true">›</span>
-<span aria-current="page">{{guide.crumb}}</span>
-</nav>
+{{@crumbs}}
 <div class="eyebrow">{{guide.eye}}</div>
 <h1>{{guide.h1}}</h1>
 <p class="updated">{{guide.updated}}: <time datetime="{{@lastmod}}">{{@lastmodLabel}}</time></p>
@@ -27,10 +23,12 @@
 <section id="crossings">
 <h2>{{guide.crossTitle}}</h2>
 {{#crossingTable}}
+<p class="note"><a class="text-link" href="{{@hub}}">{{nav.crossings}}</a></p>
 </section>
 <section id="ports">
 <h2>{{iran.portsTitle}}</h2>
 {{#ports}}
+<p class="note"><a class="text-link" href="{{@china}}">{{nav.china}}</a></p>
 </section>
 <section id="routes">
 <h2>{{guide.routesTitle}}</h2>
