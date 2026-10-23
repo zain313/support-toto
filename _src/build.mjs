@@ -21,7 +21,6 @@ const SITE = {
   geo: { latitude: 33.13, longitude: 46.1 },
   ogImage: { path: '/images/og-cover.jpg', width: 1200, height: 630 },
   fbVerification: 'sutxxrsdtg8j2zsn03ri442dxwtb39',
-  guidePublished: '2026-10-22',
 };
 
 // Object order = order of the language switcher.
@@ -35,24 +34,35 @@ const LANG_CODES = Object.keys(LANGS);
 const DEFAULT_LANG = 'ar';
 const X_DEFAULT_LANG = 'en';
 
-const PAGES = [
-  { id: 'home', slug: '', template: 'home.html', changefreq: 'weekly', priority: '1.0', images: ['/images/hero-1.webp', '/images/hero-2.webp', '/images/hero-3.webp'] },
-  { id: 'guide', slug: 'iran-iraq-customs-clearance/', template: 'guide.html', changefreq: 'monthly', priority: '0.9', images: [] },
-];
+// Same order as the "crossings" list in the translations.
+const CROSSING_SLUGS = ['zurbatiyah-mehran', 'al-sheeb-chazabeh', 'shalamcheh', 'al-mundhiriya-khosravi', 'haj-omran-tamarchin', 'bashmakh-bashmaq', 'parwezkhan-parviz-khan'];
 
-const pagePath = (lang, page) => (lang === DEFAULT_LANG ? '/' : `/${lang}/`) + page.slug;
-const pageUrl = (lang, page) => SITE.origin + pagePath(lang, page);
+// seo: prefix of the "<seo>.seo.title/desc" keys · crumb: breadcrumb label key · faq: FAQ list key · howto/howtoName/headline/published: Article + HowTo data.
+const PAGES = [
+  { id: 'home', slug: '', template: 'home', seo: 'home', faq: 'home.faq', changefreq: 'weekly', priority: '1.0', images: ['/images/hero-1.webp', '/images/hero-2.webp', '/images/hero-3.webp'] },
+  { id: 'guide', slug: 'iran-iraq-customs-clearance/', template: 'guide', seo: 'guide', faq: 'guide.faq', crumb: 'guide.crumb', priority: '0.9',
+    headline: 'guide.h1', howto: 'guide.steps', howtoName: 'guide.stepsTitle', published: '2026-10-22' },
+  { id: 'hub', slug: 'border-crossings/', template: 'hub', seo: 'hub', crumb: 'hub.crumb' },
+  ...CROSSING_SLUGS.map((slug, index) => ({ id: `crossing-${slug}`, slug: `border-crossings/${slug}/`, template: 'crossing', index })),
+  { id: 'china', slug: 'china-to-iraq-via-iran/', template: 'china', seo: 'china', faq: 'china.faq', crumb: 'china.crumb',
+    headline: 'china.h1', howto: 'china.steps', howtoName: 'china.routeTitle', published: '2026-10-23' },
+  { id: 'glossary', slug: 'customs-glossary/', template: 'glossary', seo: 'gloss', crumb: 'gloss.crumb', priority: '0.6' },
+].map(p => ({ changefreq: 'monthly', priority: '0.8', images: [], ...p }));
+
+const pagePath = (lang, pg) => (lang === DEFAULT_LANG ? '/' : `/${lang}/`) + pg.slug;
+const pageUrl = (lang, pg) => SITE.origin + pagePath(lang, pg);
 const page = id => PAGES.find(p => p.id === id);
+const crossingPage = i => PAGES.find(p => p.template === 'crossing' && p.index === i);
 
 const read = rel => fs.readFileSync(path.join(SRC, rel), 'utf8');
 const T = Object.fromEntries(LANG_CODES.map(l => [l, JSON.parse(read(`i18n/${l}.json`))]));
 const CSS = read('styles.css').trim();
 const JS = read('script.js').trim();
-const TEMPLATES = { base: read('templates/base.html'), home: read('templates/home.html'), guide: read('templates/guide.html') };
+const TEMPLATES = Object.fromEntries(['base', ...new Set(PAGES.map(p => p.template))].map(n => [n, read(`templates/${n}.html`)]));
 
 const errors = [];
 // Strips invisible direction marks used to keep phone numbers readable in RTL text.
-const md = s => String(s).replace(/[\u200e\u2066-\u2069]/g, '');
+const md = s => String(s).replace(/[‎⁦-⁩]/g, '');
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 function t(lang, key) {
@@ -64,6 +74,25 @@ function t(lang, key) {
   return v;
 }
 
+// ".field" reads the current page's own data (a crossing), anything else is a translation key.
+function get(lang, key, data) {
+  if (!key.startsWith('.')) return t(lang, key);
+  const v = data[key.slice(1)];
+  if (v === undefined) { errors.push(`[${lang}] missing page field "${key}"`); return ''; }
+  return v;
+}
+
+const pageData = (lang, pg) => (pg.template === 'crossing' ? T[lang].crossings[pg.index] : {});
+const pageSeo = (lang, pg) => (pg.template === 'crossing'
+  ? { title: pageData(lang, pg).title, desc: pageData(lang, pg).desc }
+  : { title: t(lang, `${pg.seo}.seo.title`), desc: t(lang, `${pg.seo}.seo.desc`) });
+const pageFaq = (lang, pg) => (pg.template === 'crossing' ? pageData(lang, pg).faq : pg.faq ? t(lang, pg.faq) : []);
+// Breadcrumb trail after "Home".
+const pageCrumbs = (lang, pg) => (pg.template === 'crossing'
+  ? [{ name: t(lang, 'hub.crumb'), path: pagePath(lang, page('hub')) }, { name: pageData(lang, pg).name, path: pagePath(lang, pg) }]
+  : pg.crumb ? [{ name: t(lang, pg.crumb), path: pagePath(lang, pg) }] : []);
+const termId = i => T.en.glossary[i].term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
 // Text with the phone number and email turned into links; dir="ltr" keeps the number readable inside Arabic/Persian sentences.
 const PHONE_DISPLAY = '+964 775 168 7406';
 const rich = s => esc(md(s))
@@ -71,27 +100,39 @@ const rich = s => esc(md(s))
   .split(SITE.email).join(`<a href="mailto:${SITE.email}" dir="ltr">${SITE.email}</a>`);
 
 const COMPONENTS = {
-  crossingCards: lang => '<ul class="crossings">\n' + t(lang, 'crossings').map((c, i) =>
+  crossingCards: (lang, variant) => `<ul class="crossings${variant === 'light' ? ' light' : ''}">\n` + t(lang, 'crossings').map((c, i) =>
     `<li class="crossing${i === 0 ? ' hq' : ''}">` +
     (i === 0 ? `<span class="hq-badge">${esc(t(lang, 'iran.hq'))}</span>` : '') +
-    `<div class="pair"><span class="side"><small>${esc(t(lang, 'iran.iq'))}</small><strong>${esc(c.iq)}</strong></span>` +
+    `<div class="pair"><span class="side"><small>${esc(t(lang, 'iran.iq'))}</small><strong><a class="xlink" href="${pagePath(lang, crossingPage(i))}">${esc(c.iq)}</a></strong></span>` +
     `<span class="swap" aria-hidden="true">⇄</span>` +
     `<span class="side"><small>${esc(t(lang, 'iran.ir'))}</small><strong>${esc(c.ir)}</strong></span></div>` +
-    `<p>${esc(c.note)}</p></li>`).join('\n') + '\n</ul>',
+    `<p>${esc(c.note)}</p><span class="more" aria-hidden="true">${esc(t(lang, 'iran.more'))} ›</span></li>`).join('\n') + '\n</ul>',
   crossingTable: lang => '<div class="table-wrap"><table>\n' +
     `<thead><tr><th>#</th><th>${esc(t(lang, 'iran.iq'))}</th><th>${esc(t(lang, 'iran.ir'))}</th><th>${esc(t(lang, 'guide.colNote'))}</th></tr></thead>\n<tbody>\n` +
-    t(lang, 'crossings').map((c, i) => `<tr${i === 0 ? ' class="hq"' : ''}><td>${i + 1}</td><td>${esc(c.iq)}</td><td>${esc(c.ir)}</td><td>${esc(c.note)}</td></tr>`).join('\n') +
+    t(lang, 'crossings').map((c, i) => `<tr${i === 0 ? ' class="hq"' : ''}><td>${i + 1}</td><td><a href="${pagePath(lang, crossingPage(i))}">${esc(c.iq)}</a></td><td>${esc(c.ir)}</td><td>${esc(c.note)}</td></tr>`).join('\n') +
     '\n</tbody></table></div>',
+  crossingFacts: (lang, _, ctx) => '<dl class="facts">' + [
+    ['iran.iq', ctx.data.iqFull], ['iran.ir', ctx.data.irFull], ['xing.serves', ctx.data.serves],
+    ['xing.feeds', ctx.data.feeds], ['xing.service', t(lang, 'xing.serviceText')],
+  ].map(([k, v]) => `<div><dt>${esc(t(lang, k))}</dt><dd>${esc(v)}</dd></div>`).join('') + '</dl>',
+  otherCrossings: (lang, _, ctx) => '<ul class="xlinks">\n' + t(lang, 'crossings')
+    .map((c, i) => (i === ctx.pg.index ? null : `<li><a href="${pagePath(lang, crossingPage(i))}">${esc(c.name)}</a></li>`))
+    .filter(Boolean).join('\n') + '\n</ul>',
   ports: lang => '<ul class="ports">\n' + t(lang, 'ports').map(p => `<li><strong>${esc(p.name)}</strong><span>${esc(p.note)}</span></li>`).join('\n') + '\n</ul>',
-  faq: (lang, key) => '<div class="faq">\n' + t(lang, key).map((f, i) =>
+  faq: (lang, key, ctx) => '<div class="faq">\n' + get(lang, key, ctx.data).map((f, i) =>
     `<details${i === 0 ? ' open' : ''}><summary><h3>${esc(f.q)}</h3></summary><div class="ans"><p>${rich(f.a)}</p></div></details>`).join('\n') + '\n</div>',
-  list: (lang, key) => '<ul class="bullets">\n' + t(lang, key).map(s => `<li>${esc(s)}</li>`).join('\n') + '\n</ul>',
-  steps: (lang, key) => '<ol class="howto">\n' + t(lang, key).map((s, i) => `<li id="step-${i + 1}"><h3>${esc(s.name)}</h3><p>${esc(s.text)}</p></li>`).join('\n') + '\n</ol>',
-  docs: (lang, key) => '<dl class="docs">\n' + t(lang, key).map(d => `<div><dt>${esc(d.name)}</dt><dd>${esc(d.text)}</dd></div>`).join('\n') + '\n</dl>',
+  list: (lang, key, ctx) => '<ul class="bullets">\n' + get(lang, key, ctx.data).map(s => `<li>${esc(s)}</li>`).join('\n') + '\n</ul>',
+  steps: (lang, key, ctx) => '<ol class="howto">\n' + get(lang, key, ctx.data).map((s, i) => `<li id="step-${i + 1}"><h3>${esc(s.name)}</h3><p>${esc(s.text)}</p></li>`).join('\n') + '\n</ol>',
+  docs: (lang, key, ctx) => '<dl class="docs">\n' + get(lang, key, ctx.data).map(d => `<div><dt>${esc(d.name)}</dt><dd>${esc(d.text)}</dd></div>`).join('\n') + '\n</dl>',
+  glossaryList: lang => '<div class="gloss-list">\n' + t(lang, 'glossary').map((g, i) => {
+    const others = LANG_CODES.filter(l => l !== lang).map(l => `<bdi lang="${l}" dir="${LANGS[l].dir}">${esc(T[l].glossary[i].term)}</bdi>`).join(' · ');
+    return `<div class="gloss" id="${termId(i)}"><h2>${esc(g.term)}</h2><p class="tr">${others}</p><p>${esc(g.def)}</p></div>`;
+  }).join('\n') + '\n</div>',
 };
 
-// {{key}} translated text, {{~key}} text with phone/email links, {{@var}} prebuilt HTML, {{#component arg}} rendered block. Single pass, so inserted HTML is never re-scanned.
-function render(tpl, lang, vars) {
+// {{key}} translated text, {{.field}} the page's own data, {{~key}} text with phone/email links, {{@var}} prebuilt HTML,
+// {{#component arg}} rendered block. Single pass, so inserted HTML is never re-scanned.
+function render(tpl, lang, vars, ctx = { data: {} }) {
   return tpl.replace(/\{\{([#@~]?)([\w.-]+)(?:\s+([\w.-]+))?\}\}/g, (m, sigil, name, arg) => {
     if (sigil === '@') {
       if (!(name in vars)) { errors.push(`unknown template variable @${name}`); return m; }
@@ -99,12 +140,20 @@ function render(tpl, lang, vars) {
     }
     if (sigil === '#') {
       if (!COMPONENTS[name]) { errors.push(`unknown component #${name}`); return m; }
-      return COMPONENTS[name](lang, arg);
+      return COMPONENTS[name](lang, arg, ctx);
     }
-    const v = t(lang, name);
+    const v = get(lang, name, ctx.data);
     if (typeof v !== 'string') { errors.push(`[${lang}] "${name}" is a list, use a component`); return m; }
     return sigil === '~' ? rich(v) : esc(v);
   });
+}
+
+function crumbsHtml(lang, pg) {
+  const trail = pageCrumbs(lang, pg);
+  if (!trail.length) return '';
+  const items = [`<a href="${pagePath(lang, page('home'))}">${esc(t(lang, 'nav.home'))}</a>`,
+    ...trail.map((c, i) => (i === trail.length - 1 ? `<span aria-current="page">${esc(c.name)}</span>` : `<a href="${c.path}">${esc(c.name)}</a>`))];
+  return `<nav class="crumbs" aria-label="Breadcrumb">\n${items.join('\n<span aria-hidden="true">›</span>\n')}\n</nav>`;
 }
 
 function jsonLd(lang, pg, lastmod) {
@@ -114,6 +163,7 @@ function jsonLd(lang, pg, lastmod) {
   const pageId = `${url}#webpage`;
   const ogImage = SITE.origin + SITE.ogImage.path;
   const brand = t(lang, 'brand.name');
+  const seo = pageSeo(lang, pg);
   const alternateName = [...new Set([...LANG_CODES.map(l => T[l]['brand.name']), 'Al-Bait Al-Iraqi', 'Al Bait Al Iraqi', 'البيت العراقي', 'iqbait'])].filter(n => n !== brand);
   const areaServed = [
     { '@type': 'Country', name: t(lang, 'org.iraq'), sameAs: 'https://en.wikipedia.org/wiki/Iraq' },
@@ -140,27 +190,53 @@ function jsonLd(lang, pg, lastmod) {
     hasOfferCatalog: { '@type': 'OfferCatalog', name: t(lang, 'services.title'), itemListElement: services.map(s => ({ '@type': 'Offer', itemOffered: { '@id': s['@id'] } })) },
   };
   const website = { '@type': 'WebSite', '@id': siteId, url: `${SITE.origin}/`, name: brand, alternateName, inLanguage: LANG_CODES, publisher: { '@id': orgId } };
+  const faqs = pageFaq(lang, pg);
   const webpage = {
-    '@type': ['WebPage', 'FAQPage'], '@id': pageId, url,
-    name: t(lang, `${pg.id}.seo.title`), description: t(lang, `${pg.id}.seo.desc`), inLanguage: lang,
-    isPartOf: { '@id': siteId }, about: { '@id': orgId },
+    '@type': faqs.length ? ['WebPage', 'FAQPage'] : pg.id === 'hub' ? 'CollectionPage' : 'WebPage', '@id': pageId, url,
+    name: seo.title, description: seo.desc, inLanguage: lang, isPartOf: { '@id': siteId }, about: { '@id': orgId },
     primaryImageOfPage: { '@type': 'ImageObject', url: ogImage }, dateModified: lastmod,
-    mainEntity: t(lang, pg.id === 'home' ? 'home.faq' : 'guide.faq').map(f => ({ '@type': 'Question', name: md(f.q), acceptedAnswer: { '@type': 'Answer', text: md(f.a) } })),
   };
+  if (faqs.length) webpage.mainEntity = faqs.map(f => ({ '@type': 'Question', name: md(f.q), acceptedAnswer: { '@type': 'Answer', text: md(f.a) } }));
   const graph = [business, website, webpage, ...services];
-  if (pg.id === 'guide') {
+
+  const crumbs = pageCrumbs(lang, pg);
+  if (crumbs.length) {
     webpage.breadcrumb = { '@id': `${url}#breadcrumb` };
+    graph.push({ '@type': 'BreadcrumbList', '@id': `${url}#breadcrumb`, itemListElement: [
+      { name: t(lang, 'nav.home'), path: pagePath(lang, page('home')) }, ...crumbs,
+    ].map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: SITE.origin + c.path })) });
+  }
+  if (pg.headline) {
     graph.push(
-      { '@type': 'BreadcrumbList', '@id': `${url}#breadcrumb`, itemListElement: [
-        { '@type': 'ListItem', position: 1, name: t(lang, 'nav.home'), item: pageUrl(lang, page('home')) },
-        { '@type': 'ListItem', position: 2, name: t(lang, 'guide.crumb'), item: url },
-      ] },
-      { '@type': 'Article', '@id': `${url}#article`, headline: t(lang, 'guide.h1'), description: t(lang, 'guide.seo.desc'), inLanguage: lang,
-        image: ogImage, author: { '@id': orgId }, publisher: { '@id': orgId }, datePublished: SITE.guidePublished, dateModified: lastmod,
+      { '@type': 'Article', '@id': `${url}#article`, headline: t(lang, pg.headline), description: seo.desc, inLanguage: lang,
+        image: ogImage, author: { '@id': orgId }, publisher: { '@id': orgId }, datePublished: pg.published, dateModified: lastmod,
         mainEntityOfPage: { '@id': pageId }, about: areaServed },
-      { '@type': 'HowTo', '@id': `${url}#howto`, name: t(lang, 'guide.stepsTitle'), inLanguage: lang,
-        step: t(lang, 'guide.steps').map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.name, text: s.text, url: `${url}#step-${i + 1}` })) },
+      { '@type': 'HowTo', '@id': `${url}#howto`, name: t(lang, pg.howtoName), inLanguage: lang,
+        step: t(lang, pg.howto).map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.name, text: s.text, url: `${url}#step-${i + 1}` })) },
     );
+  }
+  if (pg.template === 'crossing') {
+    const c = pageData(lang, pg);
+    const placeId = `${url}#place`;
+    graph.push(
+      { '@type': 'Place', '@id': placeId, name: c.name, description: `${c.iqFull} ⇄ ${c.irFull}`, containedInPlace: areaServed[0] },
+      { '@type': 'Service', '@id': `${url}#service`, name: c.h1, serviceType: t(lang, 'org.knowsAbout')[0], description: c.desc,
+        provider: { '@id': orgId }, areaServed: { '@id': placeId } },
+    );
+    webpage.about = [{ '@id': placeId }, { '@id': orgId }];
+  }
+  if (pg.id === 'hub') {
+    webpage.mainEntity = { '@type': 'ItemList', itemListElement: t(lang, 'crossings').map((c, i) => ({
+      '@type': 'ListItem', position: i + 1, name: c.name, url: pageUrl(lang, crossingPage(i)) })) };
+  }
+  if (pg.id === 'glossary') {
+    const setId = `${url}#terms`;
+    webpage.mainEntity = { '@id': setId };
+    graph.push({ '@type': 'DefinedTermSet', '@id': setId, name: t(lang, 'gloss.h1'), inLanguage: lang,
+      hasDefinedTerm: t(lang, 'glossary').map((g, i) => ({
+        '@type': 'DefinedTerm', '@id': `${url}#${termId(i)}`, name: g.term, description: g.def, inDefinedTermSet: { '@id': setId },
+        alternateName: LANG_CODES.filter(l => l !== lang).map(l => T[l].glossary[i].term),
+      })) });
   }
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
 }
@@ -169,8 +245,9 @@ function head(lang, pg, lastmod) {
   const L = LANGS[lang];
   const url = pageUrl(lang, pg);
   const ogImage = SITE.origin + SITE.ogImage.path;
-  const title = esc(t(lang, `${pg.id}.seo.title`));
-  const desc = esc(t(lang, `${pg.id}.seo.desc`));
+  const seo = pageSeo(lang, pg);
+  const title = esc(seo.title);
+  const desc = esc(seo.desc);
   const font = `https://fonts.googleapis.com/css2?family=${L.font}&display=swap`;
   const out = [
     '<meta charset="utf-8">',
@@ -237,11 +314,13 @@ const files = new Map();
 for (const pg of PAGES) {
   for (const lang of LANG_CODES) {
     const LM = '__LASTMOD__', LML = '__LASTMOD_LABEL__';
+    const ctx = { data: pageData(lang, pg), pg };
     const vars = {
       lang, dir: LANGS[lang].dir, home: pagePath(lang, page('home')), guide: pagePath(lang, page('guide')),
-      lastmod: LM, lastmodLabel: LML, langSwitch: langSwitch(lang, pg), css: CSS, js: JS,
+      hub: pagePath(lang, page('hub')), china: pagePath(lang, page('china')), glossary: pagePath(lang, page('glossary')),
+      lastmod: LM, lastmodLabel: LML, langSwitch: langSwitch(lang, pg), crumbs: crumbsHtml(lang, pg), css: CSS, js: JS,
     };
-    vars.content = render(TEMPLATES[pg.id], lang, vars);
+    vars.content = render(TEMPLATES[pg.template], lang, vars, ctx);
     vars.head = head(lang, pg, LM);
     const draft = render(TEMPLATES.base, lang, vars);
     const key = pagePath(lang, pg);
@@ -264,7 +343,6 @@ function sitemap() {
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' +
     urls.join('\n') + '\n</urlset>\n';
 }
-
 
 function llmsTxt() {
   const en = T.en;
@@ -294,7 +372,11 @@ function llmsTxt() {
     '',
     '## Pages',
     '',
-    ...PAGES.flatMap(pg => LANG_CODES.map(l => `- [${md(T[l][`${pg.id}.seo.title`])}](${pageUrl(l, pg)}): ${md(T[l][`${pg.id}.seo.desc`])}`)),
+    ...PAGES.map(pg => {
+      const s = pageSeo('en', pg);
+      const others = LANG_CODES.filter(l => l !== 'en').map(l => `[${LANGS[l].label}](${pageUrl(l, pg)})`).join(', ');
+      return `- [${md(s.title)}](${pageUrl('en', pg)}): ${md(s.desc)} Also in: ${others}.`;
+    }),
     '',
     '## FAQ',
     '',
@@ -310,6 +392,7 @@ function llmsTxt() {
 function llmsFullTxt() {
   const sections = LANG_CODES.map(l => {
     const d = T[l];
+    const qa = list => list.flatMap(f => [`#### ${f.q}`, '', md(f.a), '']);
     return [
       `# ${d['brand.name']} — ${LANGS[l].name} (${pageUrl(l, page('home'))})`,
       '',
@@ -327,17 +410,13 @@ function llmsFullTxt() {
       '',
       md(d['iran.sub']),
       '',
-      `### ${d['iran.landTitle']}`,
-      '',
-      ...d.crossings.map(c => `- ${c.iq} ⇄ ${c.ir} — ${c.note}`),
-      '',
       `### ${d['iran.portsTitle']}`,
       '',
       ...d.ports.map(p => `- **${p.name}:** ${p.note}`),
       '',
       `## ${d['faq.title']}`,
       '',
-      ...d['home.faq'].flatMap(f => [`### ${f.q}`, '', md(f.a), '']),
+      ...qa(d['home.faq']),
       `## ${d['guide.h1']} (${pageUrl(l, page('guide'))})`,
       '',
       md(d['guide.summary']),
@@ -368,7 +447,54 @@ function llmsFullTxt() {
       '',
       ...d['guide.tips'].map(x => `- ${x}`),
       '',
-      ...d['guide.faq'].flatMap(f => [`### ${f.q}`, '', md(f.a), '']),
+      ...qa(d['guide.faq']),
+      `## ${d['hub.h1']} (${pageUrl(l, page('hub'))})`,
+      '',
+      md(d['hub.lead']),
+      '',
+      ...d.crossings.flatMap((c, i) => [
+        `### ${c.h1} (${pageUrl(l, crossingPage(i))})`,
+        '',
+        md(c.intro),
+        '',
+        `- ${d['iran.iq']}: ${c.iqFull}`,
+        `- ${d['iran.ir']}: ${c.irFull}`,
+        `- ${d['xing.serves']}: ${c.serves}`,
+        `- ${d['xing.feeds']}: ${c.feeds}`,
+        '',
+        `${d['xing.whenTitle']}`,
+        ...c.when.map(x => `- ${x}`),
+        '',
+        `${d['xing.notesTitle']}`,
+        ...c.notes.map(x => `- ${x}`),
+        '',
+        ...qa(c.faq),
+      ]),
+      `## ${d['china.h1']} (${pageUrl(l, page('china'))})`,
+      '',
+      md(d['china.summary']),
+      '',
+      `### ${d['china.whyTitle']}`,
+      '',
+      ...d['china.why'].map(x => `- ${x}`),
+      '',
+      `### ${d['china.routeTitle']}`,
+      '',
+      ...d['china.steps'].map((s, i) => `${i + 1}. **${s.name}:** ${s.text}`),
+      '',
+      `### ${d['china.docsTitle']}`,
+      '',
+      ...d['china.docs'].map(x => `- **${x.name}:** ${x.text}`),
+      '',
+      `### ${d['china.tipsTitle']}`,
+      '',
+      ...d['china.tips'].map(x => `- ${x}`),
+      '',
+      ...qa(d['china.faq']),
+      `## ${d['gloss.h1']} (${pageUrl(l, page('glossary'))})`,
+      '',
+      ...d.glossary.map((g, i) => `- **${g.term}** (${LANG_CODES.filter(x => x !== l).map(x => T[x].glossary[i].term).join(' / ')}): ${g.def}`),
+      '',
       `${d['contact.phone.k']}: +964 775 168 7406 · WhatsApp: https://wa.me/9647751687406 · ${SITE.email} · ${md(d['contact.addr.v'])}`,
       '',
     ].join('\n');
