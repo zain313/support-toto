@@ -12,7 +12,7 @@ Static site on GitHub Pages (domain in `CNAME`). The HTML pages are **generated*
 Template syntax: `{{key}}` translated text, `{{.field}}` a field of the current page's own data (a crossing), `{{~key}}` text with the phone/email turned into links, `{{@var}}` build variables, `{{#component key}}` lists rendered by `COMPONENTS` in `build.mjs`.
 
 ## Business facts (keep identical everywhere)
-Phone/WhatsApp +964 775 168 7406 · support@iqbait.com · واسط / بدرة / منفذ زرباطية الحدودي (opposite Mehran, Iran) · since 2015, 11+ years, 3000+ shipments · Sun–Thu 8:00–17:00 · © 2015.
+Phone/WhatsApp +964 773 756 5367 · support@iqbait.com · واسط / بدرة / منفذ زرباطية الحدودي (opposite Mehran, Iran) · since 2015, 11+ years, 3000+ shipments · Sun–Thu 8:00–17:00 · © 2015.
 
 ## SEO / AI search
 - URLs: `/` (Arabic, default), `/en/`, `/fa/`, `/zh/`; under each: `iran-iraq-customs-clearance/`, `border-crossings/` + 7 crossing pages, `china-to-iraq-via-iran/`, `customs-glossary/`. Canonical, hreflang, Open Graph and JSON-LD are generated per page; every page must keep a unique title and description.
@@ -20,4 +20,4 @@ Phone/WhatsApp +964 775 168 7406 · support@iqbait.com · واسط / بدرة / 
 - `robots.txt` (hand-written) explicitly allows AI crawlers. `llms.txt` and `llms-full.txt` are generated from the translations.
 - IndexNow: key file `bd04e954b6ffc9194b4590f2baf589c9.txt` at the root; `.github/workflows/indexnow.yml` submits the sitemap after each Pages deployment.
 - `_src/` is not published: Jekyll skips folders that start with `_`.
-- In Arabic/Persian text, keep phone numbers plain (`+964 775 168 7406`); `{{~key}}` and the FAQ component wrap them in `dir="ltr"` links so they render in the right order.
+- In Arabic/Persian text, keep phone numbers plain (`+964 773 756 5367`); `{{~key}}` and the FAQ component wrap them in `dir="ltr"` links so they render in the right order.

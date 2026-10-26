@@ -13,13 +13,13 @@ const CHECK = process.argv.includes('--check');
 
 const SITE = {
   origin: 'https://iqbait.com',
-  phone: '+9647751687406',
-  whatsapp: 'https://wa.me/9647751687406',
+  phone: '+9647737565367',
+  whatsapp: 'https://wa.me/9647737565367',
   email: 'support@iqbait.com',
   founded: '2015',
   // Approximate position of the Zurbatiyah border crossing; replace with the Google Business Profile pin when available.
   geo: { latitude: 33.13, longitude: 46.1 },
-  ogImage: { path: '/images/og-cover.jpg', width: 1200, height: 630 },
+  ogImage: { path: '/images/og-cover-v2.jpg', width: 1200, height: 630 },
   fbVerification: 'sutxxrsdtg8j2zsn03ri442dxwtb39',
 };
 
@@ -94,7 +94,7 @@ const pageCrumbs = (lang, pg) => (pg.template === 'crossing'
 const termId = i => T.en.glossary[i].term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 // Text with the phone number and email turned into links; dir="ltr" keeps the number readable inside Arabic/Persian sentences.
-const PHONE_DISPLAY = '+964 775 168 7406';
+const PHONE_DISPLAY = '+964 773 756 5367';
 const rich = s => esc(md(s))
   .split(PHONE_DISPLAY).join(`<a href="tel:${SITE.phone}" dir="ltr">${PHONE_DISPLAY}</a>`)
   .split(SITE.email).join(`<a href="mailto:${SITE.email}" dir="ltr">${SITE.email}</a>`);
@@ -365,7 +365,7 @@ function llmsTxt() {
     `- Services: ${[en['svc.t1'], en['svc.t2'], en['svc.transit.t'], en['svc.t3'], en['svc.t4']].join('; ')}.`,
     `- Iraq–Iran land border crossings covered (Iraqi side ↔ Iranian side): ${crossings}.`,
     `- Iranian ports and routes followed: ${en.ports.map(p => p.name).join('; ')}.`,
-    '- Phone / WhatsApp: +964 775 168 7406 — https://wa.me/9647751687406',
+    '- Phone / WhatsApp: +964 773 756 5367 — https://wa.me/9647737565367',
     `- Email: ${SITE.email}`,
     '- Working hours: Sunday–Thursday, 08:00–17:00 (Iraq time). Quotes within 24 hours.',
     '- Website languages: Arabic, English, Persian (Farsi), Chinese.',
@@ -495,7 +495,7 @@ function llmsFullTxt() {
       '',
       ...d.glossary.map((g, i) => `- **${g.term}** (${LANG_CODES.filter(x => x !== l).map(x => T[x].glossary[i].term).join(' / ')}): ${g.def}`),
       '',
-      `${d['contact.phone.k']}: +964 775 168 7406 · WhatsApp: https://wa.me/9647751687406 · ${SITE.email} · ${md(d['contact.addr.v'])}`,
+      `${d['contact.phone.k']}: +964 773 756 5367 · WhatsApp: https://wa.me/9647737565367 · ${SITE.email} · ${md(d['contact.addr.v'])}`,
       '',
     ].join('\n');
   });
