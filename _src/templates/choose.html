@@ -1,0 +1,53 @@
+<article class="guide">
+<header class="guide-hero">
+<div class="container">
+{{@crumbs}}
+<div class="eyebrow">{{choose.eye}}</div>
+<h1>{{choose.h1}}</h1>
+<p class="updated">{{guide.updated}}: <time datetime="{{@lastmod}}">{{@lastmodLabel}}</time></p>
+</div>
+</header>
+<div class="container guide-body">
+<aside class="tldr">
+<h2>{{guide.summaryTitle}}</h2>
+<p>{{~choose.summary}}</p>
+<a href="https://wa.me/9647737565367" target="_blank" rel="noopener" class="wa-btn">
+<span class="wa-ic" aria-hidden="true"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg></span>
+<span class="lbl"><span class="t">{{contact.wa}}</span><span class="s" dir="ltr">+964 773 756 5367</span></span>
+</a>
+</aside>
+<section id="why">
+<h2>{{choose.whyTitle}}</h2>
+<p>{{choose.whyText}}</p>
+</section>
+<section id="criteria">
+<h2>{{choose.criteriaTitle}}</h2>
+{{#steps choose.criteria}}
+</section>
+<section id="questions">
+<h2>{{choose.questionsTitle}}</h2>
+{{#list choose.questions}}
+</section>
+<section id="warning-signs">
+<h2>{{choose.flagsTitle}}</h2>
+{{#list choose.flags}}
+</section>
+<section id="al-bait">
+<h2>{{choose.usTitle}}</h2>
+{{#docs choose.us}}
+<p class="note"><a class="text-link" href="{{@about}}">{{nav.about}}</a> · <a class="text-link" href="{{@hub}}">{{nav.crossings}}</a></p>
+</section>
+<section id="faq">
+<h2>{{guide.faqTitle}}</h2>
+{{#faq choose.faq}}
+</section>
+<section class="guide-cta">
+<h2>{{choose.ctaTitle}}</h2>
+<p>{{guide.ctaText}}</p>
+<a href="https://wa.me/9647737565367" target="_blank" rel="noopener" class="wa-btn">
+<span class="wa-ic" aria-hidden="true"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg></span>
+<span class="lbl"><span class="t">{{contact.wa}}</span><span class="s" dir="ltr">+964 773 756 5367</span></span>
+</a>
+</section>
+</div>
+</article>
