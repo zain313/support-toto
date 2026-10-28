@@ -718,6 +718,15 @@ section.dark-band .eyebrow{ color: var(--gold); }
 .band-cta{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:40px; }
 .band-cta .btn-ghost{ color:#fff; border-color: rgba(255,255,255,.25); }
 .band-cta .btn-ghost:hover{ background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); }
+.band-cta.light{ margin-top: 36px; }
+.band-cta.light .btn-ghost{ color: var(--navy); border-color: var(--line); background:#fff; }
+.band-cta.light .btn-ghost:hover{ background: var(--navy-soft); border-color: var(--navy-soft); }
+.numbers{ display:grid; grid-template-columns: repeat(4, 1fr); gap:12px; }
+.numbers div{ background: var(--navy); color:#fff; border-radius: var(--radius); padding: 18px 16px; text-align:center; }
+.numbers strong{ display:block; font-size: 28px; font-weight: 800; color: var(--gold); font-family:'Inter',sans-serif; line-height:1.1; }
+.numbers span{ display:block; margin-top:6px; font-size: 13px; color:#b9c4d6; line-height:1.5; }
+.guide-body section .facts{ margin:0; }
+.guide-body section .facts div{ border-color: var(--line); }
 /* ---------- FAQ ---------- */
 .faq{ max-width: 860px; margin: 0 auto; display:flex; flex-direction:column; gap:12px; }
 .faq details{ background:#fff; border:1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
@@ -798,6 +807,7 @@ a[href^="tel:"]{ white-space: nowrap; }
 }
 @media (max-width: 640px){
 .crossings, .facts, .gloss-list{ grid-template-columns: 1fr; }
+.numbers{ grid-template-columns: repeat(2, 1fr); }
 .crossing .pair{ grid-template-columns: 1fr; gap:6px; }
 .crossing .swap{ transform: rotate(90deg); justify-self:start; }
 .ports, .guide-body .ports, .docs{ grid-template-columns: 1fr; }
