@@ -815,3 +815,20 @@ a[href^="tel:"]{ white-space: nowrap; }
 .howto li{ padding-inline-start: 64px; }
 .guide-cta{ padding: 28px 20px; }
 }
+/* ---------- floating contact buttons ---------- */
+.float-contact{ position:fixed; bottom:18px; inset-inline-end:18px; z-index:60; display:flex; flex-direction:column; align-items:flex-end; gap:10px; }
+.float-contact a{ display:inline-flex; align-items:center; gap:10px; border-radius:999px; box-shadow:0 8px 24px rgba(10,35,66,.28); text-decoration:none; }
+.fc-wa{ background:#25D366; color:#fff; padding:12px 18px 12px 14px; font-weight:700; font-size:14.5px; font-family:'Inter',sans-serif; }
+.fc-wa svg{ width:26px; height:26px; flex:0 0 26px; }
+.fc-call{ background:var(--navy); color:var(--gold); width:50px; height:50px; justify-content:center; }
+.fc-call svg{ width:22px; height:22px; }
+.float-contact a:hover{ transform:translateY(-2px); }
+.hero-call{ gap:8px; }
+.hero-call span[dir="ltr"]{ font-family:'Inter',sans-serif; }
+footer.site{ padding-bottom:110px; }
+@media (max-width: 640px){
+.float-contact{ bottom:14px; inset-inline-end:14px; }
+.fc-label{ display:none; }
+.fc-wa{ width:56px; height:56px; padding:0; justify-content:center; }
+.fc-wa svg{ width:30px; height:30px; }
+}

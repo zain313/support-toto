@@ -65,7 +65,7 @@ var text = '📋 *طلب جديد من الموقع*\n\n'
 + '📦 *الخدمة:* ' + service + '\n'
 + '🌐 *الصفحة:* ' + location.pathname + '\n';
 if (msg) text += '💬 *التفاصيل:* ' + msg + '\n';
-document.getElementById('waBtn1').href = 'https://wa.me/9647737565367?text=' + encodeURIComponent(text);
+document.getElementById('waBtn1').href = 'https://wa.me/9647867094651?text=' + encodeURIComponent(text);
 var choose = document.getElementById('waChoose');
 choose.style.display = 'block';
 choose.scrollIntoView({behavior:'smooth', block:'center'});
