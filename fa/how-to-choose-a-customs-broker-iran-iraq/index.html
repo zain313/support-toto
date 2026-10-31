@@ -870,10 +870,21 @@ a[href^="tel:"]{ white-space: nowrap; }
 .float-contact a{ display:inline-flex; align-items:center; gap:10px; border-radius:999px; box-shadow:0 8px 24px rgba(10,35,66,.28); text-decoration:none; }
 .fc-wa{ background:#25D366; color:#fff; padding:12px 18px 12px 14px; font-weight:700; font-size:14.5px; font-family:'Inter',sans-serif; }
 .fc-wa svg{ width:26px; height:26px; flex:0 0 26px; }
-.fc-call{ background:var(--navy); color:var(--gold); width:50px; height:50px; justify-content:center; }
-.fc-call svg{ width:22px; height:22px; }
 .float-contact a:hover{ transform:translateY(-2px); }
 .hero-call{ gap:8px; }
+/* ---------- testimonials & share box ---------- */
+.tst-list{ display:grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap:14px; }
+.tst{ margin:0; background:#fff; border:1px solid var(--line); border-radius: var(--radius); padding:20px 22px; display:flex; flex-direction:column; gap:14px; box-shadow: var(--shadow-sm); }
+.tst blockquote{ margin:0; font-size:16px; line-height:1.85; color: var(--ink); }
+.tst blockquote::before{ content:"“"; display:block; font-size:40px; line-height:.6; color: var(--gold); font-family: Georgia, serif; }
+.tst figcaption{ font-size:14px; color: var(--muted); }
+.tst figcaption strong{ color: var(--navy); }
+.tst figcaption span{ display:block; margin-top:3px; font-size:13px; }
+.share-box{ background: var(--navy-soft); border:1px dashed var(--gold); border-radius: var(--radius); padding:24px 26px; }
+.guide-body .share-box h2{ font-size:20px; margin:0 0 8px; }
+.guide-body .share-box p{ margin:0 0 16px; }
+.share-box .wa-btn{ display:inline-flex; }
+.contact-side .wa-pref{ margin:0; font-size:13.5px; line-height:1.75; color:#c7d0e0; background: rgba(37,211,102,.12); border:1px solid rgba(37,211,102,.35); border-radius:10px; padding:10px 14px; }
 .hero-call span[dir="ltr"]{ font-family:'Inter',sans-serif; }
 footer.site{ padding-bottom:110px; }
 @media (max-width: 640px){
@@ -890,7 +901,7 @@ footer.site{ padding-bottom:110px; }
 <div class="container inner">
 <div class="topbar-meta">
 <span><span class="dot"></span><span>یکشنبه — پنجشنبه · ۸:۰۰ — ۱۷:۰۰</span></span>
-<a href="tel:+9647867094651" dir="ltr" style="font-family:'Inter',sans-serif">📞 +964 786 709 4651</a>
+<a href="https://wa.me/9647867094651" target="_blank" rel="noopener"><span>واتساپ (راه ارتباطی ترجیحی)</span><span dir="ltr" style="font-family:'Inter',sans-serif">+964 786 709 4651</span></a>
 <a href="mailto:support@iqbait.com" dir="ltr" style="font-family:'Inter',sans-serif">✉ support@iqbait.com</a>
 </div>
 <nav class="lang-switch" aria-label="زبان">
@@ -949,6 +960,7 @@ footer.site{ padding-bottom:110px; }
 <a href="/fa/customs-glossary/">واژه‌نامه گمرکی</a>
 <a href="/fa/about/">درباره ما</a>
 <a href="/fa/how-to-choose-a-customs-broker-iran-iraq/">چگونه ترخیص‌کار انتخاب کنیم</a>
+
 <a href="/fa/#contact">تماس با ما</a>
 <div class="mob-cta">
 <a href="/fa/#contact" class="btn btn-primary">دریافت پیش‌فاکتور</a>
@@ -971,7 +983,7 @@ footer.site{ padding-bottom:110px; }
 <div class="container guide-body">
 <aside class="tldr">
 <h2>به‌طور خلاصه</h2>
-<p>بهترین ترخیص‌کار برای محموله‌های شما بین ایران و عراق کسی است که در مرز ورود کالای شما حضور داشته باشد، در همه مرزها کار کند نه فقط یکی، هر دو سمت ایران و عراق را به زبان خودشان پیگیری کند، مدارک شما را پیش از ارسال بررسی کند و به پیش‌فاکتور کتبی و زمان مشخص پایبند باشد. «خانه عراقی برای ترخیص گمرکی» این معیارها را از دفتر خود در گذرگاه زرباطیه که از ۲۰۱۵ در آن فعال است برآورده می‌کند. واتساپ: <a href="tel:+9647867094651" dir="ltr">+964 786 709 4651</a>.</p>
+<p>بهترین ترخیص‌کار برای محموله‌های شما بین ایران و عراق کسی است که در مرز ورود کالای شما حضور داشته باشد، در همه مرزها کار کند نه فقط یکی، هر دو سمت ایران و عراق را به زبان خودشان پیگیری کند، مدارک شما را پیش از ارسال بررسی کند و به پیش‌فاکتور کتبی و زمان مشخص پایبند باشد. «خانه عراقی برای ترخیص گمرکی» این معیارها را از دفتر خود در گذرگاه زرباطیه که از ۲۰۱۵ در آن فعال است برآورده می‌کند. واتساپ: <a href="https://wa.me/9647867094651" target="_blank" rel="noopener" dir="ltr">+964 786 709 4651</a>.</p>
 <a href="https://wa.me/9647867094651" target="_blank" rel="noopener" class="wa-btn">
 <span class="wa-ic" aria-hidden="true"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg></span>
 <span class="lbl"><span class="t">تماس از طریق واتساپ</span><span class="s" dir="ltr">+964 786 709 4651</span></span>
@@ -1081,6 +1093,7 @@ footer.site{ padding-bottom:110px; }
 <li><a href="/fa/customs-glossary/">واژه‌نامه گمرکی</a></li>
 <li><a href="/fa/about/">درباره ما</a></li>
 <li><a href="/fa/how-to-choose-a-customs-broker-iran-iraq/">چگونه ترخیص‌کار انتخاب کنیم</a></li>
+
 <li><a href="/fa/#contact">تماس با ما</a></li>
 </ul>
 </div>
@@ -1097,7 +1110,7 @@ footer.site{ padding-bottom:110px; }
 <div class="foot">
 <h4>اطلاعات تماس</h4>
 <ul>
-<li><a href="tel:+9647867094651" dir="ltr" style="font-family:'Inter',sans-serif">+964 786 709 4651</a></li>
+<li><a href="https://wa.me/9647867094651" target="_blank" rel="noopener">واتساپ (راه ارتباطی ترجیحی): <span dir="ltr" style="font-family:'Inter',sans-serif">+964 786 709 4651</span></a></li>
 <li><a href="mailto:support@iqbait.com" dir="ltr" style="font-family:'Inter',sans-serif">support@iqbait.com</a></li>
 <li>واسط/بدره/گذرگاه مرزی زرباطیه</li>
 </ul>
@@ -1115,12 +1128,9 @@ footer.site{ padding-bottom:110px; }
 </div>
 </footer>
 <div class="float-contact">
-<a class="fc-wa" href="https://wa.me/9647867094651" target="_blank" rel="noopener" aria-label="واتساپ +964 786 709 4651">
+<a class="fc-wa" href="https://wa.me/9647867094651" target="_blank" rel="noopener" aria-label="واتساپ (راه ارتباطی ترجیحی) +964 786 709 4651">
 <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg>
 <span class="fc-label" dir="ltr">+964 786 709 4651</span>
-</a>
-<a class="fc-call" href="tel:+9647867094651" aria-label="تماس تلفنی +964 786 709 4651">
-<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6c0 9 6 15 15 15l3-4-5-2-2 2c-3-1-5-3-6-6l2-2-2-5-5 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
 </a>
 </div>
 <script>

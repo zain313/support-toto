@@ -13,7 +13,7 @@
 <div class="container inner">
 <div class="topbar-meta">
 <span><span class="dot"></span><span>{{top.hours}}</span></span>
-<a href="tel:+9647867094651" dir="ltr" style="font-family:'Inter',sans-serif">📞 +964 786 709 4651</a>
+<a href="https://wa.me/9647867094651" target="_blank" rel="noopener"><span>{{contact.phone.k}}</span><span dir="ltr" style="font-family:'Inter',sans-serif">+964 786 709 4651</span></a>
 <a href="mailto:support@iqbait.com" dir="ltr" style="font-family:'Inter',sans-serif">✉ support@iqbait.com</a>
 </div>
 <nav class="lang-switch" aria-label="{{lang.label}}">
@@ -69,6 +69,7 @@
 <a href="{{@glossary}}">{{nav.glossary}}</a>
 <a href="{{@about}}">{{nav.about}}</a>
 <a href="{{@choose}}">{{nav.choose}}</a>
+{{@tstNav}}
 <a href="{{@home}}#contact">{{nav.contact}}</a>
 <div class="mob-cta">
 <a href="{{@home}}#contact" class="btn btn-primary">{{cta.getQuote}}</a>
@@ -108,6 +109,7 @@
 <li><a href="{{@glossary}}">{{nav.glossary}}</a></li>
 <li><a href="{{@about}}">{{nav.about}}</a></li>
 <li><a href="{{@choose}}">{{nav.choose}}</a></li>
+{{@tstFoot}}
 <li><a href="{{@home}}#contact">{{nav.contact}}</a></li>
 </ul>
 </div>
@@ -124,7 +126,7 @@
 <div class="foot">
 <h4>{{foot.contact}}</h4>
 <ul>
-<li><a href="tel:+9647867094651" dir="ltr" style="font-family:'Inter',sans-serif">+964 786 709 4651</a></li>
+<li><a href="https://wa.me/9647867094651" target="_blank" rel="noopener">{{contact.phone.k}}: <span dir="ltr" style="font-family:'Inter',sans-serif">+964 786 709 4651</span></a></li>
 <li><a href="mailto:support@iqbait.com" dir="ltr" style="font-family:'Inter',sans-serif">support@iqbait.com</a></li>
 <li>{{contact.addr.v}}</li>
 </ul>
@@ -142,12 +144,9 @@
 </div>
 </footer>
 <div class="float-contact">
-<a class="fc-wa" href="https://wa.me/9647867094651" target="_blank" rel="noopener" aria-label="{{cta.waShort}} +964 786 709 4651">
+<a class="fc-wa" href="https://wa.me/9647867094651" target="_blank" rel="noopener" aria-label="{{contact.phone.k}} +964 786 709 4651">
 <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg>
 <span class="fc-label" dir="ltr">+964 786 709 4651</span>
-</a>
-<a class="fc-call" href="tel:+9647867094651" aria-label="{{cta.call}} +964 786 709 4651">
-<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6c0 9 6 15 15 15l3-4-5-2-2 2c-3-1-5-3-6-6l2-2-2-5-5 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
 </a>
 </div>
 <script>

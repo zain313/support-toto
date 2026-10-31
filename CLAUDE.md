@@ -11,8 +11,11 @@ Static site on GitHub Pages (domain in `CNAME`). The HTML pages are **generated*
 
 Template syntax: `{{key}}` translated text, `{{.field}}` a field of the current page's own data (a crossing), `{{~key}}` text with the phone/email turned into links, `{{@var}}` build variables, `{{#component key}}` lists rendered by `COMPONENTS` in `build.mjs`.
 
+## Testimonials
+`_src/testimonials.json` holds real client feedback only: the client's own words, with written permission to publish their name (`consent: true`, `source`, `date` are required; the build fails otherwise). Never write, "improve" or invent feedback. The `/testimonials/` page, the home-page section, the nav/footer links and the llms.txt quotes appear automatically once `items` is non-empty. New feedback is collected through the "share your experience" WhatsApp box on the About page.
+
 ## Business facts (keep identical everywhere)
-Phone/WhatsApp +964 786 709 4651 · support@iqbait.com · واسط / بدرة / منفذ زرباطية الحدودي (opposite Mehran, Iran) · since 2015, 11+ years, 3000+ shipments · Sun–Thu 8:00–17:00 · © 2015.
+WhatsApp +964 786 709 4651 (preferred channel — every displayed number links to WhatsApp, not tel:) · support@iqbait.com · واسط / بدرة / منفذ زرباطية الحدودي (opposite Mehran, Iran) · since 2015, 11+ years, 3000+ shipments · Sun–Thu 8:00–17:00 · © 2015.
 
 ## SEO / AI search
 - URLs: `/` (Arabic, default), `/en/`, `/fa/`, `/zh/`; under each: `iran-iraq-customs-clearance/`, `border-crossings/` + 7 crossing pages, `china-to-iraq-via-iran/`, `customs-glossary/`, `about/`, `how-to-choose-a-customs-broker-iran-iraq/`. Canonical, hreflang, Open Graph and JSON-LD are generated per page; every page must keep a unique title and description.
