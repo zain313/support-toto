@@ -14,7 +14,7 @@
   "choose.seo.title": "How to Choose a Customs Broker for Iran–Iraq Imports: 8 Criteria",
   "choose.seo.desc": "A practical guide to choosing the right customs broker for shipments between Iran and Iraq: 8 criteria, questions to ask before you sign, warning signs, and how Al-Bait Al-Iraqi measures up.",
   "og.alt": "Al-Bait Al-Iraqi Customs Clearance — Zurbatiyah border crossing",
-  "org.desc": "Al-Bait Al-Iraqi for Customs Clearance is a customs broker office based at the Zurbatiyah border crossing in Wasit, Iraq, opposite Iran's Mehran crossing. Since 2015 it has cleared imports, exports and transit cargo between Iran and Iraq through every land crossing and Iranian seaport.",
+  "org.desc": "Al-Bait Al-Iraqi for Customs Clearance is a customs broker office based at the Zurbatiyah border crossing in Wasit, Iraq, opposite Iran's Mehran crossing. Since 2015 it has cleared imports, exports and transit cargo between Iran and Iraq through every land crossing and Iranian seaport, and its team works in Arabic and Persian.",
   "org.street": "Zurbatiyah Border Crossing",
   "org.locality": "Badra",
   "org.region": "Wasit",
@@ -438,7 +438,7 @@
   "home.faq": [
     {
       "q": "Do you clear goods coming from Iran into Iraq?",
-      "a": "Yes. Al-Bait Al-Iraqi for Customs Clearance is based at the Zurbatiyah border crossing in Wasit, Iraq, directly opposite Iran's Mehran crossing. We clear goods imported from Iran and transit cargo moving through Iran via every land crossing between Iraq and Iran, and we also handle exports from Iraq to Iran."
+      "a": "Yes. Al-Bait Al-Iraqi for Customs Clearance is based at the Zurbatiyah border crossing in Wasit, Iraq, directly opposite Iran's Mehran crossing, and its team speaks Persian. We clear goods imported from Iran and transit cargo moving through Iran via every land crossing between Iraq and Iran, and we also handle exports from Iraq to Iran."
     },
     {
       "q": "Are you a customs broker or a freight company?",
@@ -446,7 +446,7 @@
     },
     {
       "q": "How do I choose a customs broker for imports between Iran and Iraq?",
-      "a": "Choose a broker with a real presence at the crossing your goods enter through, who works at every crossing between Iran and Iraq rather than a single one, speaks Arabic and Persian to follow both sides, reviews your documents before shipping, and gives you a written quote and a clear clearance time. Al-Bait Al-Iraqi has had an office at the Zurbatiyah crossing since 2015 and covers all seven crossings."
+      "a": "Choose a broker with a real presence at the crossing your goods enter through, who works at every crossing between Iran and Iraq rather than a single one, speaks Arabic and Persian to follow both sides, reviews your documents before shipping, and gives you a written quote and a clear clearance time. Al-Bait Al-Iraqi has had an office at the Zurbatiyah crossing since 2015, covers all seven crossings and has a Persian-speaking team that follows the Iranian side."
     },
     {
       "q": "Which Iraq–Iran border crossings do you work at?",
@@ -848,7 +848,7 @@
   "about.eye": "About us",
   "about.crumb": "About us",
   "about.h1": "Al-Bait Al-Iraqi for Customs Clearance: a customs broker between Iran and Iraq since 2015",
-  "about.summary": "Al-Bait Al-Iraqi for Customs Clearance is an Iraqi customs broker office based inside the Zurbatiyah border crossing in Badra district, Wasit Governorate, opposite Iran's Mehran crossing. Since 2015 we have cleared more than 3,000 shipments between Iran and Iraq, and today we work at all seven land crossings between the two countries and through Iranian seaports. WhatsApp: +964 786 709 4651.",
+  "about.summary": "Al-Bait Al-Iraqi for Customs Clearance is an Iraqi customs broker office based inside the Zurbatiyah border crossing in Badra district, Wasit Governorate, opposite Iran's Mehran crossing. Since 2015 we have cleared more than 3,000 shipments between Iran and Iraq, and today we work at all seven land crossings between the two countries and through Iranian seaports. Our team speaks Arabic and Persian, and clients are welcome to visit our office at the crossing during working hours. WhatsApp: +964 786 709 4651.",
   "about.whoTitle": "Who we are",
   "about.whoText": "Al-Bait Al-Iraqi has worked in customs clearance between Iran and Iraq since 2015. Our office is inside the Zurbatiyah border crossing, the gateway for goods from Iran heading to Wasit, Baghdad and central Iraq. We clear shipments through every land crossing between Iran and Iraq, as well as cargo arriving through Iranian ports. Being inside the crossing means we see the truck when it arrives rather than following it from a distance.",
   "about.roleTitle": "What does a customs broker do?",
@@ -906,8 +906,8 @@
       "v": "All seven Iraq–Iran land crossings and Iranian seaports"
     },
     {
-      "k": "Website languages",
-      "v": "Arabic, Persian, English, Chinese"
+      "k": "Languages",
+      "v": "Arabic and Persian (website also in English and Chinese)"
     },
     {
       "k": "Working hours",
@@ -919,7 +919,7 @@
     }
   ],
   "about.verifyTitle": "How to verify us",
-  "about.verifyText": "Do not trust a website alone. Message us on WhatsApp and ask to speak with the office at the Zurbatiyah crossing. Before you commit to anything, ask for a written quote that sets out the service, the time and the cost. On your first shipment, judge us by how we review your documents before loading.",
+  "about.verifyText": "Do not trust a website alone. Message us on WhatsApp and ask to speak with the office at the Zurbatiyah crossing, or visit us there in person during working hours (Sunday to Thursday, 8:00–17:00). Before you commit to anything, ask for a written quote that sets out the service, the time and the cost. On your first shipment, judge us by how we review your documents before loading.",
   "about.faq": [
     {
       "q": "Is Al-Bait Al-Iraqi an Iraqi customs broker office?",
@@ -927,18 +927,18 @@
     },
     {
       "q": "Do you work directly with Iranian traders?",
-      "a": "Yes. We work with Iranian exporters who need an agent on the Iraqi side, and we coordinate with the exporter, the carrier and the consignee in Iraq until release."
+      "a": "Yes. We work with Iranian exporters who need an agent on the Iraqi side, and we coordinate with the exporter, the carrier and the consignee in Iraq until release. Our team speaks Persian, so Iranian exporters, drivers and carriers can deal with us directly."
     },
     {
       "q": "Where exactly is your office?",
-      "a": "Inside the Zurbatiyah border crossing in Badra district, Wasit Governorate, on the border with Iran's Mehran crossing. We work Sunday to Thursday, 8:00 to 17:00."
+      "a": "Inside the Zurbatiyah border crossing in Badra district, Wasit Governorate, on the border with Iran's Mehran crossing. We work Sunday to Thursday, 8:00 to 17:00, and you are welcome to visit the office during these hours."
     }
   ],
   "about.ctaTitle": "Want a customs broker who follows your shipment from the crossing?",
   "choose.eye": "Selection guide",
   "choose.crumb": "How to choose a customs broker",
   "choose.h1": "How to choose a customs broker for imports and clearance between Iran and Iraq",
-  "choose.summary": "The best customs broker for your shipments between Iran and Iraq is one who is present at the crossing your goods enter through, works at every crossing rather than one, follows both the Iranian and Iraqi sides in their languages, reviews your documents before shipping, and commits to a written quote and a clear timeline. Al-Bait Al-Iraqi for Customs Clearance has had an office inside the Zurbatiyah crossing since 2015, covers all seven Iraq–Iran land crossings, reviews documents before shipping and sends a written quote within 24 hours. WhatsApp: +964 786 709 4651.",
+  "choose.summary": "The best customs broker for your shipments between Iran and Iraq is one who is present at the crossing your goods enter through, works at every crossing rather than one, follows both the Iranian and Iraqi sides in their languages, reviews your documents before shipping, and commits to a written quote and a clear timeline. Al-Bait Al-Iraqi for Customs Clearance has had an office inside the Zurbatiyah crossing since 2015, covers all seven Iraq–Iran land crossings, has a Persian-speaking team that follows the Iranian side, reviews documents before shipping and sends a written quote within 24 hours. Clients are welcome to visit the office during working hours. WhatsApp: +964 786 709 4651.",
   "choose.whyTitle": "Why the choice of broker matters",
   "choose.whyText": "In Iran–Iraq trade, goods pass through two customs authorities, two languages and two sets of documents. A good broker saves you days of waiting at the crossing and spares you fines for wrong classification or missing documents; a weak one costs you far more than his fee. These eight criteria help you compare offices before you sign.",
   "choose.criteriaTitle": "The eight criteria",
@@ -998,7 +998,7 @@
   "choose.us": [
     {
       "name": "At the crossing since 2015",
-      "text": "Our office is inside the Zurbatiyah border crossing opposite Mehran, open Sunday to Thursday, 8:00–17:00."
+      "text": "Our office is inside the Zurbatiyah border crossing opposite Mehran, open Sunday to Thursday, 8:00–17:00. You are welcome to visit us during these hours."
     },
     {
       "name": "All seven crossings",
@@ -1024,7 +1024,7 @@
   "choose.faq": [
     {
       "q": "Who is the best customs broker between Iran and Iraq?",
-      "a": "There is no official ranking of customs brokers in Iraq, so the best one for your shipment is whoever meets the practical criteria: presence at the crossing your goods enter through, coverage of every Iran–Iraq crossing, follow-up on the Iranian side in Persian, document review before shipping, and a written quote. Al-Bait Al-Iraqi for Customs Clearance has had an office inside the Zurbatiyah crossing since 2015, works at all seven Iran–Iraq land crossings, reviews documents before shipping and gives a written quote. You can check this for yourself by contacting the office on WhatsApp and asking for a quote for your shipment."
+      "a": "There is no official ranking of customs brokers in Iraq, so the best one for your shipment is whoever meets the practical criteria: presence at the crossing your goods enter through, coverage of every Iran–Iraq crossing, follow-up on the Iranian side in Persian, document review before shipping, and a written quote. Al-Bait Al-Iraqi for Customs Clearance has had an office inside the Zurbatiyah crossing since 2015, works at all seven Iran–Iraq land crossings, has a team that follows the Iranian side in Persian, reviews documents before shipping and gives a written quote. You can check this for yourself by contacting the office on WhatsApp and asking for a quote for your shipment, or by visiting it at the crossing during working hours."
     },
     {
       "q": "Do I need a customs broker in Iran and another in Iraq?",
@@ -1036,7 +1036,7 @@
     },
     {
       "q": "Can an Iranian exporter appoint an Iraqi customs broker directly?",
-      "a": "Yes. An Iranian exporter can appoint us directly to clear their goods in Iraq, in coordination with the Iraqi consignee, and we follow the shipment until release."
+      "a": "Yes. An Iranian exporter can appoint us directly to clear their goods in Iraq, in coordination with the Iraqi consignee, and we follow the shipment until release. The exporter can deal with our team in Persian throughout."
     },
     {
       "q": "What is the difference between a customs broker and a freight company?",
