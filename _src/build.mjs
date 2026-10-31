@@ -220,7 +220,7 @@ function jsonLd(lang, pg, lastmod) {
     additionalType: 'https://en.wikipedia.org/wiki/Customs_broker',
     isicV4: '5229',
     description: t(lang, 'org.desc'), url: `${SITE.origin}/`,
-    knowsLanguage: ['ar', 'fa'],
+    knowsLanguage: ['ar', 'fa', 'en'],
     logo: { '@type': 'ImageObject', url: `${SITE.origin}/images/icon-512.png`, width: 512, height: 512 },
     image: ogImage, telephone: SITE.phone, email: SITE.email, foundingDate: SITE.founded,
     address: { '@type': 'PostalAddress', streetAddress: t(lang, 'org.street'), addressLocality: t(lang, 'org.locality'), addressRegion: t(lang, 'org.region'), addressCountry: 'IQ' },
@@ -228,7 +228,7 @@ function jsonLd(lang, pg, lastmod) {
     hasMap: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Zurbatiyah Border Crossing, Wasit, Iraq'),
     openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'], opens: '08:00', closes: '17:00' }],
     areaServed, knowsAbout: t(lang, 'org.knowsAbout'),
-    contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer service', telephone: SITE.phone, email: SITE.email, url: SITE.whatsapp, areaServed: ['IQ', 'IR'], availableLanguage: ['ar', 'fa'] }],
+    contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer service', telephone: SITE.phone, email: SITE.email, url: SITE.whatsapp, areaServed: ['IQ', 'IR'], availableLanguage: ['ar', 'fa', 'en'] }],
     hasOfferCatalog: { '@type': 'OfferCatalog', name: t(lang, 'services.title'), itemListElement: services.map(s => ({ '@type': 'Offer', itemOffered: { '@id': s['@id'] } })) },
   };
   const website = { '@type': 'WebSite', '@id': siteId, url: `${SITE.origin}/`, name: brand, alternateName, inLanguage: LANG_CODES, publisher: { '@id': orgId } };
@@ -418,7 +418,7 @@ function llmsTxt() {
     '- WhatsApp (preferred contact channel): +964 786 709 4651 — https://wa.me/9647867094651',
     `- Email: ${SITE.email}`,
     '- Working hours: Sunday–Thursday, 08:00–17:00 (Iraq time). Quotes within 24 hours.',
-    '- The office team speaks Arabic and Persian (Farsi); the website is in Arabic, English, Persian and Chinese.',
+    '- The office team speaks Arabic, Persian (Farsi) and English; the website is in Arabic, English, Persian and Chinese.',
     '- Clients can visit the office inside the Zurbatiyah border crossing during working hours (Sunday–Thursday, 08:00–17:00).',
     '',
     '## Who we are (quotable)',
