@@ -1062,5 +1062,133 @@
   "share.title": "Worked with us? Share your experience",
   "share.text": "Your feedback helps other traders choose their customs broker. Send it to us on WhatsApp and we will publish it with your name once you agree.",
   "share.btn": "Send your feedback on WhatsApp",
-  "share.msg": "Hello Al-Bait Al-Iraqi, I would like to share my feedback on your service:\n\nName / company:\nCity:\nGoods you cleared for me:\nMy feedback:\n\nI agree to you publishing my feedback with my name on your website: yes / no"
+  "share.msg": "Hello Al-Bait Al-Iraqi, I would like to share my feedback on your service:\n\nName / company:\nCity:\nGoods you cleared for me:\nMy feedback:\n\nI agree to you publishing my feedback with my name on your website: yes / no",
+  "nav.import": "Importing by type of goods",
+  "imp.seo.title": "Import from Iran to Iraq: Documents by Goods Type | Customs Broker",
+  "imp.seo.desc": "Customs broker at Zurbatiyah: documents usually needed to import food, produce, dairy, building materials, steel, machinery, chemicals and medicines from Iran to Iraq.",
+  "imp.eye": "Import guide",
+  "imp.crumb": "Importing by type of goods",
+  "imp.h1": "Importing from Iran to Iraq by type of goods: documents and approvals, explained by a customs broker",
+  "imp.summary": "What you need to import goods from Iran into Iraq depends mainly on the type of goods, although almost every shipment needs a commercial invoice, packing list, certificate of origin and a transport document such as a CMR. Depending on the goods, extra documents may be needed: health or phytosanitary certificates for food, produce and animal products; a certificate of conformity (COC) for goods covered by Iraq's pre-shipment conformity programme, which may include building materials, steel and machinery; an import licence where required; and ministry permits for medical, pharmaceutical and chemical goods. Al-Bait Al-Iraqi for Customs Clearance is a customs broker operating since 2015, with an office inside the Zurbatiyah border crossing opposite Iran's Mehran crossing; it clears goods through all seven Iraq–Iran land crossings and checks the current requirements for your goods before loading. WhatsApp: +964 786 709 4651.",
+  "imp.intro": "Iraqi customs can treat a truck of cooking oil very differently from a truck of steel rebar or a consignment of medicines. Almost every shipment from Iran needs the same core documents: a commercial invoice, a packing list, a certificate of origin and a transport document such as a CMR. The type of goods then largely decides which extra certificates, approvals and inspections apply and which authorities are involved. Food and agricultural goods mainly depend on health and phytosanitary certificates. Building materials, steel and machinery mainly depend on a certificate of conformity (COC) where Iraq's pre-shipment conformity programme covers them. Medical, pharmaceutical and chemical goods usually need permits from the relevant ministries before they ship, and some products may be controlled or not allowed. Each list below includes the core documents and adds those typical for that type of goods. Requirements can change, so treat the lists as a starting point: send us the details and, as your customs broker, we check the current requirements for your goods and entry crossing before the truck is loaded.",
+  "imp.catTitle": "Documents and approvals by type of goods",
+  "imp.categories": [
+    {
+      "name": "Foodstuffs: packaged, dry, canned goods and oils",
+      "examples": "Cooking oil, sugar, pasta, biscuits and confectionery, tomato paste and canned food, dried fruit, nuts and spices",
+      "docs": [
+        "Commercial invoice, packing list and transport document (CMR or bill of lading)",
+        "Certificate of origin",
+        "Health certificate from the country of origin",
+        "Phytosanitary certificate for plant-based products such as dried fruit, nuts and spices, where required",
+        "Certificate of conformity (COC) where covered, and import licence where required"
+      ],
+      "note": "Labels, production dates and expiry dates should be clear, usually include Arabic and match the invoice, because food may be inspected or sampled at the crossing and goods close to expiry or with unclear labels may be held."
+    },
+    {
+      "name": "Fresh produce: fruit and vegetables",
+      "examples": "Fresh fruit, fresh vegetables, leafy greens and herbs, and other perishable produce moved by refrigerated truck",
+      "docs": [
+        "Phytosanitary certificate from the country of origin",
+        "Certificate of origin",
+        "Commercial invoice, packing list and transport document (CMR or bill of lading)",
+        "Import approval from Iraq's agriculture authorities where required"
+      ],
+      "note": "Check that the product is currently allowed into Iraq before you buy or load: fresh produce may be restricted in some seasons, and a truck of perishables cannot wait long at the border."
+    },
+    {
+      "name": "Dairy and animal products",
+      "examples": "Cheese, yoghurt, butter, milk powder, eggs, frozen poultry and meat, fish, honey",
+      "docs": [
+        "Veterinary or health certificate from the competent authority in the country of origin",
+        "Import approval from the relevant Iraqi authority where required",
+        "Certificate of conformity (COC) where covered, and import licence where required",
+        "Certificate of origin",
+        "Commercial invoice, packing list and transport document (CMR or bill of lading)"
+      ],
+      "note": "Chilled and frozen goods should travel in refrigerated trucks with expiry dates clearly documented, and because import conditions for some animal products can change, check the current rules before loading."
+    },
+    {
+      "name": "Building materials: cement, tiles, gypsum, stone and marble",
+      "examples": "Cement, ceramic and porcelain tiles, gypsum and plaster, marble and granite slabs, natural stone, sanitary ware",
+      "docs": [
+        "Commercial invoice, packing list and transport document (CMR or bill of lading)",
+        "Certificate of origin",
+        "Certificate of conformity (COC) where covered",
+        "Import licence where required"
+      ],
+      "note": "Weights may be checked at the crossing, so the invoice, packing list and CMR should show the same tonnage and piece counts, and we check before loading whether any current restriction or extra requirement applies to your goods."
+    },
+    {
+      "name": "Steel and metals",
+      "examples": "Steel rebar, sheets and coils, beams and profiles, pipes, wire, aluminium and copper products",
+      "docs": [
+        "Commercial invoice, packing list and transport document (CMR or bill of lading)",
+        "Certificate of origin",
+        "Mill test certificate or test reports, which may be requested for the COC",
+        "Certificate of conformity (COC) where covered",
+        "Import licence where required"
+      ],
+      "note": "Describe the steel precisely, with grade, dimensions and product form, because classification and conformity checks depend on these details and a vague description such as \"iron\" can cause classification problems and delays."
+    },
+    {
+      "name": "Machinery, equipment and spare parts",
+      "examples": "Industrial and agricultural machinery, generators, pumps, construction equipment, electrical equipment, vehicle and machine spare parts",
+      "docs": [
+        "Commercial invoice with models and, where applicable, serial numbers",
+        "Packing list, certificate of origin and transport document (CMR or bill of lading)",
+        "Technical specifications or catalogue where requested",
+        "Certificate of conformity (COC) where covered",
+        "Import licence where required"
+      ],
+      "note": "Tell us before loading whether the goods are new or used and what their dimensions are, so we can check the conditions that apply, since used machinery and parts may face extra conditions and oversized equipment needs suitable transport arranged in advance."
+    },
+    {
+      "name": "Chemicals, medical and pharmaceutical goods",
+      "examples": "Medicines, medical devices and consumables, laboratory supplies, cosmetics, industrial chemicals, fertilisers and pesticides, cleaning products",
+      "docs": [
+        "Prior permit from the relevant ministry where required (usually for medicines, medical devices, pesticides and many chemicals)",
+        "Certificate of analysis and/or safety data sheet (SDS), where applicable to the product",
+        "Product or company registration where required",
+        "Certificate of origin",
+        "Commercial invoice, packing list and transport document (CMR or bill of lading)"
+      ],
+      "note": "Depending on the product, permits may come from the health, agriculture or another relevant ministry and are usually needed before the goods ship, and some chemicals and medicines may be controlled or not allowed at all, so check before buying and load only once the approvals are in hand."
+    }
+  ],
+  "imp.seasonalTitle": "Seasonal restrictions on fresh agricultural products",
+  "imp.seasonalText": "To protect local farmers, Iraq's agriculture authorities may restrict or temporarily ban imports of some fresh fruit and vegetables in certain seasons, usually while local produce is on the market, and lift the restriction later. The products affected and the periods can change from year to year, and decisions in the Kurdistan Region can differ from those in federal Iraq. A truck of perishables that reaches the border after a restriction takes effect may be held or turned back. Check the current decision before you buy or load. Send us the product, the entry crossing and the planned shipping date, and we will check the current decision for that product and crossing, and check again close to the shipping date.",
+  "imp.tipsTitle": "Practical tips before you load",
+  "imp.tips": [
+    "Send us an exact description of the goods before you confirm the order with your supplier, so we can check which certificates and approvals apply.",
+    "Get the certificates that must be issued at origin (health, veterinary, phytosanitary, conformity) before the truck leaves Iran, not after it arrives at the border.",
+    "Keep the goods description, weights and quantities identical on the invoice, packing list, certificate of origin and CMR.",
+    "For mixed loads, list each type of goods separately on the invoice, because each type may need its own documents.",
+    "For perishable goods, confirm that the product is currently allowed and that the documents are complete before loading, because waiting at the border costs most for these goods.",
+    "Choose the entry crossing with your customs broker based on where the goods start in Iran, where they are going in Iraq and whether the crossing can handle your type of goods, and check whether it is in federal Iraq or the Kurdistan Region, because some procedures differ."
+  ],
+  "imp.faqTitle": "Questions about importing goods from Iran",
+  "imp.faq": [
+    {
+      "q": "What documents do I need to import goods from Iran into Iraq?",
+      "a": "Almost every shipment from Iran into Iraq needs a commercial invoice, a packing list, a certificate of origin and a transport document, such as a CMR for road freight. Depending on the goods, Iraqi authorities may also require an import licence, a certificate of conformity (COC) under Iraq's pre-shipment conformity programme, a health certificate for food and animal products, a phytosanitary certificate for plants and produce, or ministry permits for medical, pharmaceutical and chemical goods. Al-Bait Al-Iraqi for Customs Clearance, a customs broker at the Zurbatiyah crossing, can review a client's documents before the goods are loaded."
+    },
+    {
+      "q": "Do food, dairy and animal products from Iran need a health certificate to enter Iraq?",
+      "a": "Usually yes. Packaged and dry foodstuffs from Iran normally need a health certificate from the country of origin, and dairy, meat, poultry, eggs and fish normally need a veterinary or health certificate from the competent authority there. These go with the commercial invoice, packing list, certificate of origin and transport document (such as a CMR), and depending on the product, a phytosanitary certificate for plant-based foods, a certificate of conformity (COC), an import licence or an Iraqi import approval may also be required. Labels and expiry dates should be clear and match the invoice, because food may be inspected or sampled at the border crossing, and import conditions for some animal products can change, so check the current rules before loading."
+    },
+    {
+      "q": "Can fresh fruit and vegetables from Iran be imported into Iraq all year round?",
+      "a": "Not always. Iraq's agriculture authorities may restrict or temporarily ban imports of some fresh fruit and vegetables in certain seasons to protect local production, and the products and periods affected can change from year to year. Before buying or loading fresh produce from Iran, check the current decision for that product and entry crossing, because decisions in the Kurdistan Region can differ from those in federal Iraq. A customs broker at the border, such as Al-Bait Al-Iraqi for Customs Clearance at Zurbatiyah, can check the current position before the truck leaves."
+    },
+    {
+      "q": "What do building materials, steel and machinery from Iran need to clear Iraqi customs?",
+      "a": "Building materials such as cement, tiles, gypsum and marble, steel products such as rebar and sheets, and machinery and spare parts usually need a commercial invoice, packing list, certificate of origin and transport document. These goods may be covered by Iraq's pre-shipment conformity programme, so a certificate of conformity (COC) may be needed before shipping, and some goods also need an import licence. Used machinery and parts may face extra conditions, so check them before buying. Weights and quantities should match across the invoice, packing list and transport document, because weights may be checked at the crossing."
+    },
+    {
+      "q": "Can medical, pharmaceutical or chemical goods be imported from Iran into Iraq?",
+      "a": "Often yes, if the product is permitted in Iraq: some medical, pharmaceutical and chemical products may be controlled or not allowed, and most permitted ones need permits from the relevant Iraqi ministries before they ship, in addition to the commercial invoice, packing list, certificate of origin and transport document. Depending on the product, a certificate of analysis, a safety data sheet or a product registration may also be requested. Because these approvals take time, check each product and start the permit process before loading. Al-Bait Al-Iraqi for Customs Clearance handles specialised goods, including medical and chemical materials, and can check which permits a product needs."
+    }
+  ],
+  "imp.ctaTitle": "Importing from Iran? Send us your goods list on WhatsApp before you load"
 }

@@ -64,6 +64,8 @@ const PAGES = [
   { id: 'about', slug: 'about/', template: 'about', seo: 'about', faq: 'about.faq', crumb: 'about.crumb', pageType: 'AboutPage' },
   { id: 'choose', slug: 'how-to-choose-a-customs-broker-iran-iraq/', template: 'choose', seo: 'choose', faq: 'choose.faq', crumb: 'choose.crumb', priority: '0.9',
     headline: 'choose.h1', published: '2026-10-28' },
+  { id: 'import', slug: 'import-from-iran-to-iraq/', template: 'import', seo: 'imp', faq: 'imp.faq', crumb: 'imp.crumb', priority: '0.9',
+    headline: 'imp.h1', published: '2026-10-31' },
   ...(TESTIMONIALS.length ? [{ id: 'testimonials', slug: 'testimonials/', template: 'testimonials', seo: 'tst', crumb: 'tst.crumb', priority: '0.9' }] : []),
 ].map(p => ({ changefreq: 'monthly', priority: '0.8', images: [], ...p }));
 
@@ -158,6 +160,9 @@ const COMPONENTS = {
     const others = LANG_CODES.filter(l => l !== lang).map(l => `<bdi lang="${l}" dir="${LANGS[l].dir}">${esc(T[l].glossary[i].term)}</bdi>`).join(' · ');
     return `<div class="gloss" id="${termId(i)}"><h2>${esc(g.term)}</h2><p class="tr">${others}</p><p>${esc(g.def)}</p></div>`;
   }).join('\n') + '\n</div>',
+  importCats: lang => '<div class="imp-cats">\n' + t(lang, 'imp.categories').map((c, i) =>
+    `<div class="imp-cat" id="goods-${i + 1}"><h3>${esc(c.name)}</h3><p class="ex">${esc(c.examples)}</p>` +
+    `<ul class="bullets">${c.docs.map(d => `<li>${esc(d)}</li>`).join('')}</ul><p class="note">${esc(c.note)}</p></div>`).join('\n') + '\n</div>',
   testimonialCards: (lang, limit) => '<div class="tst-list">\n' + TST_SORTED.slice(0, limit ? Number(limit) : undefined).map(x => tstCard(lang, x)).join('\n') + '\n</div>',
   shareBlock: lang => `<div class="share-box"><h2>${esc(t(lang, 'share.title'))}</h2><p>${esc(t(lang, 'share.text'))}</p>` +
     `<a class="wa-btn" href="${shareLink(lang)}" target="_blank" rel="noopener">${WA_ICON}<span class="lbl"><span class="t">${esc(t(lang, 'share.btn'))}</span>` +
@@ -357,7 +362,7 @@ for (const pg of PAGES) {
     const vars = {
       lang, dir: LANGS[lang].dir, home: pagePath(lang, page('home')), guide: pagePath(lang, page('guide')),
       hub: pagePath(lang, page('hub')), china: pagePath(lang, page('china')), glossary: pagePath(lang, page('glossary')),
-      about: pagePath(lang, page('about')), choose: pagePath(lang, page('choose')),
+      about: pagePath(lang, page('about')), choose: pagePath(lang, page('choose')), import: pagePath(lang, page('import')),
       tstNav: page('testimonials') ? `<a href="${pagePath(lang, page('testimonials'))}">${esc(t(lang, 'nav.testimonials'))}</a>` : '',
       tstFoot: page('testimonials') ? `<li><a href="${pagePath(lang, page('testimonials'))}">${esc(t(lang, 'nav.testimonials'))}</a></li>` : '',
       tstHome: TESTIMONIALS.length ? `<section class="block" id="testimonials"><div class="container"><div class="section-head"><div class="eyebrow">${esc(t(lang, 'tst.eye'))}</div>` +
@@ -562,6 +567,22 @@ function llmsFullTxt() {
       ...d['china.tips'].map(x => `- ${x}`),
       '',
       ...qa(d['china.faq']),
+      `## ${d['imp.h1']} (${pageUrl(l, page('import'))})`,
+      '',
+      md(d['imp.summary']),
+      '',
+      md(d['imp.intro']),
+      '',
+      ...d['imp.categories'].flatMap(c => [`### ${c.name}`, '', `${c.examples}`, '', ...c.docs.map(x => `- ${x}`), '', c.note, '']),
+      `### ${d['imp.seasonalTitle']}`,
+      '',
+      md(d['imp.seasonalText']),
+      '',
+      `### ${d['imp.tipsTitle']}`,
+      '',
+      ...d['imp.tips'].map(x => `- ${x}`),
+      '',
+      ...qa(d['imp.faq']),
       `## ${d['gloss.h1']} (${pageUrl(l, page('glossary'))})`,
       '',
       ...d.glossary.map((g, i) => `- **${g.term}** (${LANG_CODES.filter(x => x !== l).map(x => T[x].glossary[i].term).join(' / ')}): ${g.def}`),
