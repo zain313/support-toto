@@ -14,7 +14,7 @@
   "choose.seo.title": "How to Choose a Customs Broker for Iran–Iraq Imports: 8 Criteria",
   "choose.seo.desc": "A practical guide to choosing the right customs broker for shipments between Iran and Iraq: 8 criteria, questions to ask before you sign, warning signs, and how Al-Bait Al-Iraqi measures up.",
   "og.alt": "Al-Bait Al-Iraqi Customs Clearance — Zurbatiyah border crossing",
-  "org.desc": "Al-Bait Al-Iraqi for Customs Clearance is a customs broker office based at the Zurbatiyah border crossing in Wasit, Iraq, opposite Iran's Mehran crossing. Since 2015 it has cleared imports, exports and transit cargo between Iran and Iraq through every land crossing and Iranian seaport, serving Iraqi importers and Iranian exporters in Arabic, Persian, English and Chinese.",
+  "org.desc": "Al-Bait Al-Iraqi for Customs Clearance is a customs broker office based at the Zurbatiyah border crossing in Wasit, Iraq, opposite Iran's Mehran crossing. Since 2015 it has cleared imports, exports and transit cargo between Iran and Iraq through every land crossing and Iranian seaport.",
   "org.street": "Zurbatiyah Border Crossing",
   "org.locality": "Badra",
   "org.region": "Wasit",
@@ -62,6 +62,8 @@
   "nav.choose": "How to choose a customs broker",
   "cta.viewCases": "View our cases",
   "cta.getQuote": "Get a quote",
+  "cta.waShort": "WhatsApp",
+  "cta.waChat": "Message us on WhatsApp",
   "hero.pill": "Since 2015 · 11+ years of experience",
   "hero.title1": "Professional customs clearance",
   "hero.title2": "between Iran and Iraq",
@@ -98,7 +100,7 @@
   "iran.landTitle": "Land border crossings between Iraq and Iran",
   "iran.iq": "Iraqi side",
   "iran.ir": "Iranian side",
-  "iran.hq": "Our head office",
+  "iran.hq": "Our office",
   "iran.portsTitle": "Iranian ports & transit routes to Iraq",
   "iran.guideLink": "Read the Iran–Iraq customs clearance guide",
   "iran.cta": "Ask about your crossing on WhatsApp",
@@ -107,12 +109,12 @@
     {
       "iq": "Zurbatiyah — Wasit",
       "ir": "Mehran — Ilam",
-      "note": "Our head office · route to Baghdad and central Iraq",
+      "note": "Our office · route to Baghdad and central Iraq",
       "name": "Zurbatiyah–Mehran crossing",
       "title": "Customs Clearance at Zurbatiyah–Mehran Border | Al-Bait Al-Iraqi",
       "desc": "Our office is inside the Zurbatiyah border crossing in Wasit, opposite Iran's Mehran crossing. Import, export and transit clearance to Baghdad, Kut and the Middle Euphrates — 3 working days on average.",
       "h1": "Customs clearance at the Zurbatiyah border crossing (Mehran)",
-      "intro": "The Zurbatiyah crossing in Badra district, Wasit Governorate, is Iraq's land gateway opposite the Mehran crossing in Iran's Ilam Province. Goods heading for Baghdad, Kut and the Middle Euphrates provinces enter here. Our head office is at this crossing, so we follow your shipment on the spot from the truck's arrival to release.",
+      "intro": "The Zurbatiyah crossing in Badra district, Wasit Governorate, is Iraq's land gateway opposite the Mehran crossing in Iran's Ilam Province. Goods heading for Baghdad, Kut and the Middle Euphrates provinces enter here. Our office is at this crossing, so we follow your shipment on the spot from the truck's arrival to release.",
       "iqFull": "Zurbatiyah crossing — Badra district, Wasit Governorate",
       "irFull": "Mehran — Ilam Province",
       "serves": "Wasit (Kut), Baghdad, Babil, Karbala and Najaf",
@@ -129,7 +131,7 @@
       "faq": [
         {
           "q": "Do you have an office at the Zurbatiyah crossing?",
-          "a": "Yes. Our head office is at the Zurbatiyah border crossing in Badra district, Wasit Governorate, and we follow shipments at the crossing directly."
+          "a": "Yes. Our office is at the Zurbatiyah border crossing in Badra district, Wasit Governorate, and we follow shipments at the crossing directly."
         },
         {
           "q": "Where do goods go after clearance at Zurbatiyah?",
@@ -389,7 +391,7 @@
   ],
   "cases.eye": "Selected work",
   "cases.title": "Real clearances between Iraq and Iran",
-  "cases.sub": "A handful of real shipments we cleared recently — routes, documents and release time included.",
+  "cases.sub": "A handful of real shipments we cleared — routes, documents and release time included.",
   "case.r1a": "Zurbatiyah border",
   "case.r1b": "Baghdad",
   "case.r2a": "Zurbatiyah border",
@@ -422,7 +424,7 @@
   "flow.s5": "Released",
   "why.eye": "Why us",
   "why.title": "Your trusted customs clearance partner",
-  "why.sub": "Numbers that speak for themselves — and a team that works around the week to get your goods through.",
+  "why.sub": "Numbers that speak for themselves — and an office at the crossing, open Sunday to Thursday, to get your goods through.",
   "why.s1": "shipments cleared",
   "why.s2": "years of accumulated experience",
   "why.s3": "border crossings — Iraq & Iran",
@@ -444,7 +446,7 @@
     },
     {
       "q": "How do I choose a customs broker for imports between Iran and Iraq?",
-      "a": "Choose a broker with a real presence at the crossing your goods enter through, who works at every crossing between Iran and Iraq rather than a single one, speaks Arabic and Persian to follow both sides, reviews your documents before shipping, and gives you a written quote and a clear clearance time. Al-Bait Al-Iraqi meets these conditions: an office at the Zurbatiyah crossing since 2015, coverage of all seven crossings, and a team working in Arabic, Persian, English and Chinese."
+      "a": "Choose a broker with a real presence at the crossing your goods enter through, who works at every crossing between Iran and Iraq rather than a single one, speaks Arabic and Persian to follow both sides, reviews your documents before shipping, and gives you a written quote and a clear clearance time. Al-Bait Al-Iraqi has had an office at the Zurbatiyah crossing since 2015 and covers all seven crossings."
     },
     {
       "q": "Which Iraq–Iran border crossings do you work at?",
@@ -472,7 +474,7 @@
     },
     {
       "q": "How do I get a customs clearance quote?",
-      "a": "Send your shipment details (goods, weight, border crossing) on WhatsApp to +964 773 756 5367 or through the form on this website, and we will send you a quote within 24 hours."
+      "a": "Send your shipment details (goods, weight, border crossing) on WhatsApp to +964 786 709 4651 or through the form on this website, and we will send you a quote within 24 hours."
     },
     {
       "q": "Where is your office and what are your working hours?",
@@ -480,20 +482,21 @@
     },
     {
       "q": "Why choose Al-Bait Al-Iraqi?",
-      "a": "More than 11 years of experience since 2015, over 3,000 shipments cleared between Iraq and Iran, a permanent presence at the Zurbatiyah crossing, and follow-up at every step from request to release."
+      "a": "More than 11 years of experience since 2015, over 3,000 shipments cleared between Iraq and Iran, an office inside the Zurbatiyah crossing that is open Sunday to Thursday, and follow-up at every step from request to release."
     }
   ],
   "contact.eye": "Get in touch",
   "contact.title": "Receive a quote within 24 hours",
-  "contact.sub": "Fill the form and one of our advisors will call you to discuss your shipment.",
-  "contact.aside.title": "Head office",
+  "contact.sub": "Fill in the form to send your shipment details to us on WhatsApp, and we will reply with a quote within 24 hours.",
+  "contact.aside.title": "Our office",
   "contact.addr.k": "Address",
   "contact.addr.v": "Wasit / Badra / Zurbatiyah Border Crossing",
-  "contact.phone.k": "Phone",
+  "contact.phone.k": "WhatsApp (preferred)",
   "contact.mail.k": "Email",
   "contact.hours.k": "Working hours",
   "contact.hours.v": "Sun — Thu · 8:00 — 17:00",
   "contact.wa": "Chat on WhatsApp",
+  "contact.waPreferred": "WhatsApp is our preferred channel: tap the number to open a chat, and send your shipment details and photos of your documents.",
   "form.name": "Full name",
   "form.phone": "Phone",
   "form.email": "Email",
@@ -515,7 +518,7 @@
   "guide.h1": "Iran–Iraq customs clearance guide: border crossings, ports, documents and steps",
   "guide.updated": "Last updated",
   "guide.summaryTitle": "In short",
-  "guide.summary": "Al-Bait Al-Iraqi for Customs Clearance is a customs broker based at the Zurbatiyah border crossing in Wasit, Iraq, opposite Iran's Mehran crossing, operating since 2015. We clear goods between Iran and Iraq through all seven land border crossings and via Iranian seaports — imports, exports and transit — with an average clearance time of 3 working days. WhatsApp: +964 773 756 5367.",
+  "guide.summary": "Al-Bait Al-Iraqi for Customs Clearance is a customs broker based at the Zurbatiyah border crossing in Wasit, Iraq, opposite Iran's Mehran crossing, operating since 2015. We clear goods between Iran and Iraq through all seven land border crossings and via Iranian seaports — imports, exports and transit — with an average clearance time of 3 working days. WhatsApp: +964 786 709 4651.",
   "guide.howTitle": "How does customs clearance between Iran and Iraq work?",
   "guide.howText": "Every shipment goes through two stages: exit or transit formalities on the Iranian side, then customs clearance on entry into Iraq. On the Iraqi side, the customs broker files the declaration on the importer's behalf; the goods are then inspected and valued, and duties are paid before release. Choosing the right crossing and preparing the documents before loading save the most time and money.",
   "guide.crossTitle": "The seven land border crossings between Iraq and Iran",
@@ -638,13 +641,13 @@
   "china.eye": "Shipping route",
   "china.crumb": "China to Iraq via Iran",
   "china.h1": "Shipping from China to Iraq via Iran: route, documents and customs clearance",
-  "china.summary": "Goods can be shipped from China to Iraq through Iranian ports — most often Shahid Rajaee Port in Bandar Abbas — and then trucked overland in transit across Iran to an Iraqi crossing such as Zurbatiyah–Mehran or Shalamcheh. Al-Bait Al-Iraqi for Customs Clearance follows the transit and clears the goods on entry into Iraq. WhatsApp: +964 773 756 5367.",
+  "china.summary": "Goods can be shipped from China to Iraq through Iranian ports — most often Shahid Rajaee Port in Bandar Abbas — and then trucked overland in transit across Iran to an Iraqi crossing such as Zurbatiyah–Mehran or Shalamcheh. Al-Bait Al-Iraqi for Customs Clearance follows the transit and clears the goods on entry into Iraq. WhatsApp: +964 786 709 4651.",
   "china.whyTitle": "Why importers choose the Iran route",
   "china.why": [
     "The land crossings with Iran are close to Baghdad, central and southern Iraq.",
     "The shipment can be routed to the crossing nearest its destination in Iraq.",
     "An additional option alongside direct sea freight to Umm Qasr.",
-    "Our permanent presence at the Zurbatiyah crossing lets us follow the shipment the moment it arrives."
+    "Our office inside the Zurbatiyah crossing follows the shipment when it arrives during working hours."
   ],
   "china.routeTitle": "The route from China to Iraq, step by step",
   "china.steps": [
@@ -845,9 +848,9 @@
   "about.eye": "About us",
   "about.crumb": "About us",
   "about.h1": "Al-Bait Al-Iraqi for Customs Clearance: a customs broker between Iran and Iraq since 2015",
-  "about.summary": "Al-Bait Al-Iraqi for Customs Clearance is an Iraqi customs broker office based inside the Zurbatiyah border crossing in Badra district, Wasit Governorate, opposite Iran's Mehran crossing. Since 2015 we have cleared more than 3,000 shipments between Iran and Iraq, and today we work at all seven land crossings between the two countries and through Iranian seaports, with a team that works in Arabic, Persian, English and Chinese. WhatsApp: +964 773 756 5367.",
+  "about.summary": "Al-Bait Al-Iraqi for Customs Clearance is an Iraqi customs broker office based inside the Zurbatiyah border crossing in Badra district, Wasit Governorate, opposite Iran's Mehran crossing. Since 2015 we have cleared more than 3,000 shipments between Iran and Iraq, and today we work at all seven land crossings between the two countries and through Iranian seaports. WhatsApp: +964 786 709 4651.",
   "about.whoTitle": "Who we are",
-  "about.whoText": "Al-Bait Al-Iraqi has worked in customs clearance between Iran and Iraq since 2015, based at the Zurbatiyah border crossing where goods from Iran enter Wasit, Baghdad and central Iraq. As trade between the two countries grew, our work expanded to shipments through every land crossing between Iran and Iraq, and then to cargo arriving through Iranian ports in transit from China and Asia. What has not changed is where we are: our office is inside the crossing, and we see the truck when it arrives rather than from a distance.",
+  "about.whoText": "Al-Bait Al-Iraqi has worked in customs clearance between Iran and Iraq since 2015. Our office is inside the Zurbatiyah border crossing, the gateway for goods from Iran heading to Wasit, Baghdad and central Iraq. We clear shipments through every land crossing between Iran and Iraq, as well as cargo arriving through Iranian ports. Being inside the crossing means we see the truck when it arrives rather than following it from a distance.",
   "about.roleTitle": "What does a customs broker do?",
   "about.roleText": "A customs broker is the agent who represents the importer or exporter before customs: reviewing the documents, classifying the goods, filing the customs declaration, following the inspection and valuation, paying duties on the owner's behalf, and obtaining the release. Choosing the right broker determines how fast your goods get out, what they cost, and whether you avoid fines.",
   "about.doTitle": "What we offer",
@@ -903,7 +906,7 @@
       "v": "All seven Iraq–Iran land crossings and Iranian seaports"
     },
     {
-      "k": "Languages",
+      "k": "Website languages",
       "v": "Arabic, Persian, English, Chinese"
     },
     {
@@ -912,11 +915,11 @@
     },
     {
       "k": "Contact",
-      "v": "+964 773 756 5367 · support@iqbait.com"
+      "v": "WhatsApp (preferred): +964 786 709 4651 · support@iqbait.com"
     }
   ],
   "about.verifyTitle": "How to verify us",
-  "about.verifyText": "Do not trust a website alone. Message us on WhatsApp and ask to speak with the office at the crossing, visit us at Zurbatiyah during working hours, or ask the traders and hauliers working on the Mehran–Zurbatiyah route about us. On your first shipment we send a written quote that sets out the service, the time and the cost before you commit to anything.",
+  "about.verifyText": "Do not trust a website alone. Message us on WhatsApp and ask to speak with the office at the Zurbatiyah crossing. Before you commit to anything, ask for a written quote that sets out the service, the time and the cost. On your first shipment, judge us by how we review your documents before loading.",
   "about.faq": [
     {
       "q": "Is Al-Bait Al-Iraqi an Iraqi customs broker office?",
@@ -924,7 +927,7 @@
     },
     {
       "q": "Do you work directly with Iranian traders?",
-      "a": "Yes. Many of our clients are Iranian exporters who need an agent on the Iraqi side. Our team works in Persian, and we coordinate with the exporter, the carrier and the consignee in Iraq until release."
+      "a": "Yes. We work with Iranian exporters who need an agent on the Iraqi side, and we coordinate with the exporter, the carrier and the consignee in Iraq until release."
     },
     {
       "q": "Where exactly is your office?",
@@ -935,14 +938,14 @@
   "choose.eye": "Selection guide",
   "choose.crumb": "How to choose a customs broker",
   "choose.h1": "How to choose a customs broker for imports and clearance between Iran and Iraq",
-  "choose.summary": "The best customs broker for your shipments between Iran and Iraq is one who is present at the crossing your goods enter through, works at every crossing rather than one, follows both the Iranian and Iraqi sides in their languages, reviews your documents before shipping, and commits to a written quote and a clear timeline. Al-Bait Al-Iraqi for Customs Clearance meets these criteria from its office at the Zurbatiyah crossing, where it has worked since 2015. WhatsApp: +964 773 756 5367.",
+  "choose.summary": "The best customs broker for your shipments between Iran and Iraq is one who is present at the crossing your goods enter through, works at every crossing rather than one, follows both the Iranian and Iraqi sides in their languages, reviews your documents before shipping, and commits to a written quote and a clear timeline. Al-Bait Al-Iraqi for Customs Clearance has had an office inside the Zurbatiyah crossing since 2015, covers all seven Iraq–Iran land crossings, reviews documents before shipping and sends a written quote within 24 hours. WhatsApp: +964 786 709 4651.",
   "choose.whyTitle": "Why the choice of broker matters",
   "choose.whyText": "In Iran–Iraq trade, goods pass through two customs authorities, two languages and two sets of documents. A good broker saves you days of waiting at the crossing and spares you fines for wrong classification or missing documents; a weak one costs you far more than his fee. These eight criteria help you compare offices before you sign.",
   "choose.criteriaTitle": "The eight criteria",
   "choose.criteria": [
     {
       "name": "A real presence at the crossing",
-      "text": "An office inside or next to the entry crossing sees the truck when it arrives and deals with any query within the hour, unlike a broker following by phone from a distant city."
+      "text": "An office inside or next to the entry crossing sees the truck when it arrives and deals with any query on the spot, unlike a broker following by phone from a distant city."
     },
     {
       "name": "Coverage of every Iran–Iraq crossing",
@@ -950,7 +953,7 @@
     },
     {
       "name": "Follow-up on the Iranian side",
-      "text": "Half of all delays happen before the border. Choose a broker who speaks Persian and coordinates with the exporter and carrier in Iran until the truck reaches the Iraqi crossing."
+      "text": "Many delays happen before the border. Choose a broker who speaks Persian and coordinates with the exporter and carrier in Iran until the truck reaches the Iraqi crossing."
     },
     {
       "name": "Document review before shipping",
@@ -995,15 +998,15 @@
   "choose.us": [
     {
       "name": "At the crossing since 2015",
-      "text": "Our head office is inside the Zurbatiyah border crossing opposite Mehran, and you can visit it Sunday to Thursday."
+      "text": "Our office is inside the Zurbatiyah border crossing opposite Mehran, open Sunday to Thursday, 8:00–17:00."
     },
     {
       "name": "All seven crossings",
       "text": "We work at Zurbatiyah, Al-Sheeb, Shalamcheh, Al-Mundhiriya, Haj Omran, Bashmakh and Parwezkhan, and follow shipments arriving from Iranian ports."
     },
     {
-      "name": "Four languages",
-      "text": "Our team communicates with the Iranian exporter, the Chinese supplier and the Iraqi importer in each one's language."
+      "name": "WhatsApp at every stage",
+      "text": "We update you on WhatsApp from document review until release, so you always know where your shipment stands."
     },
     {
       "name": "Review before shipping",
@@ -1021,7 +1024,7 @@
   "choose.faq": [
     {
       "q": "Who is the best customs broker between Iran and Iraq?",
-      "a": "There is no official ranking of customs brokers in Iraq, so the best one for your shipment is whoever meets the practical criteria: presence at the crossing your goods enter through, coverage of every Iran–Iraq crossing, follow-up on the Iranian side in Persian, document review before shipping, and a written quote. Al-Bait Al-Iraqi for Customs Clearance meets these criteria from its office inside the Zurbatiyah crossing, where it has worked since 2015, and you can verify this by visiting the office or asking the traders working on the route."
+      "a": "There is no official ranking of customs brokers in Iraq, so the best one for your shipment is whoever meets the practical criteria: presence at the crossing your goods enter through, coverage of every Iran–Iraq crossing, follow-up on the Iranian side in Persian, document review before shipping, and a written quote. Al-Bait Al-Iraqi for Customs Clearance has had an office inside the Zurbatiyah crossing since 2015, works at all seven Iran–Iraq land crossings, reviews documents before shipping and gives a written quote. You can check this for yourself by contacting the office on WhatsApp and asking for a quote for your shipment."
     },
     {
       "q": "Do I need a customs broker in Iran and another in Iraq?",
@@ -1033,12 +1036,159 @@
     },
     {
       "q": "Can an Iranian exporter appoint an Iraqi customs broker directly?",
-      "a": "Yes. Many Iranian exporters work with us directly to deliver goods cleared in Iraq, in coordination with the Iraqi consignee. Our team speaks Persian and follows the shipment from the exporter to release."
+      "a": "Yes. An Iranian exporter can appoint us directly to clear their goods in Iraq, in coordination with the Iraqi consignee, and we follow the shipment until release."
     },
     {
       "q": "What is the difference between a customs broker and a freight company?",
       "a": "A freight company moves the goods; a customs broker completes their formalities before customs at the border. Some freight companies offer clearance through a contracted broker, and some brokers arrange transport with carriers. We are a customs broker, and we coordinate with the carrier you choose."
     }
   ],
-  "choose.ctaTitle": "Ready to compare? Send us your shipment details"
+  "choose.ctaTitle": "Ready to compare? Send us your shipment details",
+  "nav.testimonials": "Client feedback",
+  "tst.seo.title": "What Our Clients Say | Al-Bait Al-Iraqi Customs Broker",
+  "tst.seo.desc": "Real feedback from importers and exporters who cleared goods with Al-Bait Al-Iraqi at the Zurbatiyah crossing, published with their names and permission.",
+  "tst.eye": "Client feedback",
+  "tst.crumb": "Client feedback",
+  "tst.h1": "What our clients say about Al-Bait Al-Iraqi",
+  "tst.lead": "Feedback from traders who cleared goods with us between Iran and Iraq, in their own words.",
+  "tst.policy": "We publish feedback exactly as clients sent it, with their permission to use their names. We do not publish anonymous feedback.",
+  "tst.homeTitle": "What our clients say",
+  "tst.homeSub": "Real feedback from traders we have worked with, published with their permission.",
+  "tst.homeMore": "All client feedback",
+  "tst.src.whatsapp": "via WhatsApp",
+  "tst.src.google": "Google review",
+  "tst.src.email": "by email",
+  "tst.src.in-person": "in person",
+  "share.title": "Worked with us? Share your experience",
+  "share.text": "Your feedback helps other traders choose their customs broker. Send it to us on WhatsApp and we will publish it with your name once you agree.",
+  "share.btn": "Send your feedback on WhatsApp",
+  "share.msg": "Hello Al-Bait Al-Iraqi, I would like to share my feedback on your service:\n\nName / company:\nCity:\nGoods you cleared for me:\nMy feedback:\n\nI agree to you publishing my feedback with my name on your website: yes / no",
+  "nav.import": "Importing by type of goods",
+  "imp.seo.title": "Import from Iran to Iraq: Documents by Goods Type | Customs Broker",
+  "imp.seo.desc": "Customs broker at Zurbatiyah: documents usually needed to import food, produce, dairy, building materials, steel, machinery, chemicals and medicines from Iran to Iraq.",
+  "imp.eye": "Import guide",
+  "imp.crumb": "Importing by type of goods",
+  "imp.h1": "Importing from Iran to Iraq by type of goods: documents and approvals, explained by a customs broker",
+  "imp.summary": "What you need to import goods from Iran into Iraq depends mainly on the type of goods, although almost every shipment needs a commercial invoice, packing list, certificate of origin and a transport document such as a CMR. Depending on the goods, extra documents may be needed: health or phytosanitary certificates for food, produce and animal products; a certificate of conformity (COC) for goods covered by Iraq's pre-shipment conformity programme, which may include building materials, steel and machinery; an import licence where required; and ministry permits for medical, pharmaceutical and chemical goods. Al-Bait Al-Iraqi for Customs Clearance is a customs broker operating since 2015, with an office inside the Zurbatiyah border crossing opposite Iran's Mehran crossing; it clears goods through all seven Iraq–Iran land crossings and checks the current requirements for your goods before loading. WhatsApp: +964 786 709 4651.",
+  "imp.intro": "Iraqi customs can treat a truck of cooking oil very differently from a truck of steel rebar or a consignment of medicines. Almost every shipment from Iran needs the same core documents: a commercial invoice, a packing list, a certificate of origin and a transport document such as a CMR. The type of goods then largely decides which extra certificates, approvals and inspections apply and which authorities are involved. Food and agricultural goods mainly depend on health and phytosanitary certificates. Building materials, steel and machinery mainly depend on a certificate of conformity (COC) where Iraq's pre-shipment conformity programme covers them. Medical, pharmaceutical and chemical goods usually need permits from the relevant ministries before they ship, and some products may be controlled or not allowed. Each list below includes the core documents and adds those typical for that type of goods. Requirements can change, so treat the lists as a starting point: send us the details and, as your customs broker, we check the current requirements for your goods and entry crossing before the truck is loaded.",
+  "imp.catTitle": "Documents and approvals by type of goods",
+  "imp.categories": [
+    {
+      "name": "Foodstuffs: packaged, dry, canned goods and oils",
+      "examples": "Cooking oil, sugar, pasta, biscuits and confectionery, tomato paste and canned food, dried fruit, nuts and spices",
+      "docs": [
+        "Commercial invoice, packing list and transport document (CMR or bill of lading)",
+        "Certificate of origin",
+        "Health certificate from the country of origin",
+        "Phytosanitary certificate for plant-based products such as dried fruit, nuts and spices, where required",
+        "Certificate of conformity (COC) where covered, and import licence where required"
+      ],
+      "note": "Labels, production dates and expiry dates should be clear, usually include Arabic and match the invoice, because food may be inspected or sampled at the crossing and goods close to expiry or with unclear labels may be held."
+    },
+    {
+      "name": "Fresh produce: fruit and vegetables",
+      "examples": "Fresh fruit, fresh vegetables, leafy greens and herbs, and other perishable produce moved by refrigerated truck",
+      "docs": [
+        "Phytosanitary certificate from the country of origin",
+        "Certificate of origin",
+        "Commercial invoice, packing list and transport document (CMR or bill of lading)",
+        "Import approval from Iraq's agriculture authorities where required"
+      ],
+      "note": "Check that the product is currently allowed into Iraq before you buy or load: fresh produce may be restricted in some seasons, and a truck of perishables cannot wait long at the border."
+    },
+    {
+      "name": "Dairy and animal products",
+      "examples": "Cheese, yoghurt, butter, milk powder, eggs, frozen poultry and meat, fish, honey",
+      "docs": [
+        "Veterinary or health certificate from the competent authority in the country of origin",
+        "Import approval from the relevant Iraqi authority where required",
+        "Certificate of conformity (COC) where covered, and import licence where required",
+        "Certificate of origin",
+        "Commercial invoice, packing list and transport document (CMR or bill of lading)"
+      ],
+      "note": "Chilled and frozen goods should travel in refrigerated trucks with expiry dates clearly documented, and because import conditions for some animal products can change, check the current rules before loading."
+    },
+    {
+      "name": "Building materials: cement, tiles, gypsum, stone and marble",
+      "examples": "Cement, ceramic and porcelain tiles, gypsum and plaster, marble and granite slabs, natural stone, sanitary ware",
+      "docs": [
+        "Commercial invoice, packing list and transport document (CMR or bill of lading)",
+        "Certificate of origin",
+        "Certificate of conformity (COC) where covered",
+        "Import licence where required"
+      ],
+      "note": "Weights may be checked at the crossing, so the invoice, packing list and CMR should show the same tonnage and piece counts, and we check before loading whether any current restriction or extra requirement applies to your goods."
+    },
+    {
+      "name": "Steel and metals",
+      "examples": "Steel rebar, sheets and coils, beams and profiles, pipes, wire, aluminium and copper products",
+      "docs": [
+        "Commercial invoice, packing list and transport document (CMR or bill of lading)",
+        "Certificate of origin",
+        "Mill test certificate or test reports, which may be requested for the COC",
+        "Certificate of conformity (COC) where covered",
+        "Import licence where required"
+      ],
+      "note": "Describe the steel precisely, with grade, dimensions and product form, because classification and conformity checks depend on these details and a vague description such as \"iron\" can cause classification problems and delays."
+    },
+    {
+      "name": "Machinery, equipment and spare parts",
+      "examples": "Industrial and agricultural machinery, generators, pumps, construction equipment, electrical equipment, vehicle and machine spare parts",
+      "docs": [
+        "Commercial invoice with models and, where applicable, serial numbers",
+        "Packing list, certificate of origin and transport document (CMR or bill of lading)",
+        "Technical specifications or catalogue where requested",
+        "Certificate of conformity (COC) where covered",
+        "Import licence where required"
+      ],
+      "note": "Tell us before loading whether the goods are new or used and what their dimensions are, so we can check the conditions that apply, since used machinery and parts may face extra conditions and oversized equipment needs suitable transport arranged in advance."
+    },
+    {
+      "name": "Chemicals, medical and pharmaceutical goods",
+      "examples": "Medicines, medical devices and consumables, laboratory supplies, cosmetics, industrial chemicals, fertilisers and pesticides, cleaning products",
+      "docs": [
+        "Prior permit from the relevant ministry where required (usually for medicines, medical devices, pesticides and many chemicals)",
+        "Certificate of analysis and/or safety data sheet (SDS), where applicable to the product",
+        "Product or company registration where required",
+        "Certificate of origin",
+        "Commercial invoice, packing list and transport document (CMR or bill of lading)"
+      ],
+      "note": "Depending on the product, permits may come from the health, agriculture or another relevant ministry and are usually needed before the goods ship, and some chemicals and medicines may be controlled or not allowed at all, so check before buying and load only once the approvals are in hand."
+    }
+  ],
+  "imp.seasonalTitle": "Seasonal restrictions on fresh agricultural products",
+  "imp.seasonalText": "To protect local farmers, Iraq's agriculture authorities may restrict or temporarily ban imports of some fresh fruit and vegetables in certain seasons, usually while local produce is on the market, and lift the restriction later. The products affected and the periods can change from year to year, and decisions in the Kurdistan Region can differ from those in federal Iraq. A truck of perishables that reaches the border after a restriction takes effect may be held or turned back. Check the current decision before you buy or load. Send us the product, the entry crossing and the planned shipping date, and we will check the current decision for that product and crossing, and check again close to the shipping date.",
+  "imp.tipsTitle": "Practical tips before you load",
+  "imp.tips": [
+    "Send us an exact description of the goods before you confirm the order with your supplier, so we can check which certificates and approvals apply.",
+    "Get the certificates that must be issued at origin (health, veterinary, phytosanitary, conformity) before the truck leaves Iran, not after it arrives at the border.",
+    "Keep the goods description, weights and quantities identical on the invoice, packing list, certificate of origin and CMR.",
+    "For mixed loads, list each type of goods separately on the invoice, because each type may need its own documents.",
+    "For perishable goods, confirm that the product is currently allowed and that the documents are complete before loading, because waiting at the border costs most for these goods.",
+    "Choose the entry crossing with your customs broker based on where the goods start in Iran, where they are going in Iraq and whether the crossing can handle your type of goods, and check whether it is in federal Iraq or the Kurdistan Region, because some procedures differ."
+  ],
+  "imp.faqTitle": "Questions about importing goods from Iran",
+  "imp.faq": [
+    {
+      "q": "What documents do I need to import goods from Iran into Iraq?",
+      "a": "Almost every shipment from Iran into Iraq needs a commercial invoice, a packing list, a certificate of origin and a transport document, such as a CMR for road freight. Depending on the goods, Iraqi authorities may also require an import licence, a certificate of conformity (COC) under Iraq's pre-shipment conformity programme, a health certificate for food and animal products, a phytosanitary certificate for plants and produce, or ministry permits for medical, pharmaceutical and chemical goods. Al-Bait Al-Iraqi for Customs Clearance, a customs broker at the Zurbatiyah crossing, can review a client's documents before the goods are loaded."
+    },
+    {
+      "q": "Do food, dairy and animal products from Iran need a health certificate to enter Iraq?",
+      "a": "Usually yes. Packaged and dry foodstuffs from Iran normally need a health certificate from the country of origin, and dairy, meat, poultry, eggs and fish normally need a veterinary or health certificate from the competent authority there. These go with the commercial invoice, packing list, certificate of origin and transport document (such as a CMR), and depending on the product, a phytosanitary certificate for plant-based foods, a certificate of conformity (COC), an import licence or an Iraqi import approval may also be required. Labels and expiry dates should be clear and match the invoice, because food may be inspected or sampled at the border crossing, and import conditions for some animal products can change, so check the current rules before loading."
+    },
+    {
+      "q": "Can fresh fruit and vegetables from Iran be imported into Iraq all year round?",
+      "a": "Not always. Iraq's agriculture authorities may restrict or temporarily ban imports of some fresh fruit and vegetables in certain seasons to protect local production, and the products and periods affected can change from year to year. Before buying or loading fresh produce from Iran, check the current decision for that product and entry crossing, because decisions in the Kurdistan Region can differ from those in federal Iraq. A customs broker at the border, such as Al-Bait Al-Iraqi for Customs Clearance at Zurbatiyah, can check the current position before the truck leaves."
+    },
+    {
+      "q": "What do building materials, steel and machinery from Iran need to clear Iraqi customs?",
+      "a": "Building materials such as cement, tiles, gypsum and marble, steel products such as rebar and sheets, and machinery and spare parts usually need a commercial invoice, packing list, certificate of origin and transport document. These goods may be covered by Iraq's pre-shipment conformity programme, so a certificate of conformity (COC) may be needed before shipping, and some goods also need an import licence. Used machinery and parts may face extra conditions, so check them before buying. Weights and quantities should match across the invoice, packing list and transport document, because weights may be checked at the crossing."
+    },
+    {
+      "q": "Can medical, pharmaceutical or chemical goods be imported from Iran into Iraq?",
+      "a": "Often yes, if the product is permitted in Iraq: some medical, pharmaceutical and chemical products may be controlled or not allowed, and most permitted ones need permits from the relevant Iraqi ministries before they ship, in addition to the commercial invoice, packing list, certificate of origin and transport document. Depending on the product, a certificate of analysis, a safety data sheet or a product registration may also be requested. Because these approvals take time, check each product and start the permit process before loading. Al-Bait Al-Iraqi for Customs Clearance handles specialised goods, including medical and chemical materials, and can check which permits a product needs."
+    }
+  ],
+  "imp.ctaTitle": "Importing from Iran? Send us your goods list on WhatsApp before you load"
 }

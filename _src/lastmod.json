@@ -1,226 +1,242 @@
 {
   "/": {
-    "hash": "31a935f583131113",
-    "date": "2026-10-28"
+    "hash": "98c13009f29b4c11",
+    "date": "2026-10-31"
   },
   "/en/": {
-    "hash": "1b238ced34af9479",
-    "date": "2026-10-28"
+    "hash": "22050ef44499e9a5",
+    "date": "2026-10-31"
   },
   "/zh/": {
-    "hash": "dfc7fc908530cce6",
-    "date": "2026-10-28"
+    "hash": "688629a93b6b2476",
+    "date": "2026-10-31"
   },
   "/fa/": {
-    "hash": "c20be6a78f56910c",
-    "date": "2026-10-28"
+    "hash": "3a59c90eeaee2e76",
+    "date": "2026-10-31"
   },
   "/iran-iraq-customs-clearance/": {
-    "hash": "ae858081684aa07c",
-    "date": "2026-10-28"
+    "hash": "9ceb538405f83708",
+    "date": "2026-10-31"
   },
   "/en/iran-iraq-customs-clearance/": {
-    "hash": "b360131afbd99b0b",
-    "date": "2026-10-28"
+    "hash": "8793292d8470fa99",
+    "date": "2026-10-31"
   },
   "/zh/iran-iraq-customs-clearance/": {
-    "hash": "c758b8a351b21d81",
-    "date": "2026-10-28"
+    "hash": "4305488d90fe578b",
+    "date": "2026-10-31"
   },
   "/fa/iran-iraq-customs-clearance/": {
-    "hash": "5865a732f08391c4",
-    "date": "2026-10-28"
+    "hash": "8397a62230d7624e",
+    "date": "2026-10-31"
   },
   "/border-crossings/": {
-    "hash": "5799051ca080c239",
-    "date": "2026-10-28"
+    "hash": "9df94c30874063b4",
+    "date": "2026-10-31"
   },
   "/en/border-crossings/": {
-    "hash": "a153b9039fe4f989",
-    "date": "2026-10-28"
+    "hash": "61dc4ddc01561cc9",
+    "date": "2026-10-31"
   },
   "/zh/border-crossings/": {
-    "hash": "470664477783bba5",
-    "date": "2026-10-28"
+    "hash": "4e7ff844e52ad915",
+    "date": "2026-10-31"
   },
   "/fa/border-crossings/": {
-    "hash": "f3357c42f63abcac",
-    "date": "2026-10-28"
+    "hash": "2ce6ff866a7ba1a3",
+    "date": "2026-10-31"
   },
   "/border-crossings/zurbatiyah-mehran/": {
-    "hash": "7a5153eda8b7c90d",
-    "date": "2026-10-28"
+    "hash": "9c3c120d63f4a778",
+    "date": "2026-10-31"
   },
   "/en/border-crossings/zurbatiyah-mehran/": {
-    "hash": "314d0cd3164ef404",
-    "date": "2026-10-28"
+    "hash": "734fbdf40a349406",
+    "date": "2026-10-31"
   },
   "/zh/border-crossings/zurbatiyah-mehran/": {
-    "hash": "30f7222e7f34001e",
-    "date": "2026-10-28"
+    "hash": "8b37018459f3ee8e",
+    "date": "2026-10-31"
   },
   "/fa/border-crossings/zurbatiyah-mehran/": {
-    "hash": "b8bef25628ed05cc",
-    "date": "2026-10-28"
+    "hash": "9c538488d26419a1",
+    "date": "2026-10-31"
   },
   "/border-crossings/al-sheeb-chazabeh/": {
-    "hash": "8395f8590fe35ee5",
-    "date": "2026-10-28"
+    "hash": "112b13f83f5a1e51",
+    "date": "2026-10-31"
   },
   "/en/border-crossings/al-sheeb-chazabeh/": {
-    "hash": "f0a3658b0208bec5",
-    "date": "2026-10-28"
+    "hash": "97534f48983bf147",
+    "date": "2026-10-31"
   },
   "/zh/border-crossings/al-sheeb-chazabeh/": {
-    "hash": "80ab82468348a425",
-    "date": "2026-10-28"
+    "hash": "fe883b4bdea9929c",
+    "date": "2026-10-31"
   },
   "/fa/border-crossings/al-sheeb-chazabeh/": {
-    "hash": "849e2be6f0d5fb78",
-    "date": "2026-10-28"
+    "hash": "12a01ca3f80ed869",
+    "date": "2026-10-31"
   },
   "/border-crossings/shalamcheh/": {
-    "hash": "e7cf233a5a9048b2",
-    "date": "2026-10-28"
+    "hash": "dcfc640f68c895d0",
+    "date": "2026-10-31"
   },
   "/en/border-crossings/shalamcheh/": {
-    "hash": "8369943ded89edae",
-    "date": "2026-10-28"
+    "hash": "c4aab145b92e444e",
+    "date": "2026-10-31"
   },
   "/zh/border-crossings/shalamcheh/": {
-    "hash": "32924e985c4518d8",
-    "date": "2026-10-28"
+    "hash": "b4661cbb711a4b3f",
+    "date": "2026-10-31"
   },
   "/fa/border-crossings/shalamcheh/": {
-    "hash": "f1bf837afbf2e625",
-    "date": "2026-10-28"
+    "hash": "e13bb88079e9c64f",
+    "date": "2026-10-31"
   },
   "/border-crossings/al-mundhiriya-khosravi/": {
-    "hash": "11bfcb43ea8bbf21",
-    "date": "2026-10-28"
+    "hash": "27da80c216f5aee4",
+    "date": "2026-10-31"
   },
   "/en/border-crossings/al-mundhiriya-khosravi/": {
-    "hash": "d8138e90afde33af",
-    "date": "2026-10-28"
+    "hash": "83f2485a3304f033",
+    "date": "2026-10-31"
   },
   "/zh/border-crossings/al-mundhiriya-khosravi/": {
-    "hash": "ba4e3e69b56a68ee",
-    "date": "2026-10-28"
+    "hash": "59f787a33ea93952",
+    "date": "2026-10-31"
   },
   "/fa/border-crossings/al-mundhiriya-khosravi/": {
-    "hash": "f88813bcc346bb58",
-    "date": "2026-10-28"
+    "hash": "0dd8ca98b9bdd48d",
+    "date": "2026-10-31"
   },
   "/border-crossings/haj-omran-tamarchin/": {
-    "hash": "448301e094a5b7a7",
-    "date": "2026-10-28"
+    "hash": "b39872f19a851fec",
+    "date": "2026-10-31"
   },
   "/en/border-crossings/haj-omran-tamarchin/": {
-    "hash": "b9b7b8e5a7de1ece",
-    "date": "2026-10-28"
+    "hash": "2bdd102ca8e545fc",
+    "date": "2026-10-31"
   },
   "/zh/border-crossings/haj-omran-tamarchin/": {
-    "hash": "b523a0b63caefeae",
-    "date": "2026-10-28"
+    "hash": "3639c3df7684d57f",
+    "date": "2026-10-31"
   },
   "/fa/border-crossings/haj-omran-tamarchin/": {
-    "hash": "3cfded8f8b9a9c61",
-    "date": "2026-10-28"
+    "hash": "e93dfa9de211a153",
+    "date": "2026-10-31"
   },
   "/border-crossings/bashmakh-bashmaq/": {
-    "hash": "afb422633e0d0ae0",
-    "date": "2026-10-28"
+    "hash": "94bac20b1a8f8af7",
+    "date": "2026-10-31"
   },
   "/en/border-crossings/bashmakh-bashmaq/": {
-    "hash": "9ee3c66b2c5c3651",
-    "date": "2026-10-28"
+    "hash": "5b3cb8d60024f2ad",
+    "date": "2026-10-31"
   },
   "/zh/border-crossings/bashmakh-bashmaq/": {
-    "hash": "68a5f0e785fe47bb",
-    "date": "2026-10-28"
+    "hash": "4a2429e92adaac92",
+    "date": "2026-10-31"
   },
   "/fa/border-crossings/bashmakh-bashmaq/": {
-    "hash": "ca8557b3f1e93ea8",
-    "date": "2026-10-28"
+    "hash": "bd85db5bbf0ac0a2",
+    "date": "2026-10-31"
   },
   "/border-crossings/parwezkhan-parviz-khan/": {
-    "hash": "9b44cbaf2bb491db",
-    "date": "2026-10-28"
+    "hash": "540618319167a4eb",
+    "date": "2026-10-31"
   },
   "/en/border-crossings/parwezkhan-parviz-khan/": {
-    "hash": "8d2ba7bb046c62ea",
-    "date": "2026-10-28"
+    "hash": "0f9ab316c49b483f",
+    "date": "2026-10-31"
   },
   "/zh/border-crossings/parwezkhan-parviz-khan/": {
-    "hash": "2e232f43469ff86f",
-    "date": "2026-10-28"
+    "hash": "6c78b82f6f9132b7",
+    "date": "2026-10-31"
   },
   "/fa/border-crossings/parwezkhan-parviz-khan/": {
-    "hash": "0235f020824ee965",
-    "date": "2026-10-28"
+    "hash": "883ab1b010ade255",
+    "date": "2026-10-31"
   },
   "/china-to-iraq-via-iran/": {
-    "hash": "e33872fd91080c0a",
-    "date": "2026-10-28"
+    "hash": "66f4212164e14ae2",
+    "date": "2026-10-31"
   },
   "/en/china-to-iraq-via-iran/": {
-    "hash": "0050c429477712c3",
-    "date": "2026-10-28"
+    "hash": "ca4d3afdee2730da",
+    "date": "2026-10-31"
   },
   "/zh/china-to-iraq-via-iran/": {
-    "hash": "a1eaf5b8dc3826bb",
-    "date": "2026-10-28"
+    "hash": "5ea35dafdd5e1a73",
+    "date": "2026-10-31"
   },
   "/fa/china-to-iraq-via-iran/": {
-    "hash": "2d3e0c61196738d6",
-    "date": "2026-10-28"
+    "hash": "77d7dc5ed20a6ff3",
+    "date": "2026-10-31"
   },
   "/customs-glossary/": {
-    "hash": "963d872b383fd326",
-    "date": "2026-10-28"
+    "hash": "44becc0bea59c16c",
+    "date": "2026-10-31"
   },
   "/en/customs-glossary/": {
-    "hash": "db5db6d93e35529c",
-    "date": "2026-10-28"
+    "hash": "6d9f435e13fe9f10",
+    "date": "2026-10-31"
   },
   "/zh/customs-glossary/": {
-    "hash": "468a870d12617b2c",
-    "date": "2026-10-28"
+    "hash": "77cd46381254639a",
+    "date": "2026-10-31"
   },
   "/fa/customs-glossary/": {
-    "hash": "4716aebc1ca9d96f",
-    "date": "2026-10-28"
+    "hash": "8a59fc74a37e99cd",
+    "date": "2026-10-31"
   },
   "/about/": {
-    "hash": "0c3e9c362b33ac4f",
-    "date": "2026-10-28"
+    "hash": "a53150dc882257ef",
+    "date": "2026-10-31"
   },
   "/en/about/": {
-    "hash": "d8cc73682de641ac",
-    "date": "2026-10-28"
+    "hash": "ce372d39fe108702",
+    "date": "2026-10-31"
   },
   "/zh/about/": {
-    "hash": "42d3d5aa10eb7258",
-    "date": "2026-10-28"
+    "hash": "a783f63becd0988a",
+    "date": "2026-10-31"
   },
   "/fa/about/": {
-    "hash": "ff1c6a5bcc92026a",
-    "date": "2026-10-28"
+    "hash": "0872156a18fbe411",
+    "date": "2026-10-31"
   },
   "/how-to-choose-a-customs-broker-iran-iraq/": {
-    "hash": "786336ed55ec0462",
-    "date": "2026-10-28"
+    "hash": "b74c4834312c8f86",
+    "date": "2026-10-31"
   },
   "/en/how-to-choose-a-customs-broker-iran-iraq/": {
-    "hash": "71d01acd2340462e",
-    "date": "2026-10-28"
+    "hash": "833262f79457161d",
+    "date": "2026-10-31"
   },
   "/zh/how-to-choose-a-customs-broker-iran-iraq/": {
-    "hash": "1be37b309360f0b4",
-    "date": "2026-10-28"
+    "hash": "8b5a22bed53eaf46",
+    "date": "2026-10-31"
   },
   "/fa/how-to-choose-a-customs-broker-iran-iraq/": {
-    "hash": "da1b43815cfb1aa9",
-    "date": "2026-10-28"
+    "hash": "822b9aff19b8ccc6",
+    "date": "2026-10-31"
+  },
+  "/import-from-iran-to-iraq/": {
+    "hash": "983f4587c05d5ec4",
+    "date": "2026-10-31"
+  },
+  "/en/import-from-iran-to-iraq/": {
+    "hash": "9e86f79cfcca0c06",
+    "date": "2026-10-31"
+  },
+  "/zh/import-from-iran-to-iraq/": {
+    "hash": "385aff009e88b245",
+    "date": "2026-10-31"
+  },
+  "/fa/import-from-iran-to-iraq/": {
+    "hash": "110db63c0ab500db",
+    "date": "2026-10-31"
   }
 }

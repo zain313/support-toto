@@ -16,7 +16,10 @@
 <span>{{hero.cta1}}</span>
 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </a>
-<a href="#cases" class="btn btn-ghost">{{hero.cta2}}</a>
+<a href="https://wa.me/9647867094651" target="_blank" rel="noopener" class="btn btn-ghost hero-call">
+<span>{{cta.waChat}}</span>
+<span dir="ltr">+964 786 709 4651</span>
+</a>
 </div>
 <div class="hero-meta">
 <div class="item"><div class="n">+3000</div><div class="l">{{hero.m1}}</div></div>
@@ -97,7 +100,7 @@
 <span>{{iran.guideLink}}</span>
 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </a>
-<a class="btn btn-ghost" href="https://wa.me/9647737565367" target="_blank" rel="noopener">{{iran.cta}}</a>
+<a class="btn btn-ghost" href="https://wa.me/9647867094651" target="_blank" rel="noopener">{{iran.cta}}</a>
 </div>
 </div>
 </section>
@@ -267,6 +270,7 @@
 </div>
 </div>
 </section>
+{{@tstHome}}
 <section class="block cases-bg" id="faq">
 <div class="container">
 <div class="section-head">
@@ -275,7 +279,7 @@
 <p>{{faq.sub}}</p>
 </div>
 {{#faq home.faq}}
-<p class="faq-more"><a href="{{@choose}}">{{nav.choose}}</a><a href="{{@guide}}">{{iran.guideLink}}</a><a href="{{@china}}">{{nav.china}}</a><a href="{{@glossary}}">{{nav.glossary}}</a></p>
+<p class="faq-more"><a href="{{@choose}}">{{nav.choose}}</a><a href="{{@guide}}">{{iran.guideLink}}</a><a href="{{@import}}">{{nav.import}}</a><a href="{{@china}}">{{nav.china}}</a><a href="{{@glossary}}">{{nav.glossary}}</a></p>
 </div>
 </section>
 <section class="block" id="contact">
@@ -326,7 +330,7 @@
 <div id="waChoose" style="display:none; margin-top:14px; text-align:center;">
 <a id="waBtn1" href="#" target="_blank" rel="noopener" class="wa-btn" style="margin-top:0;">
 <span class="wa-ic"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg></span>
-<span class="lbl"><span class="t" dir="ltr">+964 773 756 5367</span></span>
+<span class="lbl"><span class="t" dir="ltr">+964 786 709 4651</span></span>
 </a>
 </div>
 </form>
@@ -343,9 +347,10 @@
 <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 6c0 9 6 15 15 15l3-4-5-2-2 2c-3-1-5-3-6-6l2-2-2-5-5 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
 <div>
 <div class="k">{{contact.phone.k}}</div>
-<a class="v en" dir="ltr" href="tel:+9647737565367">+964 773 756 5367</a>
+<a class="v en" dir="ltr" href="https://wa.me/9647867094651" target="_blank" rel="noopener">+964 786 709 4651</a>
 </div>
 </div>
+<p class="wa-pref">{{contact.waPreferred}}</p>
 <div class="info">
 <div class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
 <div>
@@ -360,13 +365,13 @@
 <div class="v">{{contact.hours.v}}</div>
 </div>
 </div>
-<a href="https://wa.me/9647737565367" target="_blank" rel="noopener" class="wa-btn" aria-label="WhatsApp" style="margin-bottom:8px;">
+<a href="https://wa.me/9647867094651" target="_blank" rel="noopener" class="wa-btn" aria-label="WhatsApp" style="margin-bottom:8px;">
 <span class="wa-ic" aria-hidden="true">
 <svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg>
 </span>
 <span class="lbl">
 <span class="t">{{contact.wa}}</span>
-<span class="s" dir="ltr">+964 773 756 5367</span>
+<span class="s" dir="ltr">+964 786 709 4651</span>
 </span>
 </a>
 </aside>

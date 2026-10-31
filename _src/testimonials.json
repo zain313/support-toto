@@ -1,0 +1,16 @@
+{
+  "_rules": "Only real feedback a client sent in writing (WhatsApp message, email, Google review) or approved in person, with the client's permission to publish their name. Copy the client's words without improving them. Never write feedback on a client's behalf. The /testimonials/ page and the home-page section are generated automatically as soon as items has at least one entry.",
+  "_example": {
+    "name": "Client's name as they agreed to show it",
+    "company": "optional",
+    "role": "optional, e.g. building materials importer",
+    "city": "Baghdad",
+    "country": "Iraq",
+    "lang": "ar | en | fa | zh — the language the client wrote in",
+    "quote": "The client's exact words",
+    "date": "YYYY-MM",
+    "source": "whatsapp | google | email | in-person",
+    "consent": true
+  },
+  "items": []
+}

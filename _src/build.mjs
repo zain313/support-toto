@@ -13,13 +13,13 @@ const CHECK = process.argv.includes('--check');
 
 const SITE = {
   origin: 'https://iqbait.com',
-  phone: '+9647737565367',
-  whatsapp: 'https://wa.me/9647737565367',
+  phone: '+9647867094651',
+  whatsapp: 'https://wa.me/9647867094651',
   email: 'support@iqbait.com',
   founded: '2015',
   // Approximate position of the Zurbatiyah border crossing; replace with the Google Business Profile pin when available.
   geo: { latitude: 33.13, longitude: 46.1 },
-  ogImage: { path: '/images/og-cover-v2.jpg', width: 1200, height: 630 },
+  ogImage: { path: '/images/og-cover-v3.jpg', width: 1200, height: 630 },
   fbVerification: 'sutxxrsdtg8j2zsn03ri442dxwtb39',
 };
 
@@ -37,6 +37,20 @@ const X_DEFAULT_LANG = 'en';
 // Same order as the "crossings" list in the translations.
 const CROSSING_SLUGS = ['zurbatiyah-mehran', 'al-sheeb-chazabeh', 'shalamcheh', 'al-mundhiriya-khosravi', 'haj-omran-tamarchin', 'bashmakh-bashmaq', 'parwezkhan-parviz-khan'];
 
+// Real client feedback only, each with written consent to publish the name. The testimonials page and home section exist only when there is at least one.
+const TST_FIELDS = ['name', 'city', 'country', 'lang', 'quote', 'date', 'source', 'consent'];
+const TST_SOURCES = ['whatsapp', 'google', 'email', 'in-person'];
+const TESTIMONIALS = JSON.parse(fs.readFileSync(path.join(SRC, 'testimonials.json'), 'utf8')).items;
+const tstErrors = TESTIMONIALS.flatMap((x, i) => [
+  ...TST_FIELDS.filter(f => x[f] === undefined || x[f] === '').map(f => `testimonials[${i}]: missing "${f}"`),
+  ...(x.consent !== true ? [`testimonials[${i}]: "consent" must be true (written permission to publish the name)`] : []),
+  ...(x.lang && !Object.keys(LANGS).includes(x.lang) ? [`testimonials[${i}]: "lang" must be one of ${Object.keys(LANGS).join(', ')}`] : []),
+  ...(x.source && !TST_SOURCES.includes(x.source) ? [`testimonials[${i}]: "source" must be one of ${TST_SOURCES.join(', ')}`] : []),
+  ...(x.date && !/^\d{4}-\d{2}$/.test(x.date) ? [`testimonials[${i}]: "date" must be YYYY-MM`] : []),
+]);
+if (tstErrors.length) { console.error(tstErrors.join('\n')); process.exit(1); }
+const TST_SORTED = [...TESTIMONIALS].sort((a, b) => b.date.localeCompare(a.date));
+
 // seo: prefix of the "<seo>.seo.title/desc" keys · crumb: breadcrumb label key · faq: FAQ list key · howto/howtoName/headline/published: Article + HowTo data.
 const PAGES = [
   { id: 'home', slug: '', template: 'home', seo: 'home', faq: 'home.faq', changefreq: 'weekly', priority: '1.0', images: ['/images/hero-1.webp', '/images/hero-2.webp', '/images/hero-3.webp'] },
@@ -50,6 +64,9 @@ const PAGES = [
   { id: 'about', slug: 'about/', template: 'about', seo: 'about', faq: 'about.faq', crumb: 'about.crumb', pageType: 'AboutPage' },
   { id: 'choose', slug: 'how-to-choose-a-customs-broker-iran-iraq/', template: 'choose', seo: 'choose', faq: 'choose.faq', crumb: 'choose.crumb', priority: '0.9',
     headline: 'choose.h1', published: '2026-10-28' },
+  { id: 'import', slug: 'import-from-iran-to-iraq/', template: 'import', seo: 'imp', faq: 'imp.faq', crumb: 'imp.crumb', priority: '0.9',
+    headline: 'imp.h1', published: '2026-10-31' },
+  ...(TESTIMONIALS.length ? [{ id: 'testimonials', slug: 'testimonials/', template: 'testimonials', seo: 'tst', crumb: 'tst.crumb', priority: '0.9' }] : []),
 ].map(p => ({ changefreq: 'monthly', priority: '0.8', images: [], ...p }));
 
 // Text an assistant may read aloud or quote: the summary box, or the hero lead on the home page.
@@ -100,10 +117,18 @@ const pageCrumbs = (lang, pg) => (pg.template === 'crossing'
 const termId = i => T.en.glossary[i].term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 // Text with the phone number and email turned into links; dir="ltr" keeps the number readable inside Arabic/Persian sentences.
-const PHONE_DISPLAY = '+964 773 756 5367';
+const PHONE_DISPLAY = '+964 786 709 4651';
 const rich = s => esc(md(s))
-  .split(PHONE_DISPLAY).join(`<a href="tel:${SITE.phone}" dir="ltr">${PHONE_DISPLAY}</a>`)
+  .split(PHONE_DISPLAY).join(`<a href="${SITE.whatsapp}" target="_blank" rel="noopener" dir="ltr">${PHONE_DISPLAY}</a>`)
   .split(SITE.email).join(`<a href="mailto:${SITE.email}" dir="ltr">${SITE.email}</a>`);
+
+const WA_ICON = '<span class="wa-ic" aria-hidden="true"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm6.9 17c-.3.8-1.6 1.6-2.3 1.7-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.6-4.8-5.8-5-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.9 1.7.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg></span>';
+const shareLink = lang => `${SITE.whatsapp}?text=${encodeURIComponent(t(lang, 'share.msg'))}`;
+// The quote stays in the client's own language and words; only the labels around it are translated.
+const tstCard = (lang, x) => `<figure class="tst" lang="${x.lang}" dir="${LANGS[x.lang].dir}"><blockquote>${esc(x.quote)}</blockquote>` +
+  `<figcaption lang="${lang}" dir="${LANGS[lang].dir}"><strong>${esc(x.name)}</strong>` +
+  `${x.company ? ` · ${esc(x.company)}` : ''}${x.role ? ` · ${esc(x.role)}` : ''}` +
+  `<span>${esc(x.city)}${LANGS[lang].dir === 'rtl' ? '، ' : ', '}${esc(x.country)} · <time datetime="${x.date}">${x.date}</time> · ${esc(t(lang, `tst.src.${x.source}`))}</span></figcaption></figure>`;
 
 const COMPONENTS = {
   crossingCards: (lang, variant) => `<ul class="crossings${variant === 'light' ? ' light' : ''}">\n` + t(lang, 'crossings').map((c, i) =>
@@ -135,6 +160,13 @@ const COMPONENTS = {
     const others = LANG_CODES.filter(l => l !== lang).map(l => `<bdi lang="${l}" dir="${LANGS[l].dir}">${esc(T[l].glossary[i].term)}</bdi>`).join(' · ');
     return `<div class="gloss" id="${termId(i)}"><h2>${esc(g.term)}</h2><p class="tr">${others}</p><p>${esc(g.def)}</p></div>`;
   }).join('\n') + '\n</div>',
+  importCats: lang => '<div class="imp-cats">\n' + t(lang, 'imp.categories').map((c, i) =>
+    `<div class="imp-cat" id="goods-${i + 1}"><h3>${esc(c.name)}</h3><p class="ex">${esc(c.examples)}</p>` +
+    `<ul class="bullets">${c.docs.map(d => `<li>${esc(d)}</li>`).join('')}</ul><p class="note">${esc(c.note)}</p></div>`).join('\n') + '\n</div>',
+  testimonialCards: (lang, limit) => '<div class="tst-list">\n' + TST_SORTED.slice(0, limit ? Number(limit) : undefined).map(x => tstCard(lang, x)).join('\n') + '\n</div>',
+  shareBlock: lang => `<div class="share-box"><h2>${esc(t(lang, 'share.title'))}</h2><p>${esc(t(lang, 'share.text'))}</p>` +
+    `<a class="wa-btn" href="${shareLink(lang)}" target="_blank" rel="noopener">${WA_ICON}<span class="lbl"><span class="t">${esc(t(lang, 'share.btn'))}</span>` +
+    `<span class="s" dir="ltr">+964 786 709 4651</span></span></a></div>`,
 };
 
 // {{key}} translated text, {{.field}} the page's own data, {{~key}} text with phone/email links, {{@var}} prebuilt HTML,
@@ -330,7 +362,12 @@ for (const pg of PAGES) {
     const vars = {
       lang, dir: LANGS[lang].dir, home: pagePath(lang, page('home')), guide: pagePath(lang, page('guide')),
       hub: pagePath(lang, page('hub')), china: pagePath(lang, page('china')), glossary: pagePath(lang, page('glossary')),
-      about: pagePath(lang, page('about')), choose: pagePath(lang, page('choose')),
+      about: pagePath(lang, page('about')), choose: pagePath(lang, page('choose')), import: pagePath(lang, page('import')),
+      tstNav: page('testimonials') ? `<a href="${pagePath(lang, page('testimonials'))}">${esc(t(lang, 'nav.testimonials'))}</a>` : '',
+      tstFoot: page('testimonials') ? `<li><a href="${pagePath(lang, page('testimonials'))}">${esc(t(lang, 'nav.testimonials'))}</a></li>` : '',
+      tstHome: TESTIMONIALS.length ? `<section class="block" id="testimonials"><div class="container"><div class="section-head"><div class="eyebrow">${esc(t(lang, 'tst.eye'))}</div>` +
+        `<h2>${esc(t(lang, 'tst.homeTitle'))}</h2><p>${esc(t(lang, 'tst.homeSub'))}</p></div>${COMPONENTS.testimonialCards(lang, '3')}` +
+        `<p class="faq-more"><a href="${pagePath(lang, page('testimonials'))}">${esc(t(lang, 'tst.homeMore'))}</a></p></div></section>` : '',
       lastmod: LM, lastmodLabel: LML, langSwitch: langSwitch(lang, pg), crumbs: crumbsHtml(lang, pg), css: CSS, js: JS,
     };
     vars.content = render(TEMPLATES[pg.template], lang, vars, ctx);
@@ -378,7 +415,7 @@ function llmsTxt() {
     `- Services: ${[en['svc.t1'], en['svc.t2'], en['svc.transit.t'], en['svc.t3'], en['svc.t4']].join('; ')}.`,
     `- Iraq–Iran land border crossings covered (Iraqi side ↔ Iranian side): ${crossings}.`,
     `- Iranian ports and routes followed: ${en.ports.map(p => p.name).join('; ')}.`,
-    '- Phone / WhatsApp: +964 773 756 5367 — https://wa.me/9647737565367',
+    '- WhatsApp (preferred contact channel): +964 786 709 4651 — https://wa.me/9647867094651',
     `- Email: ${SITE.email}`,
     '- Working hours: Sunday–Thursday, 08:00–17:00 (Iraq time). Quotes within 24 hours.',
     '- Website languages: Arabic, English, Persian (Farsi), Chinese.',
@@ -401,6 +438,14 @@ function llmsTxt() {
     '',
     `Selection criteria for an Iran–Iraq customs broker, and how this office meets them: ${pageUrl('en', page('choose'))}`,
     '',
+    ...(TESTIMONIALS.length ? [
+      '## What clients say (real feedback, published with each client\'s permission)',
+      '',
+      ...TST_SORTED.map(x => `- "${x.quote}" — ${x.name}${x.company ? `, ${x.company}` : ''}, ${x.city}, ${x.country} (${x.date}, ${x.source})`),
+      '',
+      `All feedback: ${pageUrl('en', page('testimonials'))}`,
+      '',
+    ] : []),
     '## Pages',
     '',
     ...PAGES.map(pg => {
@@ -522,6 +567,22 @@ function llmsFullTxt() {
       ...d['china.tips'].map(x => `- ${x}`),
       '',
       ...qa(d['china.faq']),
+      `## ${d['imp.h1']} (${pageUrl(l, page('import'))})`,
+      '',
+      md(d['imp.summary']),
+      '',
+      md(d['imp.intro']),
+      '',
+      ...d['imp.categories'].flatMap(c => [`### ${c.name}`, '', `${c.examples}`, '', ...c.docs.map(x => `- ${x}`), '', c.note, '']),
+      `### ${d['imp.seasonalTitle']}`,
+      '',
+      md(d['imp.seasonalText']),
+      '',
+      `### ${d['imp.tipsTitle']}`,
+      '',
+      ...d['imp.tips'].map(x => `- ${x}`),
+      '',
+      ...qa(d['imp.faq']),
       `## ${d['gloss.h1']} (${pageUrl(l, page('glossary'))})`,
       '',
       ...d.glossary.map((g, i) => `- **${g.term}** (${LANG_CODES.filter(x => x !== l).map(x => T[x].glossary[i].term).join(' / ')}): ${g.def}`),
@@ -576,7 +637,7 @@ function llmsFullTxt() {
       ...d['choose.us'].map(x => `- **${x.name}:** ${x.text}`),
       '',
       ...qa(d['choose.faq']),
-      `${d['contact.phone.k']}: +964 773 756 5367 · WhatsApp: https://wa.me/9647737565367 · ${SITE.email} · ${md(d['contact.addr.v'])}`,
+      `${d['contact.phone.k']}: +964 786 709 4651 (https://wa.me/9647867094651) · ${SITE.email} · ${md(d['contact.addr.v'])}`,
       '',
     ].join('\n');
   });
